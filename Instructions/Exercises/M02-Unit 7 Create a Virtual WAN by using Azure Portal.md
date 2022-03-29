@@ -2,12 +2,12 @@
 Exercise:
   title: M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: d89f695085ff1284fa2a94e3875049a0619acaac
-ms.sourcegitcommit: 7e040d6fba448f60ca3262126db60cad96222bbc
+ms.openlocfilehash: 007d533a77a0f8f71d6d38989b4da59664776d18
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "137819831"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140741989"
 ---
 # <a name="m02-unit-7-create-a-virtual-wan-by-using-azure-portal"></a>M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
 
@@ -67,7 +67,7 @@ ms.locfileid: "137819831"
 6. **사이트 간** 탭에서 다음 필드를 완료합니다.
    - **사이트 간 (VPN Gateway)를 만드시겠습니까?** 예
    - **AS 번호** 필드는 편집할 수 없습니다.
-   - **게이트웨이 배율 단위:** 1 배율 단위 = 500Mbps
+   - **게이트웨이 배율 단위** 1 배율 단위 = 500Mbps x 2
 7. **검토 + 만들기** 를 선택하여 유효한지 확인합니다.
 8. **만들기** 를 선택하여 허브를 만듭니다. 
 9. 30분 후에 **새로 고침** 을 선택하여 허브 페이지에서 허브를 봅니다. 
