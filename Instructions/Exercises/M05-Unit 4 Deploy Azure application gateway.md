@@ -2,12 +2,12 @@
 Exercise:
   title: M05-단원 4 Azure Application Gateway 배포
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: 3ada3fed1e452c817bce8f52ee5418695023ab89
-ms.sourcegitcommit: 0717a1bd8290deb682974f4c4447f5fff87c220e
+ms.openlocfilehash: bb7e4a9d6c91177afa8b22c127bc56d61f95ebd3
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2022
-ms.locfileid: "138100345"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140741995"
 ---
 # <a name="m05-unit-4-deploy-azure-application-gateway"></a>M05-단원 4 Azure Application Gateway 배포
  
@@ -130,7 +130,7 @@ Azure가 애플리케이션 게이트웨이를 만들 때까지 몇 분 정도 �
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고, 드롭다운 메뉴에서 업로드를 선택한 다음, **backend.json** 및 **backend.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M05** 의 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고, 드롭다운 메뉴에서 업로드를 선택한 다음, **backend.json** 및 **backend.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M05** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 

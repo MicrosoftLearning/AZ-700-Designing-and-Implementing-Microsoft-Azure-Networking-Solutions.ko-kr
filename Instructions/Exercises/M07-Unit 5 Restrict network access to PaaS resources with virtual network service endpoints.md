@@ -2,12 +2,12 @@
 Exercise:
   title: M07-단원 5 가상 네트워크 서비스 엔드포인트로 PaaS 리소스에 대한 네트워크 액세스 제한
   module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 8c2767e40bf09e4df79012f8944720f53af729ee
-ms.sourcegitcommit: df554624b7c12a0aaa6b55f343b42c46ecfbc88c
+ms.openlocfilehash: 7769b75d3db52a3b802013dcf96cdc5528c33a4c
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "138132285"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742049"
 ---
 # <a name="m07-unit-5-restrict-network-access-to-paas-resources-with-virtual-network-service-endpoints"></a>M07-단원 5 가상 네트워크 서비스 엔드포인트로 PaaS 리소스에 대한 네트워크 액세스 제한
 
@@ -249,7 +249,7 @@ ms.locfileid: "138132285"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고, 드롭다운 메뉴에서 업로드를 선택한 다음, **VMs.json** 및 **VMs.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M07** 의 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고, 드롭다운 메뉴에서 업로드를 선택한 다음, **VMs.json** 및 **VMs.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M07** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 

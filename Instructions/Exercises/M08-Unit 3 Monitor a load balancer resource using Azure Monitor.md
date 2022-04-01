@@ -2,12 +2,12 @@
 Exercise:
   title: M08-단원 3 Azure Monitor를 사용하여 부하 분산 장치 리소스 모니터링
   module: Module - Design and implement network monitoring
-ms.openlocfilehash: 89bd32ceea640043e28d2aabfe1e448562468e16
-ms.sourcegitcommit: df554624b7c12a0aaa6b55f343b42c46ecfbc88c
+ms.openlocfilehash: eefc2e8d1e6092b133c9409cdbdd8635edd1bed6
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "138132294"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140741998"
 ---
 # <a name="m08-unit-3-monitor-a-load-balancer-resource-using-azure-monitor"></a>M08-단원 3 Azure Monitor를 사용하여 부하 분산 장치 리소스 모니터링
 
@@ -105,6 +105,7 @@ ms.locfileid: "138132294"
    | SKU                   | **표준**             |
    | 유형                  | **내부**             |
    | 프런트 엔드 IP 구성 탭 | + 프런트 엔드 IP 구성 추가 |
+   | Name                  | **LoadBalancerFrontEnd** |
    | 가상 네트워크       | **IntLB-VNet**           |
    | 서브넷                | **myBackendSubnet**      |
    | IP 주소 할당 | **동적**              |
@@ -194,7 +195,7 @@ ms.locfileid: "138132294"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고, 드롭다운 메뉴에서 업로드를 클릭한 후, **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json**, **azuredeploy.parameters.vm3.json** 파일을 **F:\Allfiles\Exercises\M08** 소스 폴더의 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고, 드롭다운 메뉴에서 업로드를 클릭한 후, **azuredeploy.json**, **azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json**, **azuredeploy.parameters.vm3.json** 파일을 **F:\Allfiles\Exercises\M08** 소스 폴더의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크, 서브넷 및 VM을 만듭니다.
 
@@ -297,7 +298,7 @@ ms.locfileid: "138132294"
 
 5. **Bastion 사용** 을 클릭합니다.
 
-6. **사용자 이름** 상자에 **TestUser** 를 입력하고, **암호** 상자에 **TestPa$$w0rd!** 를 입력한 다음 **연결** 을 클릭합니다.
+6. **사용자 이름** 상자에 **TestUser** 를 입력하고 **암호** 상자에 **TestPa$$w0rd!** 를 입력한 다음 **연결** 을 클릭합니다.
 
 7. **myTestVM** 창이 다른 브라우저 탭에서 열립니다.
 

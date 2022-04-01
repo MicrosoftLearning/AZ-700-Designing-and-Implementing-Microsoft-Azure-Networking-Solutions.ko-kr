@@ -2,12 +2,12 @@
 Exercise:
   title: M04-단원 6 Azure Portal을 사용하여 Traffic Manager 프로필 만들기
   module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: 0dc408c246bd44c0c0f3b6ca7de77a8db9e39f69
-ms.sourcegitcommit: df554624b7c12a0aaa6b55f343b42c46ecfbc88c
+ms.openlocfilehash: 1d04de9c9710cc452220b1f6c6cecc39ff130810
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "138132291"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742007"
 ---
 # <a name="m04-unit-6-create-a-traffic-manager-profile-using-the-azure-portal"></a>M04-단원 6 Azure Portal을 사용하여 Traffic Manager 프로필 만들기
 
@@ -158,7 +158,7 @@ ms.locfileid: "138132291"
 
 3. 웹 브라우저 탭을 열고 **DNS 이름** 항목(contoso-tmprofile.trafficmanager.net)을 주소 표시줄에 붙여넣거나 입력한 다음 Enter 키를 누릅니다.
 
-4. 웹앱의 기본 웹 사이트가 표시됩니다.
+4. 웹앱의 기본 웹 사이트가 표시됩니다. **404 웹 사이트를 찾을 수 없음** 메시지가 표시되면 **Contoso-TMProfilexx** Traffic Manager 프로필 개요 페이지에서 **프로필 비활성화** 를 설정하고 **프로필 활성화** 를 설정합니다. 그런 다음 웹 페이지를 새로 고침합니다.
 
    ![그림 24](../media/tm-webapp-test-1a.png)
 
@@ -192,6 +192,7 @@ ms.locfileid: "138132291"
    ```powershell
 
    Remove-AzResourceGroup -Name 'Contoso-RG-TM1' -Force -AsJob
+   Remove-AzResourceGroup -Name 'Contoso-RG-TM2' -Force -AsJob
 
    ```
 

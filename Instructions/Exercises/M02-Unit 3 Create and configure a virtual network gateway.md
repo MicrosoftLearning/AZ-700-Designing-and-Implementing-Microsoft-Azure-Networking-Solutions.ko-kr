@@ -2,12 +2,12 @@
 Exercise:
   title: M02-단원 3 가상 네트워크 게이트웨이 만들기 및 구성
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: 85db6e283f4b1bfb8f57c110d3d3eadd9af2d755
-ms.sourcegitcommit: f63ebaa31399a7b2b37abc32ed64f24f3d40608c
+ms.openlocfilehash: be0108387a6618c00d5e950d6065a286d5694fc5
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2022
-ms.locfileid: "138028509"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140741992"
 ---
 # <a name="m02-unit-3-create-and-configure-a-virtual-network-gateway"></a>M02-단원 3 가상 네트워크 게이트웨이 만들기 및 구성
 
@@ -31,7 +31,7 @@ ms.locfileid: "138028509"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고, 드롭다운 메뉴에서 업로드를 클릭한 다음, **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고 드롭다운 메뉴에서 업로드를 클릭한 다음 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크 및 서브넷을 만듭니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "138028509"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고, 드롭다운 메뉴에서 업로드를 클릭한 다음, **CoreServicesVMazuredeploy.json** 및 **CoreServicesVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02** 의 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고, 드롭다운 메뉴에서 업로드를 클릭한 다음, **CoreServicesVMazuredeploy.json** 및 **CoreServicesVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "138028509"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고, 드롭다운 메뉴에서 업로드를 클릭한 다음, **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02** 의 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고, 드롭다운 메뉴에서 업로드를 클릭한 다음, **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -137,9 +137,9 @@ ms.locfileid: "138028509"
    |                 |                   | Generation                                  | 생성 1                  |
    |                 |                   | 가상 네트워크                             | CoreServicesVnet             |
    |                 |                   | 서브넷                                      | GatewaySubnet(10.20.0.0/27) |
+   |                 |                   | 공용 IP 주소 형식                      | Basic                        |
    |                 | 공용 IP 주소 | 공용 IP 주소                           | 새로 만들기                   |
    |                 |                   | 공용 IP 주소 이름                      | CoreServicesVnetGateway-ip   |
-   |                 |                   | 공용 IP 주소 SKU                       | Basic                        |
    |                 |                   | 활성-활성 모드 사용                   | 사용 안 함                     |
    |                 |                   | BGP 구성                               | 사용 안 함                     |
    | 검토 + 만들기 |                   | 설정을 검토하고 **만들기** 를 선택합니다. |                              |
@@ -168,9 +168,9 @@ ms.locfileid: "138028509"
    |                 |                   | Generation                                  | 생성 1                  |
    |                 |                   | 가상 네트워크                             | ManufacturingVnet            |
    |                 |                   | 서브넷                                      | GatewaySubnet(10.30.0.0/27) |
+   |                 |                   | 공용 IP 주소 형식                      | Basic                        |
    |                 | 공용 IP 주소 | 공용 IP 주소                           | 새로 만들기                   |
    |                 |                   | 공용 IP 주소 이름                      | ManufacturingVnetGateway-ip  |
-   |                 |                   | 공용 IP 주소 SKU                       | Basic                        |
    |                 |                   | 활성-활성 모드 사용                   | 사용 안 함                     |
    |                 |                   | BGP 구성                               | 사용 안 함                     |
    | 검토 + 만들기 |                   | 설정을 검토하고 **만들기** 를 선택합니다. |                              |

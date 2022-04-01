@@ -2,12 +2,12 @@
 Exercise:
   title: M06-단원 4 Azure Portal을 사용하여 가상 네트워크에서 DDoS 보호 구성
   module: Module - Design and implement network security
-ms.openlocfilehash: 8a0e95de6a9dc9cdb26a13fd71719769c9715e95
-ms.sourcegitcommit: cc6b12857d97b72310f349592f5d4adbd371cc50
+ms.openlocfilehash: e8ad8b1a640391e4393082999d50ed36dcc561ac
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138422801"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742016"
 ---
 # <a name="m06-unit-4-configure-ddos-protection-on-a-virtual-network-using-the-azure-portal"></a>M06-단원 4 Azure Portal을 사용하여 가상 네트워크에서 DDoS 보호 구성
 
@@ -189,7 +189,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
 1. 새 가상 머신의 **개요** 페이지에 있는 **설정** 아래에서 **네트워킹** 을 클릭합니다.
 
-2. **네트워크 인터페이스** 옆에서 **myvirtualmachine-nic** 를 클릭합니다.
+2. **네트워크 인터페이스** 옆에서 **myvirtualmachine-nic** 를 클릭합니다. nic의 이름이 다를 수 있습니다.
 
 3. **설정** 아래에서 **IP 구성** 을 클릭합니다.
 

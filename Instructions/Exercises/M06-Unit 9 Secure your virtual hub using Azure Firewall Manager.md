@@ -2,12 +2,12 @@
 Exercise:
   title: M06-단원 9 Azure Firewall Manager를 사용하여 가상 허브 보호
   module: Module - Design and implement network security
-ms.openlocfilehash: bcab244740a8a49f7923a9a8aa782a10c93d13b1
-ms.sourcegitcommit: cc6b12857d97b72310f349592f5d4adbd371cc50
+ms.openlocfilehash: 4ccd864904eda16e2959bcfd31c360df4c0d7efc
+ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "138422789"
+ms.lasthandoff: 03/19/2022
+ms.locfileid: "140742013"
 ---
 # <a name="m06-unit-9-secure-your-virtual-hub-using-azure-firewall-manager"></a>M06-단원 9 Azure Firewall Manager를 사용하여 가상 허브 보호
 
@@ -134,7 +134,7 @@ ms.locfileid: "138422789"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고 드롭다운 메뉴에서 업로드를 선택한 다음 **FirewallManager.json** 및 **FirewallManager.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M06** 의 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고 드롭다운 메뉴에서 업로드를 선택한 다음 **FirewallManager.json** 및 **FirewallManager.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M06** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -307,7 +307,7 @@ ms.locfileid: "138422789"
 
 3. **옵션 표시** 를 클릭합니다.
 
-4. **사용자 이름** 상자에 **MyAdmin** 을 입력합니다.
+4. **사용자 이름** 상자에 **TestUser** 를 입력합니다.
 
 5. **연결** 을 클릭합니다.
 
@@ -347,7 +347,7 @@ ms.locfileid: "138422789"
 
 2. **컴퓨터** 상자에 **Srv-workload-02** 의 **개인 IP 주소**(예: **10.1.1.4**)를 입력합니다.
 
-3. **자격 증명 입력** 대화 상자에서 사용자 이름 **MyAdmin** 과 암호 **TestPa$$w0rd!** 를 사용하여 **Srv-workload-02** 서버에 로그인합니다.
+3. **자격 증명 입력** 대화 상자에서 사용자 이름 **TestUser** 와 암호 **TestPa$$w0rd!** 를 사용하여 **Srv-workload-02** 서버에 로그인합니다.
 
 4. **확인** 을 클릭합니다.
 
