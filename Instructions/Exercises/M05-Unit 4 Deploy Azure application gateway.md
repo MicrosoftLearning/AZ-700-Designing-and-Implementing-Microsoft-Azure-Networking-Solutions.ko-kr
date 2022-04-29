@@ -2,12 +2,12 @@
 Exercise:
   title: M05-단원 4 Azure Application Gateway 배포
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: bb7e4a9d6c91177afa8b22c127bc56d61f95ebd3
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 4a69cd20079b32de6219049a3127d146a26386c4
+ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741995"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "144102112"
 ---
 # <a name="m05-unit-4-deploy-azure-application-gateway"></a>M05-단원 4 Azure Application Gateway 배포
  
@@ -96,7 +96,7 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
 
 19. **수신기** 탭의 다른 설정에 대해서는 기본값을 적용합니다.
 
-    ![Azure Portal의 애플리케이션 게이트웨이 라우팅 규칙 추가 화면](../media/routing-rule-listener-tab.png)
+    ![Azure Portal의 애플리케이션 게이트웨이 라우팅 규칙 추가 화면](../media/Routing-rule-listener-tab.png)
 
 20. **백 엔드 대상** 탭을 선택하여 나머지 라우팅 규칙을 구성합니다.
 
@@ -105,7 +105,7 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
     | **설정**   | **값**      |
     | ------------- | -------------- |
     | 대상 형식   | 백 엔드 풀   |
-    | HTTP 설정 | **새로 만들기** |
+    | HTTP 설정 | **새로 추가** |
 
 22. **HTTP 설정 추가** 에서 다음 정보를 입력하거나 선택합니다.
 

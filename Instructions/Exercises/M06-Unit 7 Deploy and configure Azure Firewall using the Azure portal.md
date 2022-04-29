@@ -2,12 +2,12 @@
 Exercise:
   title: M06-단원 7 Azure Portal을 사용하여 Azure Firewall 배포 및 구성
   module: 'Module - Design and implement network security '
-ms.openlocfilehash: ae9bb7d64103b1a04003cb7b1bce42f2e99fadde
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: d5d875e379845d0fec8b9803b18b7b78bb4d385a
+ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742001"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "144102115"
 ---
 # <a name="m06-unit-7-deploy-and-configure-azure-firewall-using-the-azure-portal"></a>M06-단원 7 Azure Portal을 사용하여 Azure Firewall 배포 및 구성
 
@@ -209,7 +209,7 @@ Contoso의 네트워크 보안 팀에서 수행할 다음 작업은 특정 웹 �
 
 15. **다음 홉 주소** 에 앞에서 적어 둔 방화벽의 개인 IP 주소(예: **10.0.1.4**)를 입력합니다.
 
-16. **확인** 을 클릭합니다.
+16. **추가** 를 클릭합니다.
 
     ![방화벽 경로 추가](../media/add-firewall-route.png)
 
