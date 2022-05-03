@@ -2,12 +2,12 @@
 Exercise:
   title: M05-단원 6 Azure Portal을 사용하여 고가용성 웹 애플리케이션용 Front Door 만들기
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: 78a6ba6417aa6c43e2e613af8c20c5d76c4749c0
-ms.sourcegitcommit: 3aeb76a0ac28b33b6edc61365b303f5b0252a3c2
+ms.openlocfilehash: ae5346b27305d68779db54dad5496027a0adfec5
+ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2022
-ms.locfileid: "137860537"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "144102103"
 ---
 # <a name="m05-unit-6-create-a-front-door-for-a-highly-available-web-application-using-the-azure-portal"></a>M05-단원 6 Azure Portal을 사용하여 고가용성 웹 애플리케이션용 Front Door 만들기
 
@@ -41,7 +41,7 @@ ms.locfileid: "137860537"
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | 구독을 선택합니다.                                    |
    | Resource group   | 리소스 그룹 ContosoResourceGroup을 선택합니다.               |
-   | 속성             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예에서는 WebAppContoso-1을 사용합니다. |
+   | Name             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예에서는 WebAppContoso-1을 사용합니다. |
    | 게시          | **코드** 를 선택합니다.                                             |
    | 런타임 스택    | **.NET Core 3.1(LTS)** 을 선택합니다.                              |
    | 운영 체제 | **Windows** 를 선택합니다.                                          |
@@ -77,89 +77,38 @@ ms.locfileid: "137860537"
 
 두 웹앱 서버 간의 가장 짧은 대기 시간을 기준으로 사용자 트래픽을 보내도록 Azure Front Door를 구성합니다. 시작하려면 Azure Front Door에 대한 프런트 엔드 호스트를 추가합니다.
 
-1. 아무 Azure Portal 페이지에서나 **리소스, 서비스 및 문서 검색(G+/)** 에 front door를 입력하고 결과에서 **Front Door** 를 선택합니다.
+1. Azure Portal 페이지의 **검색 리소스, 서비스 및 문서(G+/)** 에서 Front Door 및 CDN 프로필을 검색한 다음, **Front Door 및 CDN 프로필** 을 선택합니다.
 
-   ![Azure Portal에서 Front Door를 검색한 화면](../media/search-front-door.png)
+1. **Front Door 및 CDN 프로필 만들기** 를 선택합니다. 제품 비교 페이지에서 빨리 만들기를 선택합니다. 그런 다음, 계속 Front Door 만들기를 선택합니다.
 
-2. Front Door 페이지에서 **+ 만들기** 를 선택합니다.
+1. 기본 탭에서 다음 정보를 입력하거나 선택합니다.
 
-3. Front Door 만들기에서 다음 정보를 입력하거나 선택합니다.
 
    | **설정**             | **값**                                    |
    | ----------------------- | -------------------------------------------- |
    | Subscription            | 구독을 선택합니다.                    |
    | Resource group          | ContosoResourceGroup 선택                  |
    | 리소스 그룹 위치 | 기본 설정 적용                       |
+   | Name                    | FrontDoor(yourinitials)와 같은 고유한 이름을 이 구독에 입력합니다.   |
+   | 계층                    | Standard   |
+   | 엔드포인트 이름           | FDendpoint   |
+   | 원본 형식             | App Service| 
+   | 원래 호스트 이름        | 이전에 배포한 웹앱의 이름 |
+   
 
-4. 완료되면 **다음: 구성** 을 선택합니다.
+1. **검토 및 만들기** 를 선택한 후 **만들기** 를 선택합니다.
 
-5. 구성 탭의 **프런트 엔드/도메인** 에서 **+** 를 선택하여 프런트 엔드 호스트를 추가합니다.
-
-   ![Front Door 만들기 및 프런트 엔드/도메인 추가](../media/add-frontends-domains.png)
-
-6. contoso-frontend와 같은 전역적으로 고유한 **호스트 이름** 을 입력한 다음, **추가** 를 선택합니다.
-
-7. 다음으로, 두 개의 웹앱이 포함된 백 엔드 풀을 만듭니다.  
-   ‎Front Door 만들기의 **백 엔드** 풀에서 +를 선택하여 백 엔드 풀을 추가합니다.
-
-   ![Front Door 만들기 및 백 엔드 풀 추가](../media/add-backends.png)
-
-8. 호스트 이름을 입력합니다(예: **BackendPool**).
-
-9. **백 엔드** 에서 **+ 백 엔드 추가** 를 선택합니다.
-
-10. 백 엔드 추가에서 다음 정보를 입력하거나 선택합니다.
-
-    | **설정**       | **값**                                                    |
-    | ----------------- | ------------------------------------------------------------ |
-    | 백 엔드 호스트 유형 | **앱 서비스** 를 선택합니다.                                      |
-    | Subscription      | 구독을 선택합니다.                                    |
-    | 백 엔드 호스트 이름 | 만든 첫 번째 웹앱을 선택합니다. 이 예에서는 웹앱이 **WebAppContoso-1** 이었습니다. |
-
-11. 다른 모든 필드는 기본값으로 두고 **추가** 를 선택합니다.
-
-12. **+ 백 엔드 추가** 를 다시 선택하고 다음을 입력하거나 선택합니다.
-
-    | **설정**       | **값**                                                    |
-    | ----------------- | ------------------------------------------------------------ |
-    | 백 엔드 호스트 유형 | App Service를 선택합니다.                                          |
-    | Subscription      | 구독을 선택합니다.                                    |
-    | 백 엔드 호스트 이름 | 만든 두 번째 웹앱을 선택합니다. 이 예제에서는 웹앱이 **WebAppContoso-2** 이었습니다. |
-
-13. 다른 모든 필드는 기본값으로 두고 **추가** 를 선택합니다.
-
-14. **백 엔드 추가** **풀** 블레이드에서 **추가** 를 선택하여 백 엔드 풀의 구성을 완료합니다.
-
-15. 마지막으로, 회람 규칙을 추가합니다. 회람 규칙은 프런트 엔드 호스트를 백 엔드 풀에 매핑합니다. 이 규칙은 contoso-frontend.azurefd.net에 대한 요청을 myBackendPool에 전달합니다.
-
-16. Front Door 만들기의 **라우팅 규칙** 에서 **+** 를 선택하여 라우팅 규칙을 구성합니다.
-
-    ![Front Door 만들기 라우팅 규칙 추가](../media/add-routing-rules.png)
-
-17. 규칙 추가에서 **이름** 에 대해 LocationRule을 입력합니다. 
-
-18. 모든 기본값을 적용한 다음, **추가** 를 선택하여 회람 규칙을 추가합니다.
-
-19. **검토 + 만들기** 를 선택한 다음, **만들기** 를 선택합니다.
-
-**Front Door의 각 프런트 엔드 호스트에 기본 경로(\*)가 연결된 라우팅 규칙이 있는지 확인해야 합니다. 즉, 모든 라우팅 규칙에서 기본 경로(\*)에 정의된 각 프런트 엔드 호스트에 대해 하나 이상의 라우팅 규칙이 있어야 합니다. 이렇게 하지 않으면 최종 사용자 트래픽이 올바르게 라우팅되지 않을 수 있습니다**.
-
- 
+1. 리소스가 배포될 때까지 기다린 다음, **리소스로 이동** 을 선택합니다.
+2. 개요 블레이드의 Front Door 리소스에서 **원본 그룹** 을 찾은 후 만든 원본 그룹을 선택합니다.
+3. 원본 그룹을 업데이트하려면 목록에서 **default-origin-group** 이름을 선택합니다. **원본 추가** 를 선택하고 두 번째 웹앱을 추가합니다. 추가를 선택한 다음, 업데이트를 선택합니다. 
 
 ## <a name="task-3-view-azure-front-door-in-action"></a>작업 3: 작동 중인 Azure Front Door 보기
 
 Front Door를 만들면 구성이 전역적으로 배포되는 데 몇 분 정도 걸립니다. 완료되면 생성한 프런트 엔드 호스트에 액세스합니다. 
 
-1. Azure Portal에서 Front Door 프런트 엔드로 이동합니다. **리소스로 이동** 을 선택합니다. 또는 리소스, 서비스 및 문서 검색(G+/)에서 **Front Door** 를 입력하고 결과에서 **Front Door** 를 선택한 다음, Front Door를 선택합니다.
+1. 개요 블레이드의 Front Door 리소스에서 엔드포인트에 대해 만들어진 엔드포인트 호스트 이름을 찾습니다. fdendpoint 뒤에 하이픈과 임의 문자열이 와야 합니다. 예: **fdendpoint-fxa8c8hddhhgcrb9.z01.azurefd.net**. 이 FQDN을 **복사** 합니다.
 
-2. Front Door 페이지에서 **프런트 엔드 호스트** URL을 기록해 둡니다. 이 연습에서는 contoso-frontend.azurefd.net을 사용하지만 이름이 고유하도록 변경했을 수 있습니다.
-
-   ![Azure Portal 프런트 엔드 페이지 - 프런트 엔드 URL 확인](../media/frontend-url.png)
-
-3. 브라우저에서 프런트 엔드 호스트 URL(contoso-frontend.azurefd.net)로 이동합니다. 요청이 자동으로 백 엔드 풀에 지정된 서버에서 가장 가까운 서버로 라우팅됩니다.
-
-4. 그러면 다음 정보 페이지가 표시됩니다.
-
+1. 새 브라우저 탭에서 Front Door 엔드포인트 FQDN으로 이동합니다. 기본 App Service 페이지가 표시됩니다.
    ![App Service 정보 페이지를 보여 주는 브라우저](../media/app-service-info-page.png)
 
 5. 즉각적인 글로벌 장애 조치가 작동 중인지 테스트하려면 다음 단계를 수행합니다.
@@ -182,9 +131,8 @@ Front Door를 만들면 구성이 전역적으로 배포되는 데 몇 분 정�
 
    축하합니다! Azure Front Door를 구성하고 테스트했습니다.
    
-  
-   
-   ## <a name="task-4-clean-up-resources"></a>작업 4: 리소스 정리
+
+## <a name="task-4-clean-up-resources"></a>작업 4: 리소스 정리
    
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 

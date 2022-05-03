@@ -2,12 +2,12 @@
 Exercise:
   title: M08-단원 3 Azure Monitor를 사용하여 부하 분산 장치 리소스 모니터링
   module: Module - Design and implement network monitoring
-ms.openlocfilehash: eefc2e8d1e6092b133c9409cdbdd8635edd1bed6
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 6ba86eb68ad8e343bfe693cef6a8a3c882a24dda
+ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741998"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "144102118"
 ---
 # <a name="m08-unit-3-monitor-a-load-balancer-resource-using-azure-monitor"></a>M08-단원 3 Azure Monitor를 사용하여 부하 분산 장치 리소스 모니터링
 
@@ -87,13 +87,10 @@ ms.locfileid: "140741998"
 
 이 섹션에서는 내부 표준 SKU 부하 분산 장치를 만듭니다. 이 연습에서 기본 SKU 부하 분산 장치 대신 표준 SKU 부하 분산 장치를 만드는 이유는, 표준 SKU 버전의 부하 분산 장치가 필요한 이후 연습을 위한 것입니다.
 
-1. Azure Portal 홈페이지의 페이지 맨 위에 있는 검색 상자에 **Load Balancer** 를 입력하고 서비스 아래에서 부하 분산 장치를 선택합니다.
-
-2. **만들기** 를 클릭합니다.
-
-   ![부하 분산 장치 만들기](../media/create-load-balancer-4.png)
-
-3. **기본** 탭에서 아래 표의 정보를 사용하여 부하 분산 장치를 만듭니다.
+1.  Azure 홈페이지의 검색 표시줄에 **부하 분산 장치** 를 입력합니다. 
+2.  **부하 분산 장치 만들기** 를 선택합니다.
+3.  **기본** 탭에서 아래 표의 정보를 사용하여 부하 분산 장치를 만듭니다.
+    
 
    | **설정**           | **값**                |
    | --------------------- | ------------------------ |
@@ -262,7 +259,7 @@ ms.locfileid: "140741998"
    | 지역               | **(미국) 미국 서부**                             |
    | 가용성 옵션 | **인프라 중복 필요 없음**    |
    | 이미지                | **Windows Server 2019 Datacenter - Gen 1**   |
-   | 크기                 | **Standard_DS2_v3 - 2 vcpu, 8GiB 메모리** |
+   | 크기                 | **Standard_DS2_v3 - 2 vcpu, 메모리 8GiB** |
    | 사용자 이름             | **TestUser**                                 |
    | 암호             | **TestPa$$w0rd!**                            |
    | 암호 확인     | **TestPa$$w0rd!**                            |
@@ -298,7 +295,7 @@ ms.locfileid: "140741998"
 
 5. **Bastion 사용** 을 클릭합니다.
 
-6. **사용자 이름** 상자에 **TestUser** 를 입력하고 **암호** 상자에 **TestPa$$w0rd!** 를 입력한 다음 **연결** 을 클릭합니다.
+6. **사용자 이름** 상자에 **TestUser** 를 입력하고, **암호** 상자에 **TestPa$$w0rd!** 를 입력한 다음 **연결** 을 클릭합니다.
 
 7. **myTestVM** 창이 다른 브라우저 탭에서 열립니다.
 
