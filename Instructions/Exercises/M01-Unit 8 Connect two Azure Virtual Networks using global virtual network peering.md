@@ -2,12 +2,12 @@
 Exercise:
   title: M01-단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: fc423941d69e8a4c4d166aa6896c10506fe239eb
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: dfa6acdc6e3e2ad25d50cb20e9deccdf7f73b1ba
+ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742040"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "141348852"
 ---
 # <a name="m01-unit-8-connect-two-azure-virtual-networks-using-global-virtual-network-peering"></a>M01-단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
 
@@ -126,6 +126,7 @@ ms.locfileid: "140742040"
 | 설정을 검토하고 추가를 선택합니다. |                                               |                                       |
 |                                      |                                               |                                       |
 
+ >**참고**: “MOC 구독”이 없는 경우 이전에 사용한 구독을 사용합니다. 단지 이름일 뿐입니다.
 
 5. CoreServicesVnet | 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 표시되는지 확인합니다.
 

@@ -2,12 +2,12 @@
 Exercise:
   title: M03-단원 5 ExpressRoute 회로 프로비전
   module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: cf7a0c4f6c7a17d7b67d75bf661a1a7a4781084c
-ms.sourcegitcommit: 7e040d6fba448f60ca3262126db60cad96222bbc
+ms.openlocfilehash: baf6ccb5c164b867b31225fbe78758e834df6c6e
+ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "137819972"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "141348858"
 ---
 # <a name="m03-unit-5-provision-an-expressroute-circuit"></a>M03-단원 5 ExpressRoute 회로 프로비전
 
@@ -15,7 +15,6 @@ ms.locfileid: "137819972"
 
 ![연습에 필요한 ExpressRoute 회로 레이아웃 다이어그램](../media/environment-diagram.png)
 
-ExpressRoute 회로를 만드는 방법의 데모를 보려면 [Azure ExpressRoute - ExpressRoute 회로를 만드는 방법 | Azure | Channel 9(msdn.com)](https://channel9.msdn.com/Blogs/Azure/Azure-ExpressRoute-How-to-create-an-ExpressRoute-circuit?term=ExpressRoute&lang-en=true&pageSize=15&skip=15)를 참조하세요.
 
 
 이 연습에서 다음을 수행합니다.
@@ -43,6 +42,11 @@ ExpressRoute 회로를 만드는 방법의 데모를 보려면 [Azure ExpressRou
 3. **ExpressRoute 만들기** 페이지에서 회로의 **리소스 그룹**, **지역** 및 **이름** 을 다음과 같이 입력합니다. ExpressRouteResourceGroup, 미국 동부 2, TestERCircuit. 그다움에 **다음: 구성&gt;** 을 클릭합니다.
 
 4. 이 페이지의 값을 입력할 때 올바른 SKU 계층(로컬, 표준, 프리미엄) 및 데이터 계량 청구 모델(무제한 또는 데이터 요금제)을 지정해야 합니다.
+
+5. **검토 + 생성** 를 선택합니다.
+
+6. ExpressRoute 구성이 유효성 검사를 통과하는지 확인한 다음, **만들기** 를 선택합니다.
+
 
 ![Azure Portal - ExpressRoute 만들기 구성 탭](../media/expressroute-create-configuration.png)
 

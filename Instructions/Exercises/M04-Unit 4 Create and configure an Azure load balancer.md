@@ -2,12 +2,12 @@
 Exercise:
   title: M04-단원 4 Azure Load Balancer 만들기 및 구성
   module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: 1c34cac1a578662e40265f387b4579b6171b4d13
-ms.sourcegitcommit: 3aeb76a0ac28b33b6edc61365b303f5b0252a3c2
+ms.openlocfilehash: f88f70aa0a753425a9c93ac37d034d26ea7685d4
+ms.sourcegitcommit: 349c82964aa36c0f69cfaf6a0b36ad8bb0017f06
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2022
-ms.locfileid: "137860531"
+ms.lasthandoff: 04/06/2022
+ms.locfileid: "141483589"
 ---
 # <a name="m04-unit-4-create-and-configure-an-azure-load-balancer"></a>M04-단원 4 Azure Load Balancer 만들기 및 구성
 
@@ -81,9 +81,9 @@ ms.locfileid: "137860531"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고 드롭다운 메뉴에서 업로드를 클릭한 후 azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json, azuredeploy.parameters.vm3.json 파일을 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고, 드롭다운 메뉴에서 업로드를 클릭하고, azuredeploy.json, azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json, azuredeploy.parameters.vm3.json 파일을 하나씩 Cloud Shell 홈 디렉터리에 업로드합니다.
 
-3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크, 서브넷 및 VM을 만듭니다.
+3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
    ```powershell
    $RGName = "IntLB-RG"
@@ -92,6 +92,8 @@ ms.locfileid: "137860531"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
    ```
+
+이러한 세 개의 VM을 만드는 데 5~10분이 걸릴 수 있습니다. 이 작업이 완료될 때까지 기다릴 필요가 없으며 이미 다음 작업을 계속할 수 있습니다.
 
 ## <a name="task-3-create-the-load-balancer"></a>작업 3: 부하 분산 장치 만들기
 
@@ -104,7 +106,6 @@ ms.locfileid: "137860531"
 3. 결과 페이지에서 **Load Balancer**(이름 아래에 ‘Microsoft’ 및 ‘Azure 서비스’라고 표시된 항목)를 찾아 선택합니다.
 
 4. **만들기** 를 클릭합니다.
-   ![그림 3](../media/create-load-balancer-4.png)
 
 5. **기본** 탭에서 아래 표의 정보를 사용하여 부하 분산 장치를 만듭니다.
 
@@ -120,7 +121,7 @@ ms.locfileid: "137860531"
 
 6. **다음: 프런트 엔드 IP 구성**.
 7. 프런트 엔드 IP 추가 클릭
-8. **프런트 엔드 IP 주소 추가** 블레이드에서 아래 표의 정보를 입력합니다.
+8. **프런트 엔드 IP 주소 추가** 블레이드에서 아래 표의 정보를 입력하고 **추가** 를 선택합니다.
  
    | **설정**     | **값**                |
    | --------------- | ------------------------ |
@@ -223,7 +224,7 @@ ms.locfileid: "137860531"
 
 ### <a name="create-test-vm"></a>테스트 VM 만들기
 
-1. Azure Portal 홈페이지에서 **리소스 만들기**, **컴퓨팅** 을 차례로 클릭한 다음 **가상 머신** 을 선택합니다. 이 리소스 종류가 페이지에 나열되지 않으면 페이지 맨 위에 있는 검색 상자를 사용하여 검색합니다.
+1. Azure Portal 홈페이지에서 **리소스 만들기**, **가상** 을 차례로 클릭한 다음, **가상 머신** 을 선택합니다. 이 리소스 종류가 페이지에 나열되지 않으면 페이지 맨 위에 있는 검색 상자를 사용하여 검색하고 선택합니다.
 
 2. **가상 머신 만들기** 페이지의 **기본** 탭에서 아래 표의 정보를 사용하여 첫 번째 VM을 만듭니다.
 
@@ -234,7 +235,7 @@ ms.locfileid: "137860531"
    | 가상 머신 이름 | **myTestVM**                                 |
    | 지역               | **(미국) 미국 동부**                             |
    | 가용성 옵션 | **인프라 중복 필요 없음**    |
-   | 이미지                | **Windows Server 2019 Datacenter - Gen 1**   |
+   | 이미지                | **Windows Server 2019 Datacenter - Gen 2**   |
    | 크기                 | **Standard_DS2_v3 - 2 vcpu, 메모리 8GiB** |
    | 사용자 이름             | **TestUser**                                 |
    | 암호             | **TestPa$$w0rd!**                            |
@@ -273,7 +274,7 @@ ms.locfileid: "137860531"
 
 5. **Bastion 사용** 을 클릭합니다.
 
-6. **사용자 이름** 상자에 **TestUser** 를 입력하고, **암호** 상자에 **TestPa$$w0rd!** 를 입력한 다음 **연결** 을 클릭합니다.
+6. **사용자 이름** 상자에 **TestUser** 를 입력하고, **암호** 상자에 **TestPa$$w0rd!** 를 입력한 다음 **연결** 을 클릭합니다. 팝업 차단기가 새 창을 차단하는 경우 팝업 차단기를 허용하고 다시 **연결** 합니다.
 
 7. **myTestVM** 창이 다른 브라우저 탭에서 열립니다.
 

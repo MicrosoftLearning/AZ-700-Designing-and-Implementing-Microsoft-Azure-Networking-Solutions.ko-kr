@@ -2,12 +2,12 @@
 Exercise:
   title: M06-단원 4 Azure Portal을 사용하여 가상 네트워크에서 DDoS 보호 구성
   module: Module - Design and implement network security
-ms.openlocfilehash: e8ad8b1a640391e4393082999d50ed36dcc561ac
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 3a6a7719f5f78198fe5215b6d0779752d0fbc848
+ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742016"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "141348861"
 ---
 # <a name="m06-unit-4-configure-ddos-protection-on-a-virtual-network-using-the-azure-portal"></a>M06-단원 4 Azure Portal을 사용하여 가상 네트워크에서 DDoS 보호 구성
 
@@ -233,7 +233,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
     ![경고 규칙에 조건 추가 - 신호 논리 구성](../media/add-condition-to-alert-rule-2.png)
 
-13. **경고 규칙 만들기** 페이지로 돌아가서 **경고 규칙 세부 정보** 섹션까지 아래로 스크롤하고, **경고 규칙 이름** 에 **MyDdosAlert** 를 입력합니다.
+13. 다시 **경고 규칙 만들기** 페이지에서 **경고 규칙 세부 정보** 섹션 아래 **경고 규칙 이름** 에 **MyDdosAlert** 를 입력합니다.
 
     ![새 경고 규칙 만들기의 엔드포인트](../media/new-alert-rule-end.png)
 
