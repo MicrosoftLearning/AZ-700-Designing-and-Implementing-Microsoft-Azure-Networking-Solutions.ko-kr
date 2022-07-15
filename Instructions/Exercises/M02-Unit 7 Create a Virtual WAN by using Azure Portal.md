@@ -2,12 +2,12 @@
 Exercise:
   title: M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: 007d533a77a0f8f71d6d38989b4da59664776d18
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: cdba2b4a3439d6903030352de15166c030ad2f3e
+ms.sourcegitcommit: 2b9d6e12ebe29bbf543d2f0b88f4caefc7fa91ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741989"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "147098037"
 ---
 # <a name="m02-unit-7-create-a-virtual-wan-by-using-azure-portal"></a>M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
 
@@ -63,6 +63,7 @@ ms.locfileid: "140741989"
    - **지역:** 미국 서부
    - **이름:** ContosoVirtualWANHub-WestUS
    - **허브 프라이빗 주소 공간:** 10.60.0.0/24
+   - **가상 허브 용량:** 2 라우팅 인프라 단위
 5. 완료되면 **다음: 사이트 간**
 6. **사이트 간** 탭에서 다음 필드를 완료합니다.
    - **사이트 간 (VPN Gateway)를 만드시겠습니까?** 예
