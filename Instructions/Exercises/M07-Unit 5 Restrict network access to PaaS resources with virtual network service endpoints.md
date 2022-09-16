@@ -2,12 +2,12 @@
 Exercise:
   title: M07-단원 5 가상 네트워크 서비스 엔드포인트로 PaaS 리소스에 대한 네트워크 액세스 제한
   module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 165f6023aaee74ce370f319cda493ce9eb87251a
-ms.sourcegitcommit: 99cea7fefa7a89521d4d01338bbad396bc6411cf
+ms.openlocfilehash: 3dd388f4bed463f4e982e848bcec7e15598482a1
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2022
-ms.locfileid: "146111071"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922379"
 ---
 # <a name="m07-unit-5-restrict-network-access-to-paas-resources-with-virtual-network-service-endpoints"></a>M07-단원 5 가상 네트워크 서비스 엔드포인트로 PaaS 리소스에 대한 네트워크 액세스 제한
 
@@ -27,6 +27,8 @@ ms.locfileid: "146111071"
 + 작업 9: 가상 머신 만들기
 + 작업 10: 스토리지 계정에 대한 액세스 확인
 + 작업 11: 리소스 정리
+
+#### <a name="estimated-time-35-minutes"></a>예상 시간: 35분
 
 ## <a name="task-1-create-a-virtual-network"></a>작업 1: 가상 네트워크 만들기
 

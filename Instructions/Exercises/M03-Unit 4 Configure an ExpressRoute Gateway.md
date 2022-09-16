@@ -2,18 +2,21 @@
 Exercise:
   title: M03-단원 4 ExpressRoute 게이트웨이 구성
   module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: 27ff95d931a6ec26dc892af0965158157cabac31
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: af79e4be86e2b89c20338b9cb66ddaa5a94b1f5e
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742037"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922337"
 ---
 # <a name="m03-unit-4-configure-an-expressroute-gateway"></a>M03-단원 4 ExpressRoute 게이트웨이 구성
 
 ## <a name="deploy-expressroute-gateways"></a>ExpressRoute 게이트웨이 배포
 
 ExpressRoute를 통해 Azure 가상 네트워크와 온-프레미스 네트워크를 연결하려면 먼저 가상 네트워크 게이트웨이를 만들어야 합니다. 가상 네트워크 게이트웨이는 네트워크 간에 IP 경로를 교환하고 네트워크 트래픽을 라우팅하는 두 가지 용도로 사용됩니다. 
+
+
+#### <a name="estimated-time-60-minutes-includes-45-minutes-deployment-waiting-time"></a>예상 시간: 60분(배포 대기 시간 ~45분 포함)
 
 **게이트웨이 유형**
 

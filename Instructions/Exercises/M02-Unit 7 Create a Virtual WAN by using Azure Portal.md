@@ -2,12 +2,12 @@
 Exercise:
   title: M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: cdba2b4a3439d6903030352de15166c030ad2f3e
-ms.sourcegitcommit: 2b9d6e12ebe29bbf543d2f0b88f4caefc7fa91ce
+ms.openlocfilehash: 0d1cdaad19959b5c284618d3e55c2a0c7068e9b1
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "147098037"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922322"
 ---
 # <a name="m02-unit-7-create-a-virtual-wan-by-using-azure-portal"></a>M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
 
@@ -22,6 +22,8 @@ ms.locfileid: "147098037"
 + 작업 4: 리소스 정리
 
 
+
+#### <a name="estimated-time-65-minutes-including-45-minutes-deployment-waiting-time"></a>예상 시간: 65분(배포 대기 시간 ~45분 포함)
 
 ## <a name="task-1-create-a-virtual-wan"></a>작업 1: Virtual WAN 만들기
 

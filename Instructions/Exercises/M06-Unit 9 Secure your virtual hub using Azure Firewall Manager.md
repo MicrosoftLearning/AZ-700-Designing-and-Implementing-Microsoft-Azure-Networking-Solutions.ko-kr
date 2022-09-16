@@ -2,12 +2,12 @@
 Exercise:
   title: M06-단원 9 Azure Firewall Manager를 사용하여 가상 허브 보호
   module: Module - Design and implement network security
-ms.openlocfilehash: 4ccd864904eda16e2959bcfd31c360df4c0d7efc
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: e53ea57b2304396f36d608ce531d278c6ddad446
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742013"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922382"
 ---
 # <a name="m06-unit-9-secure-your-virtual-hub-using-azure-firewall-manager"></a>M06-단원 9 Azure Firewall Manager를 사용하여 가상 허브 보호
 
@@ -29,6 +29,8 @@ ms.locfileid: "140742013"
 + 작업 8: 애플리케이션 규칙 테스트
 + 작업 9: 네트워크 규칙 테스트
 + 작업 10: 리소스 정리
+
+#### <a name="estimated-time-35-minutes"></a>예상 시간: 35분
 
 ## <a name="task-1-create-two-spoke-virtual-networks-and-subnets"></a>작업 1: 2개의 스포크 가상 네트워크 및 서브넷 만들기
 

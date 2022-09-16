@@ -2,16 +2,18 @@
 Exercise:
   title: M04-단원 4 Azure Load Balancer 만들기 및 구성
   module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: f88f70aa0a753425a9c93ac37d034d26ea7685d4
-ms.sourcegitcommit: 349c82964aa36c0f69cfaf6a0b36ad8bb0017f06
+ms.openlocfilehash: f3125fa7a5fafa5a1894ccd18b1430cb1055028d
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2022
-ms.locfileid: "141483589"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922328"
 ---
 # <a name="m04-unit-4-create-and-configure-an-azure-load-balancer"></a>M04-단원 4 Azure Load Balancer 만들기 및 구성
 
 이 연습에서는 가상의 Contoso Ltd 조직에 대한 내부 부하 분산 장치를 만듭니다. 
+
+#### <a name="estimated-time-60-minutes-includes-45-minutes-deployment-waiting-time"></a>예상 시간: 60분(배포 대기 시간 ~45분 포함)
 
 내부 부하 분산 장치를 만드는 단계는 이 모듈에서 이미 배운 공용 부하 분산 장치를 만드는 과정과 매우 유사합니다. 주요 차이점은 공용 부하 분산 장치를 사용하면 공용 IP 주소를 통해 프런트 엔드에 액세스하고, 가상 네트워크 외부에 있는 호스트에서 연결을 테스트한다는 것입니다. 반면, 내부 부하 분산 장치를 사용하면 프런트 엔드가 가상 네트워크 내부에 있는 개인 IP 주소이며, 동일한 네트워크 내부에 있는 호스트에서 연결을 테스트합니다.
 
@@ -126,9 +128,10 @@ ms.locfileid: "141483589"
    | **설정**     | **값**                |
    | --------------- | ------------------------ |
    | Name            | **LoadBalancerFrontEnd** |
-   | 가상 네트워크 | **IntLB-VNet**           |
-   | 서브넷          | **myFrontEndSubnet**     |
-   | 할당      | **동적**              |
+   | IP 버전      | **IPv4**           |
+   | IP 유형         | **IP 주소**     |
+   | 공용 IP 주소      | **myFrontEndIP** 라는 **새로 만들기**             |
+   | 게이트웨이 부하 분산 장치  | **없음**  |
 
 9. **검토 + 만들기** 를 클릭합니다.
 
@@ -253,7 +256,7 @@ ms.locfileid: "141483589"
    | 공용 IP                                                    | **없음** 으로 변경            |
    | NIC 네트워크 보안 그룹 추가                                   | **고급**                  |
    | 네트워크 보안 그룹 구성                             | 기존 **myNSG** 를 선택합니다. |
-   | 기존 부하 분산 솔루션 뒤에 이 가상 머신을 배치하시겠습니까? | **끄기**(선택 취소함)           |
+   | 부하 분산 옵션                                       | **없음**                      |
 
 
 5. **검토 + 만들기** 를 클릭합니다.
