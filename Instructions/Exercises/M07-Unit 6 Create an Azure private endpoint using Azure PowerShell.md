@@ -2,22 +2,24 @@
 Exercise:
   title: M07-단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기
   module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 4587a3a1f0812a006db7097ebfc4cea2c0fe45b1
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 13ad6214d9814bcf39794f9e4bd91d22f5371a02
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742046"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922370"
 ---
 # <a name="m07-unit-6-create-an-azure-private-endpoint-using-azure-powershell"></a>M07-단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기
 
 Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Private Link를 시작합니다. Portal, CLI, PowerShell 등의 다양한 방법을 사용하여 엔드포인트를 만들 수 있습니다. 
 
+#### <a name="estimated-time-45-minutes"></a>예상 시간: 45분
+
 Azure 웹앱용 프라이빗 엔드포인트를 만들고, 가상 머신을 배포하여 프라이빗 연결을 테스트합니다.
 
 Azure SQL과 Azure Storage 같은 다양한 종류의 Azure 서비스에 대한 프라이빗 엔드포인트를 만들 수 있습니다.
 
-**전제 조건**
+**필수 구성 요소**
 
 - 활성 구독이 있는 Azure 계정. 체험 계정을 만듭니다.
 

@@ -2,12 +2,12 @@
 Exercise:
   title: M01-단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: dfa6acdc6e3e2ad25d50cb20e9deccdf7f73b1ba
-ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
+ms.openlocfilehash: d93ebe915fbdf9b4e7acd69695e3de3ea214f7c3
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "141348852"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922373"
 ---
 # <a name="m01-unit-8-connect-two-azure-virtual-networks-using-global-virtual-network-peering"></a>M01-단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
 
@@ -22,6 +22,8 @@ ms.locfileid: "141348852"
 + 작업 4: CoreServicesVnet과 ManufacturingVnet 사이에 VNet 피어링 만들기
 + 작업 5: VM 간 연결 테스트
 + 작업 6: 리소스 정리
+
+#### <a name="estimated-time-20-minutes"></a>예상 소요 시간: 20분
 
 ## <a name="task-1-create-a-virtual-machine-to-test-the-configuration"></a>작업 1: 구성을 테스트할 가상 머신 만들기
 

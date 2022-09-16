@@ -2,12 +2,12 @@
 Exercise:
   title: M05-단원 6 Azure Portal을 사용하여 고가용성 웹 애플리케이션용 Front Door 만들기
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: ae5346b27305d68779db54dad5496027a0adfec5
-ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
+ms.openlocfilehash: dbdd8fdccdea3ade0ae2d8f67b5b837a13fb94fa
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144102103"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922364"
 ---
 # <a name="m05-unit-6-create-a-front-door-for-a-highly-available-web-application-using-the-azure-portal"></a>M05-단원 6 Azure Portal을 사용하여 고가용성 웹 애플리케이션용 Front Door 만들기
 
@@ -24,6 +24,8 @@ ms.locfileid: "144102103"
 + 작업 3: 작동 중인 Azure Front Door 보기
 + 작업 4: 리소스 정리
 
+
+#### <a name="estimated-time-30-minutes"></a>예상 소요 시간: 30분
 
 ## <a name="task-1-create-two-instances-of-a-web-app"></a>작업 1: 웹앱의 두 인스턴스 만들기
 

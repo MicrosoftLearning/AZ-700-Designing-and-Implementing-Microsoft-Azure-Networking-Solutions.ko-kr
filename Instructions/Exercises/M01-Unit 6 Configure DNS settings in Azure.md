@@ -2,12 +2,12 @@
 Exercise:
   title: M01 - 단원 6 Azure에서 DNS 설정 구성
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: 9e273579568e8ae32eb241ad7c8cefe67258a062
-ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
+ms.openlocfilehash: e6a21f21c87ff92e0e8a1a245d5b1fab477ce271
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144102106"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922325"
 ---
 # <a name="m01---unit-6-configure-dns-settings-in-azure"></a>M01 - 단원 6 Azure에서 DNS 설정 구성
 
@@ -21,6 +21,7 @@ ms.locfileid: "144102106"
 + 작업 3: 구성을 테스트할 가상 머신 만들기
 + 작업 4: 레코드가 DNS 영역에 있는지 확인
 
+#### <a name="estimated-time-25-minutes"></a>예상 소요 시간: 25분
 
 ## <a name="task-1-create-a-private-dns-zone"></a>작업 1: 프라이빗 DNS 영역 만들기
 

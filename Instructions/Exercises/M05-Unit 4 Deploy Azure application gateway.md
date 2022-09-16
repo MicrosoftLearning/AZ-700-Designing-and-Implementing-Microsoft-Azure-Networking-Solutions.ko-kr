@@ -2,17 +2,19 @@
 Exercise:
   title: M05-단원 4 Azure Application Gateway 배포
   module: Module - Load balancing HTTP(S) traffic in Azure
-ms.openlocfilehash: 4a69cd20079b32de6219049a3127d146a26386c4
-ms.sourcegitcommit: 2793e1a16a8f6ef6c25352cd6eaeaae43c9615a4
+ms.openlocfilehash: 0f000687276a78991f2a88d7caeab7c5b7a32bcd
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "144102112"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922367"
 ---
 # <a name="m05-unit-4-deploy-azure-application-gateway"></a>M05-단원 4 Azure Application Gateway 배포
  
 
 이 연습에서는 Azure Portal을 사용하여 애플리케이션 게이트웨이를 만듭니다. 그런 다음, 테스트하여 제대로 작동하는지 확인합니다.
+
+#### <a name="estimated-time-25-minutes"></a>예상 소요 시간: 25분
 
 애플리케이션 게이트웨이는 애플리케이션 웹 트래픽을 백 엔드 풀의 특정 리소스로 보냅니다. 수신기를 포트에 할당하고, 규칙을 만들고, 백 엔드 풀에 리소스를 추가합니다. 간단히 나타내기 위해 이 문서에서는 퍼블릭 프런트 엔드 IP 1개, 애플리케이션 게이트웨이에 단일 사이트를 호스트하는 기본 수신기 1개, 기본 요청 라우팅 규칙 1개 및 백 엔드 풀의 가상 머신 2개를 이용한 간단한 설정을 사용합니다.
 
@@ -92,6 +94,7 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
     | **설정**   | **값**         |
     | ------------- | ----------------- |
     | 수신기 이름 | 수신기          |
+    | 우선 순위      | **100**           |
     | 프런트 엔드 IP   | **Public** 을 선택합니다. |
 
 19. **수신기** 탭의 다른 설정에 대해서는 기본값을 적용합니다.

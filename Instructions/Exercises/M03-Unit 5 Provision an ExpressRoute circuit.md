@@ -2,16 +2,18 @@
 Exercise:
   title: M03-단원 5 ExpressRoute 회로 프로비전
   module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: baf6ccb5c164b867b31225fbe78758e834df6c6e
-ms.sourcegitcommit: b4698ea8d7f37149530f40e4e92394a0f3d6440c
+ms.openlocfilehash: 9e65cbcb5b746b1b6a63139c9e7ee9973ddb8a5b
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2022
-ms.locfileid: "141348858"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922334"
 ---
 # <a name="m03-unit-5-provision-an-expressroute-circuit"></a>M03-단원 5 ExpressRoute 회로 프로비전
 
 이 연습에서는 Azure Portal 및 Azure Resource Manager 배포 모델을 사용하여 ExpressRoute 회로를 만듭니다. 
+
+#### <a name="estimated-time-15-minutes"></a>예상 소요 시간: 15분
 
 ![연습에 필요한 ExpressRoute 회로 레이아웃 다이어그램](../media/environment-diagram.png)
 
