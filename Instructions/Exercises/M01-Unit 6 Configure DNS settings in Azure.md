@@ -2,12 +2,12 @@
 Exercise:
   title: M01 - 단원 6 Azure에서 DNS 설정 구성
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: 6224b77917ee7631ec709773edc866ffc19b85b0
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: e6a21f21c87ff92e0e8a1a245d5b1fab477ce271
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742043"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922325"
 ---
 # <a name="m01---unit-6-configure-dns-settings-in-azure"></a>M01 - 단원 6 Azure에서 DNS 설정 구성
 
@@ -21,6 +21,7 @@ ms.locfileid: "140742043"
 + 작업 3: 구성을 테스트할 가상 머신 만들기
 + 작업 4: 레코드가 DNS 영역에 있는지 확인
 
+#### <a name="estimated-time-25-minutes"></a>예상 소요 시간: 25분
 
 ## <a name="task-1-create-a-private-dns-zone"></a>작업 1: 프라이빗 DNS 영역 만들기
 
@@ -105,6 +106,8 @@ ms.locfileid: "140742043"
 이 섹션에서는 프라이빗 DNS 영역 구성을 테스트할 두 개의 테스트 VM을 만듭니다.
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
+    
+    > **참고:** Cloud Shell을 처음 연 경우에는 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. **스토리지 만들기** 를 선택합니다.
 
 2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고 드롭다운 메뉴에서 업로드를 선택한 다음 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 

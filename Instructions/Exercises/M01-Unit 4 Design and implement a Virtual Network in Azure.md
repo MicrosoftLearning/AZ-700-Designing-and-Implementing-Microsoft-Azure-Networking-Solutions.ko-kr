@@ -2,12 +2,12 @@
 Exercise:
   title: M01-단원 4 Azure에서 가상 네트워크 설계 및 구현
   module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: f44e23e80ce989065d4495586bb1ba0e5b90ec64
-ms.sourcegitcommit: 7e040d6fba448f60ca3262126db60cad96222bbc
+ms.openlocfilehash: 609406c98129f47e547e09bfe70b0d289ed95340
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2021
-ms.locfileid: "137819924"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922376"
 ---
 # <a name="m01-unit-4-design-and-implement-a-virtual-network-in-azure"></a>M01-단원 4 Azure에서 가상 네트워크 설계 및 구현
 
@@ -17,6 +17,8 @@ ms.locfileid: "137819924"
 이제 Azure Portal에서 가상 네트워크를 배포할 준비가 되었습니다.
 
 가상의 조직 Contoso Ltd.에서 인프라 및 애플리케이션을 Azure로 마이그레이션하는 과정에 있다고 가정해봅니다. 본인이 네트워크 엔지니어의 역할을 맡고 있어서 이러한 가상 네트워크의 리소스를 지원하기 위해 세 개의 가상 네트워크와 서브넷을 계획하고 구현해야 합니다.
+
+#### <a name="estimated-time-20-minutes"></a>예상 소요 시간: 20분
 
 **CoreServicesVnet** 가상 네트워크는 **미국 동부** 지역에 배포됩니다. 이 가상 네트워크에는 가장 많은 수의 리소스가 포함됩니다. 이 네트워크는 VPN 연결을 통해 온-프레미스 네트워크에 연결됩니다. 이 네트워크에는 웹 서비스, 데이터베이스 및 비즈니스 운영에 중요한 기타 시스템이 포함됩니다. 도메인 컨트롤러 및 DNS와 같은 공유 서비스도 여기에 있습니다. 많은 양의 증가가 예상되므로 이 가상 네트워크에는 대용량 주소 공간이 필요합니다.
 

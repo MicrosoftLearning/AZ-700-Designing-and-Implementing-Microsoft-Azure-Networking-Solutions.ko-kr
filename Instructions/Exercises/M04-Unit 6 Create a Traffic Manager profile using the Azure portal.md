@@ -2,16 +2,18 @@
 Exercise:
   title: M04-단원 6 Azure Portal을 사용하여 Traffic Manager 프로필 만들기
   module: Module - Load balancing non-HTTP(S) traffic in Azure
-ms.openlocfilehash: 1d04de9c9710cc452220b1f6c6cecc39ff130810
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: c285aaf46e98daa1fa95a0cf1ef603bb9674b2e5
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742007"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922331"
 ---
 # <a name="m04-unit-6-create-a-traffic-manager-profile-using-the-azure-portal"></a>M04-단원 6 Azure Portal을 사용하여 Traffic Manager 프로필 만들기
 
 이 연습에서는 가상의 Contoso Ltd 조직 웹 애플리케이션에 고가용성을 제공하는 Traffic Manager 프로필을 만듭니다. 
+
+#### <a name="estimated-time-35-minutes"></a>예상 시간: 35분
 
 서로 다른 두 지역(미국 동부와 서유럽)에 배포된 두 개의 웹 애플리케이션 인스턴스가 필요합니다. 미국 동부 지역은 Traffic Manager의 주 엔드포인트로, 서유럽 지역은 장애 조치(failover) 엔드포인트로 작동합니다.
 

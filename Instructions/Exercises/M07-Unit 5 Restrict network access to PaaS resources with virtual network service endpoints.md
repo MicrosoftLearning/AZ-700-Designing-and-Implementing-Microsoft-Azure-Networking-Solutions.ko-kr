@@ -2,12 +2,12 @@
 Exercise:
   title: M07-단원 5 가상 네트워크 서비스 엔드포인트로 PaaS 리소스에 대한 네트워크 액세스 제한
   module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 7769b75d3db52a3b802013dcf96cdc5528c33a4c
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 3dd388f4bed463f4e982e848bcec7e15598482a1
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140742049"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922379"
 ---
 # <a name="m07-unit-5-restrict-network-access-to-paas-resources-with-virtual-network-service-endpoints"></a>M07-단원 5 가상 네트워크 서비스 엔드포인트로 PaaS 리소스에 대한 네트워크 액세스 제한
 
@@ -27,6 +27,8 @@ ms.locfileid: "140742049"
 + 작업 9: 가상 머신 만들기
 + 작업 10: 스토리지 계정에 대한 액세스 확인
 + 작업 11: 리소스 정리
+
+#### <a name="estimated-time-35-minutes"></a>예상 시간: 35분
 
 ## <a name="task-1-create-a-virtual-network"></a>작업 1: 가상 네트워크 만들기
 
@@ -117,7 +119,8 @@ ms.locfileid: "140742049"
 
    | **설정**             | **값**                 |
    | ----------------------- | ------------------------- |
-   | 원본                  | **VirtualNetwork** 를 선택합니다. |
+   | 원본                  | **서비스 태그** 를 선택합니다.    |
+   | 원본 서비스 태그      | **VirtualNetwork** 를 선택합니다. |
    | 원본 포트 범위      | *                         |
    | 대상             | **서비스 태그** 를 선택합니다.    |
    | 대상 서비스 태그 | **스토리지** 를 선택합니다.        |
@@ -272,12 +275,14 @@ ms.locfileid: "140742049"
 5. 로그인 프로세스 중에 인증서 경고가 나타날 수 있습니다. 경고 메시지가 표시되면 예 또는 계속을 선택하여 연결을 계속합니다.
 6. ContosoPrivate VM에서 PowerShell을 사용하여 Azure 파일 공유를 Z 드라이브에 매핑합니다. 다음 명령을 실행하기 전에 <storage-account-key>, <storage-account-name>(즉, contosostoragexx), my-file-share(즉, 스토리지 계정 만들기 작업에서 입력했거나 가져온 값으로 바꿉니다.
 
-```Azure CLI
+
+```azurecli
 $acctKey = ConvertTo-SecureString -String "<storage-account-key>" -AsPlainText -Force
 
 $credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\<storage-account-name>", $acctKey
 
 New-PSDrive -Name Z -PSProvider FileSystem -Root "\\<storage-account-name>.file.core.windows.net\marketing" -Credential $credential
+
 ```
 
 Azure 파일 공유가 Z 드라이브에 매핑되었습니다.

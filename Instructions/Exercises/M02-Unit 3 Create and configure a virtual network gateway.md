@@ -2,12 +2,12 @@
 Exercise:
   title: M02-단원 3 가상 네트워크 게이트웨이 만들기 및 구성
   module: Module - Design and implement hybrid networking
-ms.openlocfilehash: be0108387a6618c00d5e950d6065a286d5694fc5
-ms.sourcegitcommit: 15778a5942c3177246f4fb1077d4233ddeaf95a2
+ms.openlocfilehash: 55c62023ebcc5f30e69649dca4a027f8d69878ac
+ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2022
-ms.locfileid: "140741992"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "147922343"
 ---
 # <a name="m02-unit-3-create-and-configure-a-virtual-network-gateway"></a>M02-단원 3 가상 네트워크 게이트웨이 만들기 및 구성
 
@@ -27,11 +27,13 @@ ms.locfileid: "140741992"
 + 작업 10: 연결 확인 
 + 작업 11: VM 간 연결 테스트
 
+#### <a name="estimated-time-70-minutes-including-45-minutes-deployment-waiting-time"></a>예상 시간: 70분(배포 대기 시간 ~45분 포함)
+
 ## <a name="task-1-create-coreservicesvnet-and-manufacturingvnet"></a>작업 1: CoreServicesVnet 및 ManufacturingVnet 만들기
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고 드롭다운 메뉴에서 업로드를 클릭한 다음 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 클릭하고 드롭다운 메뉴에서 업로드를 클릭한 다음, **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 원본 폴더 **F:\Allfiles\Exercises\M02** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크 및 서브넷을 만듭니다.
 
