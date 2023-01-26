@@ -1,13 +1,7 @@
 ---
 Exercise:
-  title: M01-단원 4 Azure에서 가상 네트워크 설계 및 구현
-  module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: 609406c98129f47e547e09bfe70b0d289ed95340
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922376"
+  title: M01 - 단원 4 Azure에서 가상 네트워크 설계 및 구현
+  module: Module 01 - Introduction to Azure Virtual Networks
 ---
 # <a name="m01-unit-4-design-and-implement-a-virtual-network-in-azure"></a>M01-단원 4 Azure에서 가상 네트워크 설계 및 구현
 
@@ -63,9 +57,9 @@ ms.locfileid: "147922376"
 
 1. [Azure 포털](https://portal.azure.com/)로 이동합니다.
 
-2. 홈페이지의 **Azure 서비스** 에서 **리소스 그룹** 을 선택합니다.  
+2. 홈페이지의 **Azure 서비스**에서 **리소스 그룹**을 선택합니다.  
 
-3. 리소스 그룹에서 **만들기** 를 선택합니다.
+3. 리소스 그룹에서 **만들기**를 선택합니다.
 
 4. 다음 표의 정보를 사용하여 리소스 그룹을 만듭니다.
 
@@ -74,17 +68,17 @@ ms.locfileid: "147922376"
 | 기본 사항          | Resource group                             | ContosoResourceGroup |
 |                 | 지역                                     | (미국) 미국 동부         |
 | 태그            | 변경 필요 없음                        |                      |
-| 검토 + 만들기 | 설정을 검토하고 **만들기** 를 선택합니다. |                      |
+| 검토 + 만들기 | 설정을 검토하고 **만들기**를 선택합니다. |                      |
 
 
-5. 리소스 그룹에서 **ContosoResourceGroup** 이 목록에 표시되는지 확인합니다.
+5. 리소스 그룹에서 **ContosoResourceGroup**이 목록에 표시되는지 확인합니다.
 
  
 
 ## <a name="task-2-create-the-coreservicesvnet-virtual-network-and-subnets"></a>작업 2: CoreServicesVnet 가상 네트워크 및 서브넷 만들기
 
-1. Azure Portal 홈페이지에서 전역 검색 표시줄로 이동하여 **가상 네트워크** 를 검색하고 서비스 아래에서 가상 네트워크를 선택합니다.  ![가상 네트워크에 대한 Azure Portal 홈페이지 전역 검색 표시줄 결과](../media/global-search-bar.PNG)
-2. 가상 네트워크 페이지에서 **만들기** 를 선택합니다.  ![가상 네트워크 만들기 마법사](../media/create-virtual-network.png)
+1. Azure Portal 홈페이지에서 전역 검색 표시줄로 이동하여 **가상 네트워크**를 검색하고 서비스 아래에서 가상 네트워크를 선택합니다.  ![가상 네트워크에 대한 Azure Portal 홈페이지 전역 검색 표시줄 결과](../media/global-search-bar.PNG)
+2. 가상 네트워크 페이지에서 **만들기**를 선택합니다.  ![가상 네트워크 만들기 마법사](../media/create-virtual-network.png)
 3. 다음 표의 정보를 사용하여 CoreServicesVnet 가상 네트워크를 만듭니다.  
    ‎기본 IP 주소 공간 제거 또는 덮어쓰기![Azure 가상 네트워크 배포용 IP 주소 구성  ](../media/default-vnet-ip-address-range-annotated.png)
 
@@ -99,7 +93,7 @@ ms.locfileid: "147922376"
 
  4. 다음 표의 정보를 사용하여 CoreServicesVnet 서브넷을 만듭니다.
 
- 5. 각 서브넷 만들기를 시작하려면 **+ 서브넷 추가** 를 선택합니다. 각 서브넷 만들기를 마치려면 **추가** 를 선택합니다.
+ 5. 각 서브넷 만들기를 시작하려면 **+ 서브넷 추가**를 선택합니다. 각 서브넷 만들기를 마치려면 **추가**를 선택합니다.
 
 | **서브넷**             | **옵션**           | **값**              |
 | ---------------------- | -------------------- | ---------------------- |
@@ -112,9 +106,9 @@ ms.locfileid: "147922376"
 | PublicWebServiceSubnet | 서브넷 이름          | PublicWebServiceSubnet |
 |                        | 서브넷 주소 범위 | 10.20.30.0/24          |
 
- 6. CoreServicesVnet 및 연결된 서브넷 만들기를 마치려면 **검토 + 만들기** 를 선택합니다.
+ 6. CoreServicesVnet 및 연결된 서브넷 만들기를 마치려면 **검토 + 만들기**를 선택합니다.
 
- 7. 구성이 유효성 검사를 통과했는지 확인한 다음 **만들기** 를 선택합니다.
+ 7. 구성이 유효성 검사를 통과했는지 확인한 다음 **만들기**를 선택합니다.
  
  8. 아래 표에 따라 각 VNet마다 1 -8 단계를 반복합니다.  
 
@@ -160,15 +154,15 @@ ms.locfileid: "147922376"
 
 ## <a name="task-5-verify-the-creation-of-vnets-and-subnets"></a>작업 5: VNet 및 서브넷 만들기 확인
 
-1. Azure Portal 홈페이지에서 **모든 리소스** 를 선택합니다.
+1. Azure Portal 홈페이지에서 **모든 리소스**를 선택합니다.
 
 2. CoreServicesVnet, ManufacturingVnet 및 ResearchVnet이 표시되는지 확인합니다.
 
 3. Azure는 사용하는 각 지역에 대해 NetworkWatchers를 만듭니다.
 
-4. **CoreServicesVnet** 을 선택합니다. 
+4. **CoreServicesVnet**을 선택합니다. 
 
-5. CoreServicesVnet의 **설정** 에서 **서브넷** 을 선택합니다.
+5. CoreServicesVnet의 **설정**에서 **서브넷**을 선택합니다.
 
 6. CoreServicesVnet | 서브넷에서, 만든 서브넷이 나열되고 IP 주소 범위가 맞는지 확인합니다.
 

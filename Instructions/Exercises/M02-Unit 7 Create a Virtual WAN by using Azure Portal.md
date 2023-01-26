@@ -1,14 +1,9 @@
 ---
 Exercise:
-  title: M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
-  module: Module - Design and implement hybrid networking
-ms.openlocfilehash: 0d1cdaad19959b5c284618d3e55c2a0c7068e9b1
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922322"
+  title: M02 - 단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
+  module: Module 02 - Design and implement hybrid networking
 ---
+
 # <a name="m02-unit-7-create-a-virtual-wan-by-using-azure-portal"></a>M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
 
 
@@ -29,13 +24,13 @@ ms.locfileid: "147922322"
 
 1. 브라우저에서 Azure Portal로 이동하고 Azure 계정으로 로그인합니다.
 
-2. 포털에서 검색창에 Virtual WAN을 입력하고 결과 목록에서 **Virtual WAN** 을 선택합니다.
+2. 포털에서 검색창에 Virtual WAN을 입력하고 결과 목록에서 **Virtual WAN**을 선택합니다.
 
    ![Azure Portal에서 Virtual WAN 검색](../media/search-for-virtual-wan.png)
 
  
 
-3. Virtual WAN 페이지에서 + **만들기** 를 선택합니다. 
+3. Virtual WAN 페이지에서 + **만들기**를 선택합니다. 
 
 4. WAN 만들기 페이지의 **기본 사항** 탭에서 다음 필드를 입력합니다.
 
@@ -49,17 +44,17 @@ ms.locfileid: "147922322"
 
    - **유형:** 표준 
 
-5. 필드를 채운 후 **검토 + 만들기** 를 선택합니다.
+5. 필드를 채운 후 **검토 + 만들기**를 선택합니다.
 
-6. 유효성 검사를 통과하면 **만들기** 를 선택하여 Virtual WAN을 만듭니다.
+6. 유효성 검사를 통과하면 **만들기**를 선택하여 Virtual WAN을 만듭니다.
 
 ## <a name="task-2-create-a-hub-by-using-azure-portal"></a>작업 2: Azure Portal을 사용하여 허브 만들기
 
 허브는 사이트 간, ExpressRoute 또는 지점 및 사이트 간 기능을 위한 게이트웨이를 포함합니다. 가상 허브에서 사이트 간 VPN 게이트웨이를 만드는 데 30분이 소요됩니다. 허브를 만들려면 먼저 Virtual WAN을 만들어야 합니다.
 
 1. 생성한 Virtual WAN을 찾습니다. 
-2. Virtual WAN 페이지의 **연결** 에서 **허브** 를 선택합니다.
-3. 허브 페이지에서 **+새 허브** 를 선택하여 가상 허브 만들기 페이지를 엽니다.
+2. Virtual WAN 페이지의 **연결**에서 **허브**를 선택합니다.
+3. 허브 페이지에서 **+새 허브**를 선택하여 가상 허브 만들기 페이지를 엽니다.
    ![가상 허브, 기본 사항 탭을 만듭니다.](../media/create-vwan-hub.png)
 4. 가상 허브 만들기 페이지의 **기본 사항** 탭에서 다음 필드를 완료합니다.
    - **지역:** 미국 서부
@@ -71,19 +66,19 @@ ms.locfileid: "147922322"
    - **사이트 간 (VPN Gateway)를 만드시겠습니까?** 예
    - **AS 번호** 필드는 편집할 수 없습니다.
    - **게이트웨이 배율 단위** 1 배율 단위 = 500Mbps x 2
-7. **검토 + 만들기** 를 선택하여 유효한지 확인합니다.
-8. **만들기** 를 선택하여 허브를 만듭니다. 
-9. 30분 후에 **새로 고침** 을 선택하여 허브 페이지에서 허브를 봅니다. 
+7. **검토 + 만들기**를 선택하여 유효한지 확인합니다.
+8. **만들기**를 선택하여 허브를 만듭니다. 
+9. 30분 후에 **새로 고침**을 선택하여 허브 페이지에서 허브를 봅니다. 
 
 ## <a name="task-3-connect-a-vnet-to-the-virtual-hub"></a>작업 3: 가상 허브에 VNet 연결
 
 1. 생성한 Virtual WAN을 찾습니다. 
 
-2. ContosoVirtualWAN의 **연결** 에서 **가상 네트워크 연결** 을 선택합니다.
+2. ContosoVirtualWAN의 **연결**에서 **가상 네트워크 연결**을 선택합니다.
 
    ![가상 네트워크 연결이 강조 표시된 Virtual WAN 구성 페이지.](../media/connect-vnet-to-virtual-hub.png)
 
-3. ContosoVirtualWAN | 가상 네트워크 연결에서 **+ 연결 추가** 를 선택합니다.
+3. ContosoVirtualWAN | 가상 네트워크 연결에서 **+ 연결 추가**를 선택합니다.
 
 4. 연결 추가에서 다음 정보를 사용하여 연결을 만듭니다.
 
@@ -101,7 +96,7 @@ ms.locfileid: "147922322"
 
    - **경로 테이블 연결:** 기본
 
-5. **만들기** 를 선택합니다.
+5. **만들기**를 선택합니다.
 
  
 

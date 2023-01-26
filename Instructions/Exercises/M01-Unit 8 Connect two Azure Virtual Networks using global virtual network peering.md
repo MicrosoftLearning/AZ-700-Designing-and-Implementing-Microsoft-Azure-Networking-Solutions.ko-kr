@@ -1,13 +1,7 @@
 ---
 Exercise:
-  title: M01-단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
-  module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: d93ebe915fbdf9b4e7acd69695e3de3ea214f7c3
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922373"
+  title: M01 - 단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
+  module: Module 01 - Introduction to Azure Virtual Networks
 ---
 # <a name="m01-unit-8-connect-two-azure-virtual-networks-using-global-virtual-network-peering"></a>M01-단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
 
@@ -33,7 +27,7 @@ ms.locfileid: "147922373"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고 드롭다운 메뉴에서 업로드를 선택한 다음 **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고 드롭다운 메뉴에서 업로드를 선택한 다음 **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -43,39 +37,39 @@ ms.locfileid: "147922373"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
    ```
   
-4. 배포가 완료되면 Azure Portal 홈페이지로 이동한 다음 **가상 머신** 을 선택합니다.
+4. 배포가 완료되면 Azure Portal 홈페이지로 이동한 다음 **가상 머신**을 선택합니다.
 
 5. 가상 머신이 만들어졌는지 확인합니다.
 
 ## <a name="task-2-connect-to-the-test-vms-using-rdp"></a>작업 2: RDP를 사용하여 테스트 VM에 연결
 
-1. Azure Portal 홈 페이지에서 **가상 머신** 을 선택합니다.
+1. Azure Portal 홈 페이지에서 **가상 머신**을 선택합니다.
 
-2. **ManufacturingVM** 을 선택합니다.
+2. **ManufacturingVM**을 선택합니다.
 
-3. ManufacturingVM에서 **연결 &gt; RDP** 를 선택합니다.
+3. ManufacturingVM에서 **연결 &gt; RDP**를 선택합니다.
 
-4. ManufacturingVM | 연결에서 **RDP 파일 다운로드** 를 선택합니다.
+4. ManufacturingVM | 연결에서 **RDP 파일 다운로드**를 선택합니다.
 
 5. RDP 파일을 바탕화면에 저장합니다.
 
 6. RDP 파일과 사용자 이름 **TestUser** 및 암호 **TestPa$$w0rd!** 를 사용하여 ManufacturingVM에 연결합니다.
 
-7. Azure Portal 홈 페이지에서 **가상 머신** 을 선택합니다.
+7. Azure Portal 홈 페이지에서 **가상 머신**을 선택합니다.
 
-8. **TestVM1** 을 선택합니다.
+8. **TestVM1**을 선택합니다.
 
-9. TestVM1에서 **연결 &gt; RDP** 를 선택합니다.
+9. TestVM1에서 **연결 &gt; RDP**를 선택합니다.
 
-10. TestVM1 | 연결에서 **RDP 파일 다운로드** 를 선택합니다.
+10. TestVM1 | 연결에서 **RDP 파일 다운로드**를 선택합니다.
 
 11. RDP 파일을 바탕화면에 저장합니다.
 
 12. RDP 파일과 사용자 이름 **TestUser** 및 암호 **TestPa$$w0rd!** 를 사용하여 TestVM1에 연결합니다.
 
-13. 두 VM의 **디바이스에 대한 개인 정보 설정 선택** 에서 **동의** 를 선택합니다.
+13. 두 VM의 **디바이스에 대한 개인 정보 설정 선택**에서 **동의**를 선택합니다.
 
-14. 두 VM의 **네트워크** 에서 **예** 를 선택합니다.
+14. 두 VM의 **네트워크**에서 **예**를 선택합니다.
 
 15. TestVM1에서 PowerShell 프롬프트를 열고 다음 명령, ipconfig를 실행합니다.
 
@@ -100,12 +94,12 @@ ms.locfileid: "147922373"
 
 ## <a name="task-4-create-vnet-peerings-between-coreservicesvnet-and-manufacturingvnet"></a>작업 4: CoreServicesVnet과 ManufacturingVnet 사이에 VNet 피어링 만들기
 
-1. Azure 홈페이지에서 **가상 네트워크** 를 선택한 다음 **CoreServicesVnet** 을 선택합니다.
+1. Azure 홈페이지에서 **가상 네트워크**를 선택한 다음 **CoreServicesVnet**을 선택합니다.
 
-2. CoreServicesVnet의 **설정** 에서 **피어링** 을 선택합니다.
+2. CoreServicesVnet의 **설정**에서 **피어링**을 선택합니다.
    ![핵심 서비스 VNet 피어링 설정 스크린샷 ](../media/create-peering-on-coreservicesvnet.png)
 
-3. CoreServicesVnet | 피어링에서 **+ 추가** 를 선택합니다.
+3. CoreServicesVnet | 피어링에서 **+ 추가**를 선택합니다.
 
 4. 다음 표의 정보를 사용하여 피어링을 만듭니다.
 
@@ -132,7 +126,7 @@ ms.locfileid: "147922373"
 
 5. CoreServicesVnet | 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 표시되는지 확인합니다.
 
-6. 가상 네트워크에서 **ManufacturingVnet** 을 선택하고, **ManufacturingVnet-to-CoreServicesVnet** 피어링이 표시되는지 확인합니다.
+6. 가상 네트워크에서 **ManufacturingVnet**을 선택하고, **ManufacturingVnet-to-CoreServicesVnet** 피어링이 표시되는지 확인합니다.
 
  
 
