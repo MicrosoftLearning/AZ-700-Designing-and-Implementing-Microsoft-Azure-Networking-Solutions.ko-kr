@@ -1,14 +1,9 @@
 ---
 Exercise:
   title: M01 - 단원 6 Azure에서 DNS 설정 구성
-  module: Module - Introduction to Azure Virtual Networks
-ms.openlocfilehash: e6a21f21c87ff92e0e8a1a245d5b1fab477ce271
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922325"
+  module: Module 01 - Introduction to Azure Virtual Networks
 ---
+
 # <a name="m01---unit-6-configure-dns-settings-in-azure"></a>M01 - 단원 6 Azure에서 DNS 설정 구성
 
 ## <a name="exercise-scenario"></a>연습 시나리오 
@@ -27,10 +22,10 @@ ms.locfileid: "147922325"
 
 1. [Azure Portal](https://portal.azure.com/)로 이동합니다.
 
-2. Azure 홈페이지의 검색 창에 dns를 입력한 다음 **프라이빗 DNS 영역** 을 선택합니다.  
+2. Azure 홈페이지의 검색 창에 dns를 입력한 다음 **프라이빗 DNS 영역**을 선택합니다.  
    ‎![DNS를 검색한 Azure Portal 홈 페이지](../media/create-private-dns-zone.png)
 
-3. 프라이빗 DNS 영역에서 **만들기** 를 선택합니다.
+3. 프라이빗 DNS 영역에서 **만들기**를 선택합니다.
 
 4. 다음 표의 정보를 사용하여 프라이빗 DNS 영역을 만듭니다.
 
@@ -42,15 +37,15 @@ ms.locfileid: "147922325"
 | 검토 + 만들기 | 설정 검토 및 만들기 선택 |                      |
 
 
-5. 배포가 완료될 때까지 기다렸다가 **리소스로 이동** 을 선택합니다.
+5. 배포가 완료될 때까지 기다렸다가 **리소스로 이동**을 선택합니다.
 
 6. 영역이 만들어졌는지 확인합니다.
 
 ## <a name="task-2-link-subnet-for-auto-registration"></a>작업 2: 자동 등록을 위한 서브넷 연결
 
-1. Contoso.com의 **설정** 에서 **가상 네트워크 링크** 를 선택합니다.
+1. Contoso.com의 **설정**에서 **가상 네트워크 링크**를 선택합니다.
 
-2. Contoso.com | 가상 네트워크 링크에서 **+ 추가** 를 선택합니다.
+2. Contoso.com | 가상 네트워크 링크에서 **+ 추가**를 선택합니다.
 
 ![+ 추가가 강조 표시된 contoso.com | 가상 링크.](../media/add-network-link-dns.png)
 
@@ -65,7 +60,7 @@ ms.locfileid: "147922325"
 | 설정을 검토하고 확인을 선택합니다. |                                         |
 
 
-4. **새로 고침** 을 선택합니다.
+4. **새로 고침**을 선택합니다.
 
 5. CoreServicesVnetLink가 생성되었는지와 자동 등록이 설정되는지 확인합니다.
 
@@ -80,7 +75,7 @@ ms.locfileid: "147922325"
 | 설정을 검토하고 확인을 선택합니다. |                                          |
 
 
-7. **새로 고침** 을 선택합니다.
+7. **새로 고침**을 선택합니다.
 
 8. ManufacturingVnetLink가 생성되었는지와 자동 등록이 설정되는지 확인합니다.
 
@@ -95,7 +90,7 @@ ms.locfileid: "147922325"
 | 설정을 검토하고 확인을 선택합니다. |                                     |
 
 
-10. **새로 고침** 을 선택합니다.
+10. **새로 고침**을 선택합니다.
 
 11. ResearchVnetLink가 생성되었는지와 자동 등록이 설정되는지 확인합니다.
 
@@ -107,9 +102,9 @@ ms.locfileid: "147922325"
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
     
-    > **참고:** Cloud Shell을 처음 연 경우에는 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. **스토리지 만들기** 를 선택합니다.
+    > **참고:** Cloud Shell을 처음 연 경우에는 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. **스토리지 만들기**를 선택합니다.
 
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고 드롭다운 메뉴에서 업로드를 선택한 다음 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01** 의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고 드롭다운 메뉴에서 업로드를 선택한 다음 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -119,7 +114,7 @@ ms.locfileid: "147922325"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
   
-4. 배포가 완료되면 Azure Portal 홈페이지로 이동한 다음 **가상 머신** 을 선택합니다.
+4. 배포가 완료되면 Azure Portal 홈페이지로 이동한 다음 **가상 머신**을 선택합니다.
 
 5. 두 가상 머신이 모두 만들어졌는지 확인합니다.
 
@@ -127,9 +122,9 @@ ms.locfileid: "147922325"
 
 ## <a name="task-4-verify-records-are-present-in-the-dns-zone"></a>작업 4: 레코드가 DNS 영역에 있는지 확인
 
-1. Azure Portal 홈 페이지에서 **프라이빗 DNS 영역** 을 선택합니다.
+1. Azure Portal 홈 페이지에서 **프라이빗 DNS 영역**을 선택합니다.
 
-2. 프라이빗 DNS 영역에서 **contoso.com** 을 선택합니다.
+2. 프라이빗 DNS 영역에서 **contoso.com**을 선택합니다.
 
 3. 다음과 같이 두 VM 모두 호스트 (A) 레코드가 표시되는지 확인합니다.
 
@@ -143,25 +138,25 @@ ms.locfileid: "147922325"
 
 ### <a name="connect-to-the-test-vms-using-rdp"></a>RDP를 사용하여 테스트 VM에 연결
 
-1. Azure Portal 홈 페이지에서 **가상 머신** 을 선택합니다.
+1. Azure Portal 홈 페이지에서 **가상 머신**을 선택합니다.
 
-2. **TestVM1** 을 선택합니다.
+2. **TestVM1**을 선택합니다.
 
-3. TestVM1에서 **연결 &gt; RDP** 를 선택합니다.
+3. TestVM1에서 **연결 &gt; RDP**를 선택합니다.
 
 ![연결과 RDP가 강조 표시된 TestVM1.](../media/connect-to-am.png)
 
-4. TestVM1 | 연결에서 **RDP 파일 다운로드** 를 선택합니다.
+4. TestVM1 | 연결에서 **RDP 파일 다운로드**를 선택합니다.
 
 5. RDP 파일을 바탕화면에 저장합니다.
 
-6. Azure Portal 홈 페이지에서 **가상 머신** 을 선택합니다.
+6. Azure Portal 홈 페이지에서 **가상 머신**을 선택합니다.
 
-7. **TestVM2** 를 선택합니다.
+7. **TestVM2**를 선택합니다.
 
-8. TestVM2에서 **연결 &gt; RDP** 를 선택합니다.
+8. TestVM2에서 **연결 &gt; RDP**를 선택합니다.
 
-9. TestVM2 | 연결에서 **RDP 파일 다운로드** 를 선택합니다.
+9. TestVM2 | 연결에서 **RDP 파일 다운로드**를 선택합니다.
 
 10. RDP 파일을 바탕화면에 저장합니다.
 
@@ -169,9 +164,9 @@ ms.locfileid: "147922325"
 
 12. RDP 파일과 사용자 이름 **TestUser** 및 암호 **TestPa$$w0rd!** 를 사용하여 TestVM2에 연결합니다.
 
-13. 두 VM의 **디바이스에 대한 개인 정보 설정 선택** 에서 **동의** 를 선택합니다.
+13. 두 VM의 **디바이스에 대한 개인 정보 설정 선택**에서 **동의**를 선택합니다.
 
-14. 메시지가 표시되면 두 VM의 **네트워크** 에서 **예** 를 선택합니다.
+14. 메시지가 표시되면 두 VM의 **네트워크**에서 **예**를 선택합니다.
 
 15. TestVM1에서 명령 프롬프트를 열고 ipconfig /all 명령을 입력합니다.
 

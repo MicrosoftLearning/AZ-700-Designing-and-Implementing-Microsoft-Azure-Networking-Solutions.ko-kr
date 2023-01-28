@@ -1,13 +1,7 @@
 ---
 Exercise:
-  title: M03-단원 5 ExpressRoute 회로 프로비전
-  module: Module - Design and implement Azure ExpressRoute
-ms.openlocfilehash: 9e65cbcb5b746b1b6a63139c9e7ee9973ddb8a5b
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922334"
+  title: M03 - 단원 5 ExpressRoute 회로 프로비전
+  module: Module 03 - Design and implement Azure ExpressRoute
 ---
 # <a name="m03-unit-5-provision-an-expressroute-circuit"></a>M03-단원 5 ExpressRoute 회로 프로비전
 
@@ -37,20 +31,20 @@ ms.locfileid: "147922334"
    >
    > ExpressRoute 회로는 서비스 키가 발급된 순간부터 비용이 청구됩니다. 연결 공급자가 회로를 프로비전할 준비가 된 후에 이 작업을 수행하도록 하십시오.
 
-2. Azure Portal 메뉴에서 **+ 리소스 만들기** 를 선택합니다. **네트워킹** 을 선택하고 다음 그림과 같이 **ExpressRoute** 를 선택합니다. ExpressRoute가 목록에 없으면 **마켓플레이스 검색** 을 사용하여 검색합니다.
+2. Azure Portal 메뉴에서 **+ 리소스 만들기**를 선택합니다. **네트워킹**을 선택하고 다음 그림과 같이 **ExpressRoute**를 선택합니다. ExpressRoute가 목록에 없으면 **마켓플레이스 검색**을 사용하여 검색합니다.
 
    ![Azure Portal - ExpressRoute 회로 만들기 메뉴](../media/create-expressroute-circuit-menu.png)
 
-3. **ExpressRoute 만들기** 페이지에서 회로의 **리소스 그룹**, **지역** 및 **이름** 을 다음과 같이 입력합니다. ExpressRouteResourceGroup, 미국 동부 2, TestERCircuit. 그다움에 **다음: 구성&gt;** 을 클릭합니다.
+3. **ExpressRoute 만들기** 페이지에서 회로의 **리소스 그룹**, **지역** 및 **이름**을 다음과 같이 입력합니다. ExpressRouteResourceGroup, 미국 동부 2, TestERCircuit. 그다움에 **다음: 구성&gt;** 을 클릭합니다.
 
-4. 이 페이지의 값을 입력할 때 올바른 SKU 계층(로컬, 표준, 프리미엄) 및 데이터 계량 청구 모델(무제한 또는 데이터 요금제)을 지정해야 합니다.
+4. 이 페이지의 값을 입력하는 경우, 이 예제에서는 올바른 SKU 계층(**표준**) 데이터 계량 청구 모델(**요금제**) 공급자(**Equinix**) 피어링 위치(**시애틀**) 및 대역폭(**50Mbps**)을 지정해야 합니다.
 
-5. **검토 + 생성** 를 선택합니다.
+5. **검토 + 생성**를 선택합니다.
 
-6. ExpressRoute 구성이 유효성 검사를 통과하는지 확인한 다음, **만들기** 를 선택합니다.
+6. ExpressRoute 구성이 유효성 검사를 통과하는지 확인한 다음, **만들기**를 선택합니다.
 
 
-![Azure Portal - ExpressRoute 만들기 구성 탭](../media/expressroute-create-configuration.png)
+![Azure Portal - ExpressRoute 만들기 구성 탭](../media/expressroute-create-configuration2.png)
 
  
 
@@ -63,24 +57,24 @@ ms.locfileid: "147922334"
 >
 > 피어링 위치는 Microsoft와 피어링하는 [물리적 위치](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-locations)를 나타냅니다. 이 위치는 Azure Network Resource Provider가 있는 지리적 위치를 참조하는 "Location" 속성에 연결되지 않습니다 . 이 속성에 연결되지 않는 대신 회로의 피어링 위치와 지리적으로 가까운 네트워크 리소스 공급자를 선택 하는 것이 좋습니다.
 
-- **SKU** 는 ExpressRoute 로컬, ExpressRoute 표준 또는 ExpressRoute 프리미엄 추가 기능이 사용되는지 여부를 결정합니다. **로컬** 을 지정하여 로컬 SKU를 가져오거나, **표준** 을 지정하여 표준 SKU를 가져오거나, 프리미엄 추가 기능을 위해 **프리미엄** 을 지정할 수 있습니다. SKU를 변경하여 프리미엄 추가 기능을 사용하도록 설정할 수 있습니다.
+- **SKU**는 ExpressRoute 로컬, ExpressRoute 표준 또는 ExpressRoute 프리미엄 추가 기능이 사용되는지 여부를 결정합니다. **로컬**을 지정하여 로컬 SKU를 가져오거나, **표준**을 지정하여 표준 SKU를 가져오거나, 프리미엄 추가 기능을 위해 **프리미엄**을 지정할 수 있습니다. SKU를 변경하여 프리미엄 추가 기능을 사용하도록 설정할 수 있습니다.
 
 > [!Important]
 >
 > SKU를 표준/프리미엄에서 로컬로 변경할 수 없습니다.
 
-- **청구 모델** 은 청구서 유형을 결정합니다. 데이터 요금제의 경우 **Metered** 를 선택하고 무제한 데이터 요금제의 경우 **Unlimited** 를 선택할 수 있습니다. 청구 유형을 **Metered** 에서 **Unlimited** 로 변경할 수 있습니다.
+- **청구 모델**은 청구서 유형을 결정합니다. 데이터 요금제의 경우 **Metered**를 선택하고 무제한 데이터 요금제의 경우 **Unlimited**를 선택할 수 있습니다. 청구 유형을 **Metered**에서 **Unlimited**로 변경할 수 있습니다.
 
 > [!Important]
 >
 > 청구 유형을 무제한에서 데이터 요금제로 변경할 수는 없습니다.
 
-- **클래식 작업 허용** 을 사용하여 클래식 가상 네트워크를 회로에 연결할 수 있습니다.
+- **클래식 작업 허용**을 사용하여 클래식 가상 네트워크를 회로에 연결할 수 있습니다.
 
 ## <a name="task-2-retrieve-your-service-key"></a>작업 2: 서비스 키 검색
  
 
-1. **모든 서비스 &gt; 네트워킹 &gt; ExpressRoute 회로** 를 선택하여 만든 모든 회로를 볼 수 있습니다.
+1. **모든 서비스 &gt; 네트워킹 &gt; ExpressRoute 회로**를 선택하여 만든 모든 회로를 볼 수 있습니다.
 
    ![Azure Portal - ExpressRoute 만들기 리소스 메뉴](../media/expressroute-circuit-menu.png)
 
@@ -92,7 +86,7 @@ ms.locfileid: "147922334"
 
    ![Azure Portal - 서비스 키를 표시하는 ExpressRoute 회로 속성](../media/expressroute-circuit-overview.png)
 
-4. 이 페이지에서 **공급자 상태** 는 서비스 공급자 측의 현재 프로비저닝 상태를 제공합니다. **회로 상태** 는 Microsoft 측의 상태를 제공합니다. 
+4. 이 페이지에서 **공급자 상태**는 서비스 공급자 측의 현재 프로비저닝 상태를 제공합니다. **회로 상태**는 Microsoft 측의 상태를 제공합니다. 
 
 5. 새 ExpressRoute 회로를 만들면 회로는 다음 상태가 됩니다.
 
@@ -112,13 +106,12 @@ ms.locfileid: "147922334"
 ![Azure Portal - 상태가 이제 프로비저닝됨을 표시하는 ExpressRoute 회로 속성](../media/provisioned.png)
 
  
-ExpressRoute 회로를 만들고 프로비저닝하는 방법의 데모를 [Azure ExpressRoute - ExpressRoute 회로를 만드는 방법 | Azure | Channel 9(msdn.com)](https://channel9.msdn.com/Blogs/Azure/Azure-ExpressRoute-How-to-create-an-ExpressRoute-circuit?term=ExpressRoute&lang-en=true&pageSize=15&skip=15)에서 시청하세요. 
 
 축하합니다! ExpressRoute 회로를 만들었고 회로 프로비저닝을 완료하는 데 필요한 서비스 키를 찾았습니다.
 
 ## <a name="task-3-deprovisioning-an-expressroute-circuit"></a>작업 3: ExpressRoute 회로 프로비저닝 해제
 
-ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저닝 중** 또는 **프로비저닝됨** 인 경우에는 서비스 공급자에게 회로 프로비저닝 해제를 요청해야 합니다. Microsoft는 서비스 공급자가 회로 프로비저닝 해제를 완료하고 알릴 때까지 계속해서 리소스를 예약하고 요금을 청구합니다.
+ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저닝 중** 또는 **프로비저닝됨**인 경우에는 서비스 공급자에게 회로 프로비저닝 해제를 요청해야 합니다. Microsoft는 서비스 공급자가 회로 프로비저닝 해제를 완료하고 알릴 때까지 계속해서 리소스를 예약하고 요금을 청구합니다.
 
 > [!Note]
 >

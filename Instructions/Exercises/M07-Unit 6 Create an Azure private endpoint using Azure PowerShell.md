@@ -1,14 +1,9 @@
 ---
 Exercise:
-  title: M07-단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기
-  module: Module - Design and implement private access to Azure Services
-ms.openlocfilehash: 13ad6214d9814bcf39794f9e4bd91d22f5371a02
-ms.sourcegitcommit: e98d709ed0f96f3c8e8c4e74c3aea821dff153ca
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2022
-ms.locfileid: "147922370"
+  title: M07 - 단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기
+  module: Module 07 - Design and implement private access to Azure Services
 ---
+
 # <a name="m07-unit-6-create-an-azure-private-endpoint-using-azure-powershell"></a>M07-단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기
 
 Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Private Link를 시작합니다. Portal, CLI, PowerShell 등의 다양한 방법을 사용하여 엔드포인트를 만들 수 있습니다. 
@@ -27,7 +22,7 @@ Azure SQL과 Azure Storage 같은 다양한 종류의 Azure 서비스에 대한 
 
 - 아래 단계에서는 필요한 리소스 그룹과 웹앱을 만드는 방법을 살펴봅니다.
 
-1. M07 폴더에서 **parameters.json** 을 찾아서 엽니다. 메모장에서 열어 “value” 줄을 찾습니다. "GEN-UNIQUE". 자리 표시자 GEN-UNIQUE 문자열을 웹앱 이름의 고유 값으로 바꿉니다. 이 변경 사항을 저장합니다.
+1. M07 폴더에서 **parameters.json**을 찾아서 엽니다. 메모장에서 열어 “value” 줄을 찾습니다. "GEN-UNIQUE". 자리 표시자 GEN-UNIQUE 문자열을 웹앱 이름의 고유 값으로 바꿉니다. 이 변경 사항을 저장합니다.
 
 2. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
@@ -379,13 +374,13 @@ New-AzPrivateDnsZoneGroup @parameters4
 
 1.  [Azure 포털](https://portal.azure.com/)
 
-2.  왼쪽 탐색 창에서 **리소스 그룹** 을 선택합니다.
+2.  왼쪽 탐색 창에서 **리소스 그룹**을 선택합니다.
 
-3. **CreatePrivateEndpointQS-rg** 를 선택합니다.
+3. **CreatePrivateEndpointQS-rg**를 선택합니다.
 
-4. **myVM** 을 선택합니다.
+4. **myVM**을 선택합니다.
 
-5. **myVM** 에 대한 개요 페이지에서 **연결** 을 선택한 다음, **Bastion** 을 선택합니다.
+5. **myVM**에 대한 개요 페이지에서 **연결**을 선택한 다음, **Bastion**을 선택합니다.
 
 6. 파란색 **Bastion 사용** 단추를 선택합니다.
 
@@ -410,12 +405,12 @@ New-AzPrivateDnsZoneGroup @parameters4
   ```  
 
 
-웹앱 이름에 대해 **10.0.0.5** 의 개인 IP 주소가 반환됩니다. 이 주소는 이전에 만든 가상 네트워크의 서브넷에 있습니다.
+웹앱 이름에 대해 **10.0.0.5**의 개인 IP 주소가 반환됩니다. 이 주소는 이전에 만든 가상 네트워크의 서브넷에 있습니다.
 
-1. **myVM** 에 대한 베스천 연결에서 Internet Explorer를 엽니다.
-2. 웹앱의 URL, **https://&lt;your-webapp-name&gt;.azurewebsites.net** 을 입력합니다.
+1. **myVM**에 대한 베스천 연결에서 Internet Explorer를 엽니다.
+2. 웹앱의 URL, **https://&lt;your-webapp-name&gt;.azurewebsites.net**을 입력합니다.
 3. 애플리케이션이 배포되지 않은 경우 기본 웹앱 페이지를 받게 됩니다. ![앱 서비스가 실행 중임을 나타내는 Azure 페이지의 스크린샷](../media/web-app-default-page.png)
-4. **myVM** 에 대한 연결을 닫습니다. 
+4. **myVM**에 대한 연결을 닫습니다. 
 
 ## <a name="task-7-clean-up-resources"></a>작업 7: 리소스 정리
 
