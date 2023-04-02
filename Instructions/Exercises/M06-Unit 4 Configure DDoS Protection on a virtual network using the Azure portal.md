@@ -4,7 +4,7 @@ Exercise:
   module: Module 06 - Design and implement network security
 ---
 
-# <a name="m06-unit-4-configure-ddos-protection-on-a-virtual-network-using-the-azure-portal"></a>M06-단원 4 Azure Portal을 사용하여 가상 네트워크에서 DDoS 보호 구성
+# M06-단원 4 Azure Portal을 사용하여 가상 네트워크에서 DDoS 보호 구성
 
 Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모의 DDoS 공격을 실행하려고 합니다. 다음 단계는 가상 네트워크를 만들고, DDoS Protection을 구성하고, 원격 분석 및 메트릭의 도움을 통해 관찰하고 모니터링할 수 있는 공격을 만드는 과정을 안내합니다.
 
@@ -21,9 +21,9 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
 
 
-#### <a name="estimated-time-40-minutes"></a>예상 시간: 40분
+#### 예상 시간: 40분
 
-## <a name="task-1-create-a-resource-group"></a>작업 1: 리소스 그룹 만들기
+## 작업 1: 리소스 그룹 만들기
 
 1. Azure 계정에 로그인
 
@@ -41,7 +41,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
 
 
-## <a name="task-2-create-a-ddos-protection-plan"></a>작업 2: DDoS 보호 계획 만들기
+## 작업 2: DDoS 보호 계획 만들기
 
 1. Azure Portal 홈페이지에서 검색 상자에 **DDoS**를 입력한 다음, **DDoS 보호 계획**이 표시되면 선택합니다.
 
@@ -55,7 +55,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
  
 
-## <a name="task-3-enable-ddos-protection-on-a-new-virtual-network"></a>작업 3: 새 가상 네트워크에서 DDoS Protection을 사용하도록 설정
+## 작업 3: 새 가상 네트워크에서 DDoS Protection을 사용하도록 설정
 
 여기서는 기존 가상 네트워크가 아니라 새 가상 네트워크에서 DDoS를 사용하도록 설정하므로, 먼저 새 가상 네트워크를 만든 다음 이전에 만든 계획을 사용하여 DDoS 보호를 사용하도록 설정해야 합니다.
 
@@ -79,7 +79,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
  
 
-## <a name="task-4-configure-ddos-telemetry"></a>작업 4: DDoS 원격 분석 구성
+## 작업 4: DDoS 원격 분석 구성
 
 공용 IP 주소를 만들고, 다음 단계에서 원격 분석을 설정합니다.
 
@@ -91,7 +91,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
 4. **이름** 상자에 **MyPublicIPAddress**를 입력합니다.
 
-5. **IP 주소 할당** 아래에서 **고정**을 선택합니다.
+5. **IP 주소 할당** 아래에서 **정적**을 선택합니다.
 
 6. **DNS 이름 레이블**에 **mypublicdnsxx**를 입력합니다(여기서 xx는 이 레이블을 고유하게 만드는 사용자 이니셜임).
 
@@ -121,7 +121,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
  
 
-## <a name="task-5-configure-ddos-diagnostic-logs"></a>작업 5: DDoS 진단 로그 구성
+## 작업 5: DDoS 진단 로그 구성
 
 1. Azure 홈페이지에서 **모든 리소스**를 클릭합니다.
 
@@ -145,11 +145,11 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
  
 
-## <a name="task-6-configure-ddos-alerts"></a>작업 6: DDoS 경고 구성
+## 작업 6: DDoS 경고 구성
 
 이 단계에서는 가상 머신을 만들고, 공용 IP 주소를 할당하고, DDoS 경고를 구성합니다.
 
-### <a name="create-the-vm"></a>VM 만들기
+### VM 만들기
 
 1. Azure Portal 홈페이지에서 **리소스 만들기**를 선택하고, 검색 상자에 **가상 머신**을 입력한 다음, **가상 머신**이 표시되면 클릭합니다.
 
@@ -162,7 +162,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
    | Subscription          | 구독 선택                                     |
    | Resource group        | **MyResourceGroup**                                          |
    | 가상 머신 이름  | **MyVirtualMachine**                                         |
-   | 지역                | 지역                                                  |
+   | 지역                | 미국 동부                                                  |
    | 가용성 옵션  | **인프라 중복은 필요하지 않음**                   |
    | 이미지                 | **Ubuntu Server 18.04 LTS -  Gen 1**(필요한 경우 VM 세대 구성 링크를 선택) |                     
    | 크기                  | **모든 크기 보기**를 선택한 다음, 목록에서 **B1ls**를 선택하고 **선택** **(Standard_B1ls - vcpu 1개, 메모리 0.5GiB**)을 선택합니다. |
@@ -182,7 +182,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
 8. 배포가 완료되면 **리소스로 이동**을 클릭합니다.
 
-### <a name="assign-the-public-ip-address"></a>공용 IP 주소 할당
+### 공용 IP 주소 할당
 
 1. 새 가상 머신의 **개요** 페이지에 있는 **설정** 아래에서 **네트워킹**을 클릭합니다.
 
@@ -198,7 +198,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
    ![DDoS VM의 공용 IP 주소 변경](../media/change-public-ip-config-for-ddos-vm-new.png)
 
-### <a name="configure-ddos-alerts"></a>DDoS 경고 구성
+### DDoS 경고 구성
 
 1. Azure 홈페이지에서 **모든 리소스**를 클릭합니다.
 
@@ -238,7 +238,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
  
 
-## <a name="task-7-submit-a-ddos-service-request-to-run-a-ddos-attack"></a>작업 7: DDoS 서비스 요청을 제출하여 DDoS 공격 실행
+## 작업 7: DDoS 서비스 요청을 제출하여 DDoS 공격 실행
 
 1. [BreakingPoint Cloud](https://breakingpoint.cloud/)를 사용하여 계정 만들기
 
@@ -257,7 +257,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
    ![DDoS 공격을 받는 리소스를 보여 주는 메트릭](../media/metrics-showing-resource-under-attack.png)
 
  
-## <a name="task-8-clean-up-resources"></a>작업 8: 리소스 정리
+## 작업 8: 리소스 정리
 
 >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
