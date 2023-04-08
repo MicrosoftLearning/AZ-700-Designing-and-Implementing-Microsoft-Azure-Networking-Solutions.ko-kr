@@ -4,7 +4,7 @@ Exercise:
   module: Module 02 - Design and implement hybrid networking
 ---
 
-# <a name="m02-unit-7-create-a-virtual-wan-by-using-azure-portal"></a>M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
+# M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
 
 
 이 연습에서는 Contoso용 Virtual WAN을 만듭니다.
@@ -18,9 +18,9 @@ Exercise:
 
 
 
-#### <a name="estimated-time-65-minutes-including-45-minutes-deployment-waiting-time"></a>예상 시간: 65분(배포 대기 시간 ~45분 포함)
+#### 예상 시간: 65분(배포 대기 시간 ~45분 포함)
 
-## <a name="task-1-create-a-virtual-wan"></a>작업 1: Virtual WAN 만들기
+## 작업 1: Virtual WAN 만들기
 
 1. 브라우저에서 Azure Portal로 이동하고 Azure 계정으로 로그인합니다.
 
@@ -48,7 +48,7 @@ Exercise:
 
 6. 유효성 검사를 통과하면 **만들기**를 선택하여 Virtual WAN을 만듭니다.
 
-## <a name="task-2-create-a-hub-by-using-azure-portal"></a>작업 2: Azure Portal을 사용하여 허브 만들기
+## 작업 2: Azure Portal을 사용하여 허브 만들기
 
 허브는 사이트 간, ExpressRoute 또는 지점 및 사이트 간 기능을 위한 게이트웨이를 포함합니다. 가상 허브에서 사이트 간 VPN 게이트웨이를 만드는 데 30분이 소요됩니다. 허브를 만들려면 먼저 Virtual WAN을 만들어야 합니다.
 
@@ -61,8 +61,8 @@ Exercise:
    - **이름:** ContosoVirtualWANHub-WestUS
    - **허브 프라이빗 주소 공간:** 10.60.0.0/24
    - **가상 허브 용량:** 2 라우팅 인프라 단위
-5. 완료되면 **다음: 사이트 간**
-6. **사이트 간** 탭에서 다음 필드를 완료합니다.
+5. 완료되면 **다음: 사이트 대 사이트**
+6. **사이트 대 사이트** 탭에서 다음 필드를 완료합니다.
    - **사이트 간 (VPN Gateway)를 만드시겠습니까?** 예
    - **AS 번호** 필드는 편집할 수 없습니다.
    - **게이트웨이 배율 단위** 1 배율 단위 = 500Mbps x 2
@@ -70,7 +70,7 @@ Exercise:
 8. **만들기**를 선택하여 허브를 만듭니다. 
 9. 30분 후에 **새로 고침**을 선택하여 허브 페이지에서 허브를 봅니다. 
 
-## <a name="task-3-connect-a-vnet-to-the-virtual-hub"></a>작업 3: 가상 허브에 VNet 연결
+## 작업 3: 가상 허브에 VNet 연결
 
 1. 생성한 Virtual WAN을 찾습니다. 
 
@@ -102,7 +102,7 @@ Exercise:
 
 축하합니다! Virtual WAN 및 Virtual WAN 허브를 만들고 ResearchVNet을 허브에 연결했습니다.
 
-## <a name="task-4-clean-up-resources"></a>작업 4: 리소스 정리
+## 작업 4: 리소스 정리
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
