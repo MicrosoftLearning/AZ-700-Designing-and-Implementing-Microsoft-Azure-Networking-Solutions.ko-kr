@@ -3,11 +3,13 @@ Exercise:
   title: M03 - 단원 5 ExpressRoute 회로 프로비전
   module: Module 03 - Design and implement Azure ExpressRoute
 ---
-# <a name="m03-unit-5-provision-an-expressroute-circuit"></a>M03-단원 5 ExpressRoute 회로 프로비전
+# M03-단원 5 ExpressRoute 회로 프로비전
 
 이 연습에서는 Azure Portal 및 Azure Resource Manager 배포 모델을 사용하여 ExpressRoute 회로를 만듭니다. 
 
-#### <a name="estimated-time-15-minutes"></a>예상 소요 시간: 15분
+                **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+
+#### 예상 소요 시간: 15분
 
 ![연습에 필요한 ExpressRoute 회로 레이아웃 다이어그램](../media/environment-diagram.png)
 
@@ -21,7 +23,7 @@ Exercise:
 + 작업 4: 리소스 정리
 
 
-## <a name="task-1-create-and-provision-an-expressroute-circuit"></a>작업 1: ExpressRoute 회로 만들기 및 프로비저닝
+## 작업 1: ExpressRoute 회로 만들기 및 프로비저닝
 
  
 
@@ -31,17 +33,17 @@ Exercise:
    >
    > ExpressRoute 회로는 서비스 키가 발급된 순간부터 비용이 청구됩니다. 연결 공급자가 회로를 프로비전할 준비가 된 후에 이 작업을 수행하도록 하십시오.
 
-2. Azure Portal 메뉴에서 **+ 리소스 만들기**를 선택합니다. **네트워킹**을 선택하고 다음 그림과 같이 **ExpressRoute**를 선택합니다. ExpressRoute가 목록에 없으면 **마켓플레이스 검색**을 사용하여 검색합니다.
+1. Azure Portal 메뉴에서 **+ 리소스 만들기**를 선택합니다. **네트워킹**을 선택하고 다음 그림과 같이 **ExpressRoute**를 선택합니다. ExpressRoute가 목록에 없으면 **마켓플레이스 검색**을 사용하여 검색합니다.
 
    ![Azure Portal - ExpressRoute 회로 만들기 메뉴](../media/create-expressroute-circuit-menu.png)
 
-3. **ExpressRoute 만들기** 페이지에서 회로의 **리소스 그룹**, **지역** 및 **이름**을 다음과 같이 입력합니다. ExpressRouteResourceGroup, 미국 동부 2, TestERCircuit. 그다움에 **다음: 구성&gt;** 을 클릭합니다.
+1. **ExpressRoute 만들기** 페이지에서 회로의 **리소스 그룹**, **지역** 및 **이름**을 다음과 같이 입력합니다. ExpressRouteResourceGroup, 미국 동부 2, TestERCircuit. 그다움에 **다음: 구성&gt;** 을 클릭합니다.
 
-4. 이 페이지의 값을 입력하는 경우, 이 예제에서는 올바른 SKU 계층(**표준**) 데이터 계량 청구 모델(**요금제**) 공급자(**Equinix**) 피어링 위치(**시애틀**) 및 대역폭(**50Mbps**)을 지정해야 합니다.
+1. 이 페이지의 값을 입력하는 경우, 이 예제에서는 올바른 SKU 계층(**표준**) 데이터 계량 청구 모델(**요금제**) 공급자(**Equinix**) 피어링 위치(**시애틀**) 및 대역폭(**50Mbps**)을 지정해야 합니다.
 
-5. **검토 + 생성**를 선택합니다.
+1. **검토 + 생성**를 선택합니다.
 
-6. ExpressRoute 구성이 유효성 검사를 통과하는지 확인한 다음, **만들기**를 선택합니다.
+1. ExpressRoute 구성이 유효성 검사를 통과하는지 확인한 다음, **만들기**를 선택합니다.
 
 
 ![Azure Portal - ExpressRoute 만들기 구성 탭](../media/expressroute-create-configuration2.png)
@@ -71,24 +73,24 @@ Exercise:
 
 - **클래식 작업 허용**을 사용하여 클래식 가상 네트워크를 회로에 연결할 수 있습니다.
 
-## <a name="task-2-retrieve-your-service-key"></a>작업 2: 서비스 키 검색
+## 작업 2: 서비스 키 검색
  
 
 1. **모든 서비스 &gt; 네트워킹 &gt; ExpressRoute 회로**를 선택하여 만든 모든 회로를 볼 수 있습니다.
 
    ![Azure Portal - ExpressRoute 만들기 리소스 메뉴](../media/expressroute-circuit-menu.png)
 
-2. 구독에서 만든 모든 ExpressRoute 회로가 여기에 표시됩니다. 
+1. 구독에서 만든 모든 ExpressRoute 회로가 여기에 표시됩니다. 
 
    ![Azure Portal - 기존 Expressroute 회로 표시](../media/expressroute-circuit-list.png)
 
-3. 회로 페이지에는 회로의 속성이 표시됩니다. 서비스 키는 서비스 키 필드에 표시됩니다. 서비스 공급자가 프로비저닝 프로세스를 완료하려면 서비스 키가 필요합니다. 서비스 키는 회로에 지정됩니다. **프로비저닝을 위해 연결 공급자에 서비스 키를 보내야 합니다.**
+1. 회로 페이지에는 회로의 속성이 표시됩니다. 서비스 키는 서비스 키 필드에 표시됩니다. 서비스 공급자가 프로비저닝 프로세스를 완료하려면 서비스 키가 필요합니다. 서비스 키는 회로에 지정됩니다. **프로비저닝을 위해 연결 공급자에 서비스 키를 보내야 합니다.**
 
    ![Azure Portal - 서비스 키를 표시하는 ExpressRoute 회로 속성](../media/expressroute-circuit-overview.png)
 
-4. 이 페이지에서 **공급자 상태**는 서비스 공급자 측의 현재 프로비저닝 상태를 제공합니다. **회로 상태**는 Microsoft 측의 상태를 제공합니다. 
+1. 이 페이지에서 **공급자 상태**는 서비스 공급자 측의 현재 프로비저닝 상태를 제공합니다. **회로 상태**는 Microsoft 측의 상태를 제공합니다. 
 
-5. 새 ExpressRoute 회로를 만들면 회로는 다음 상태가 됩니다.
+1. 새 ExpressRoute 회로를 만들면 회로는 다음 상태가 됩니다.
 
    - 공급자 상태: 프로비전되지 않음
    -  회로 상태: 활성화됨
@@ -109,7 +111,7 @@ Exercise:
 
 축하합니다! ExpressRoute 회로를 만들었고 회로 프로비저닝을 완료하는 데 필요한 서비스 키를 찾았습니다.
 
-## <a name="task-3-deprovisioning-an-expressroute-circuit"></a>작업 3: ExpressRoute 회로 프로비저닝 해제
+## 작업 3: ExpressRoute 회로 프로비저닝 해제
 
 ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저닝 중** 또는 **프로비저닝됨**인 경우에는 서비스 공급자에게 회로 프로비저닝 해제를 요청해야 합니다. Microsoft는 서비스 공급자가 회로 프로비저닝 해제를 완료하고 알릴 때까지 계속해서 리소스를 예약하고 요금을 청구합니다.
 
@@ -119,7 +121,7 @@ ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저
 >
 > 서비스 공급자가 회로 프로비전을 해제하여 서비스 공급자 프로비전 상태가 프로비전되지 않음이 되면 회로를 삭제할 수 있습니다. 그러면 회로에 대한 요금 청구가 중지됩니다.
 
-## <a name="task-4-clean-up-resources"></a>작업 4: 리소스 정리
+## 작업 4: 리소스 정리
 
 **삭제** 아이콘을 선택하여 ExpressRoute 회로를 삭제할 수 있습니다. 계속하기 전에 공급자 상태가 프로비전 안 됨인지 확인합니다.
 
@@ -128,7 +130,7 @@ ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
-1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
+1. Azure Portal **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
 1. 다음 명령을 실행하여 이 모듈의 랩 전체에서 만든 모든 리소스 그룹을 삭제합니다.
 
