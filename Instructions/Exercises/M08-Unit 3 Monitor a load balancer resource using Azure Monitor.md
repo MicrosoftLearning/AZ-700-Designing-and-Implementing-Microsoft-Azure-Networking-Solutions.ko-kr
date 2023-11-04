@@ -22,14 +22,14 @@ Exercise:
 + 작업 5: 부하 분산 장치 규칙 만들기
 + 작업 6: 백 엔드 서버 만들기
 + 작업 7: 백 엔드 풀에 VM 추가
-+ 작업 8: VM에 IIS 설치
-+ 작업 9: 부하 분산 장치 테스트
-+ 작업 10: Log Analytics 작업 영역 만들기
-+ 작업 11: 함수 종속성 보기 사용
-+ 작업 12: 자세한 메트릭 보기
-+ 작업 13: 리소스 상태 보기
-+ 작업 14: 진단 설정 구성
-+ 작업 15: 리소스 정리
++ 작업 8: 부하 분산 장치 테스트
++ 작업 9: Log Analytics 작업 영역 만들기
++ 작업 10: 기능 종속성 보기 사용
++ 작업 11: 자세한 메트릭 보기
++ 작업 12: 리소스 상태 보기
++ 작업 13: 진단 설정 구성
++ 작업 14: 리소스 정리
+
 
                 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
@@ -55,18 +55,18 @@ Exercise:
 
    | **설정**    | **값**                                           |
    | -------------- | --------------------------------------------------- |
-   | Subscription   | 구독 선택                            |
+   | 구독   | 구독 선택                            |
    | Resource group | **새로 만들기**를 선택합니다.<br /><br />이름: **IntLB-RG** |
    | 속성           | **IntLB-VNet**                                      |
    | 지역         | **(미국) 미국 서부**                                    |
 
 1. **다음 : IP 주소**를 선택합니다.
 
-1. **IP 주소** 탭의 **IPv4 주소 공간** 상자에 **10.1.0.0/16**을 입력합니다.
+1. **IP 주소** 탭의 **IPv4 주소 공간** 상자에 **10.1.0.0/16을** 입력합니다.
 
 1. **서브넷 이름** 위에서 **+ 서브넷 추가**를 선택합니다.
 
-1. **서브넷 추가** 창에서 **myBackendSubnet**의 서브넷 이름과 **10.1.0.0/24**의 서브넷 주소 범위를 제공합니다.
+1. **서브넷 추가** 창에서 **myBackendSubnet**의 서브넷 이름과 서브넷 주소 범위 **10.1.0.0/24**를 제공합니다.
 
 1. **추가**를 선택합니다.
 
@@ -191,8 +191,8 @@ Exercise:
 이 섹션에서는 부하 분산 장치의 백 엔드 풀에 대해 VM을 세 개 만들고, VM을 백 엔드 풀에 추가한 다음, 세 VM에 IIS를 설치하여 부하 분산 장치를 테스트합니다.
 
 1. Azure Portal **Cloud Shell** 창 내에서 **PowerShell** 세션을 엽니다.
-
-1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택하고 **azuredeploy.json, azuredeploy.parameters.vm1.json**, **azuredeploy.parameters.vm2.json** 및 ******azuredeploy.parameters.vm3.json** 파일을 원본 폴더 **F:\Allfiles\에서 하나씩 Cloud Shell 홈 디렉터리에 업로드합니다. Exercises\M08**.
+ > **참고:** Cloud Shell을 처음 연 경우에는 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. **스토리지 만들기**를 선택합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택하고 다음 파일 **azuredeploy.json** 및 **azuredeploy.parameters.json**을 원본 폴더 **F:\Allfiles\Exercises\M08**에서 하나씩 Cloud Shell 홈 디렉터리에 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크, 서브넷 및 VM을 만듭니다.
 
@@ -200,10 +200,8 @@ Exercise:
 
    ```powershell
    $RGName = "IntLB-RG"
-   
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
+
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
   
     > **참고:** 이를 배포하는 데는 몇 분 정도 걸립니다. 
@@ -226,24 +224,7 @@ Exercise:
 
  
 
-## 작업 8: VM에 IIS 설치
-
-1. Azure Portal 홈페이지에서 **모든 리소스를** 선택한 다음, 리소스 목록에서 **myVM1**을 선택합니다.
-1. **개요** 페이지에서 **연결**을 선택한 다음, **Bastion**을 선택합니다.
-1. **Bastion 사용**을 선택합니다.
-1. **사용자 이름** 상자에 **TestUser**를 입력하고 **암호** 상자에 배포 중에 제공한 암호를 입력한 다음 **연결을 선택합니다.**
-1. **myVM1** 창이 다른 브라우저 탭에서 열립니다.
-1. **네트워크** 창이 나타나면 **예를** 선택합니다.
-1. 창의 왼쪽 아래 모서리에서 **Windows 시작 아이콘**을 선택한 다음 **, Windows PowerShell** 타일을 선택합니다.
-1. IIS를 설치하려면 PowerShell에서 Install-WindowsFeature -name Web-Server -IncludeManagementTools 명령을 실행합니다.
-1. 기존 기본 웹 홈페이지를 제거하려면 PowerShell에서 Remove-Item C:\inetpub\wwwroot\iisstart.htm 명령을 실행합니다.
-1. 새 기본 웹 홈페이지를 추가하고 콘텐츠를 추가하려면 PowerShell에서 Add-Content -Path "C:\inetpub\wwwroot\iisstart.htm" -Value $("Hello World from " + $env:computername) 명령을 실행합니다.
-1. 브라우저 탭을 닫아 **myVM1**에 대한 Bastion 세션을 닫습니다.
-1. **myVM2** 및 **myVM3** 가상 머신에 IIS와 업데이트된 기본 홈페이지를 설치하려면 위의 1-11단계를 반복합니다.
-
- 
-
-## 작업 9: 부하 분산 장치 테스트
+## 작업 8: 부하 분산 장치 테스트
 
 이 섹션에서는 테스트 VM을 만든 후 부하 분산 장치를 테스트합니다.
 
@@ -258,7 +239,7 @@ Exercise:
 
    | **설정**          | **값**                                    |
    | -------------------- | -------------------------------------------- |
-   | Subscription         | 구독 선택                     |
+   | 구독         | 구독 선택                     |
    | Resource group       | **IntLB-RG**                                 |
    | 가상 머신 이름 | **myTestVM**                                 |
    | 지역               | **(미국) 미국 서부**                             |
@@ -319,9 +300,9 @@ Exercise:
 
     ![VM3의 Hello World 응답을 보여 주는 브라우저 창](../media/load-balancer-web-test-2.png)
 
-## 작업 10: Log Analytics 작업 영역 만들기
+## 작업 9:: Log Analytics 작업 영역 만들기
 
-1. Azure Portal 홈페이지에서 **모든 서비스를** 선택한 다음 페이지 위쪽의 검색 상자에 **Log Analytics**를 입력하고 필터링된 목록에서 **Log Analytics 작업 영역을** 선택합니다.
+1. Azure Portal 홈페이지에서 **모든 서비스를** 선택한 다음, 페이지 위쪽의 검색 상자에 **Log Analytics**를 입력하고 필터링된 목록에서 **Log Analytics 작업 영역을** 선택합니다.
 
    ![Azure Portal 홈페이지에서 Log Analytics 작업 영역에 액세스](../media/log-analytics-workspace-1.png)
 
@@ -331,7 +312,7 @@ Exercise:
 
    | **설정**    | **값**                |
    | -------------- | ------------------------ |
-   | Subscription   | 구독 선택 |
+   | 구독   | 구독 선택 |
    | Resource group | **IntLB-RG**             |
    | 속성           | **myLAworkspace**        |
    | 지역         | **미국 서부**              |
@@ -342,7 +323,7 @@ Exercise:
 
 
 
-## 작업 11: 함수 종속성 보기 사용
+## 작업 10: 기능 종속성 보기 사용
 
 1. Azure Portal 홈페이지에서 **모든 리소스를** 선택한 다음, 리소스 목록에서 **myIntLoadBalancer**를 선택합니다.
 
@@ -350,7 +331,7 @@ Exercise:
 
 1. **모니터링**에서 **인사이트**를 선택합니다.
 
-1. 페이지의 오른쪽 위 모서리에서 **X** 를 선택하여 현재 **메트릭** 창을 닫습니다. 잠시 후 창을 다시 열 것입니다.
+1. 페이지의 오른쪽 위 모서리에서 **X** 를 선택하여 지금은 **메트릭** 창을 닫습니다. 잠시 후 창을 다시 열 것입니다.
 
 1. 이 페이지 보기를 함수 종속성 보기라고 하며, 이 보기에는 선택한 네트워크 리소스의 토폴로지(이 경우 부하 분산 장치)를 보여 주는 유용한 대화형 다이어그램이 표시됩니다. 표준 Load Balancer의 경우 백 엔드 풀 리소스는 트래픽을 처리할 수 있는 백 엔드 풀의 현재 가용성을 나타내는 상태 프로브의 상태를 사용하여 색으로 구분됩니다.
 
@@ -371,7 +352,7 @@ Exercise:
 
  
 
-## 작업 12: 자세한 메트릭 보기
+## 작업 11: 자세한 메트릭 보기
 
 1. 이 네트워크 리소스에 대한 보다 포괄적인 메트릭을 보려면 **자세한 메트릭 보기를** 선택합니다.
    ![Azure Monitor Network Insights - 자세한 메트릭 보기 단추 강조 표시](../media/network-insights-detailedmetrics-1.png)
@@ -387,17 +368,17 @@ Exercise:
 1. 차트의 데이터 요소 중 일부를 마우스로 가리키면 값이 변경되어 해당 시점의 정확한 값이 표시됩니다.
    ![Azure Monitor Network Insights - 자세한 메트릭 보기 - 데이터 처리량 탭](../media/network-insights-detailedmetrics-3.png)
 
-1. **흐름 분포** 탭을 선택하고 페이지 아래로 스크롤하여 **VM 흐름 만들기 및 네트워크 트래픽** 섹션 아래의 차트를 확인합니다. 
+1. **흐름 분포** 탭을 선택하고 페이지를 아래로 스크롤하여 **VM 흐름 만들기 및 네트워크 트래픽** 섹션 아래의 차트를 확인합니다. 
 
    ![Azure Monitor Network Insights - 자세한 메트릭 보기 - VM 흐름 만들기 및 네트워크 트래픽 차트](../media/network-insights-detailedmetrics-4.png)
 
  
 
-## 작업 13: 리소스 상태 보기
+## 작업 12: 리소스 상태 보기
 
 1. Load Balancer 리소스의 상태를 보려면 Azure Portal 홈페이지에서 **모든 서비스를** 선택한 다음, **모니터**를 선택합니다.
 
-1. **모니터&gt;개요** 페이지의 왼쪽 메뉴에서 **서비스 상태를** 선택합니다.
+1. **모니터&gt;개요** 페이지의 왼쪽 메뉴에서 **Service Health**를 선택합니다.
 
 1. **Service Health&gt;Service 문제** 페이지의 왼쪽 메뉴에서 **Resource Health** 선택합니다.
 
@@ -413,7 +394,7 @@ Exercise:
 
  
 
-## 작업 14: 진단 설정 구성
+## 작업 13: 진단 설정 구성
 
 1. Azure Portal 홈페이지에서 **리소스 그룹을** 선택한 다음 목록에서 **IntLB-RG** 리소스 그룹을 선택합니다.
 
@@ -435,9 +416,7 @@ Exercise:
 
  
 
- 
-
-## 작업 15: 리소스 정리
+## 작업 14: 리소스 정리
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
