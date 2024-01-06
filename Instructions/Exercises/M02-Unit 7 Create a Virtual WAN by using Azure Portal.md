@@ -16,7 +16,7 @@ Exercise:
 + 작업 3: 가상 허브에 VNet 연결
 + 작업 4: 리소스 정리
 
-                **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20virtual%20WAN%20using%20the%20Azure%20portal)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20virtual%20WAN%20using%20the%20Azure%20portal)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 #### 예상 시간: 65분(배포 대기 시간 ~45분 포함)
 
@@ -24,7 +24,7 @@ Exercise:
 
 1. 브라우저에서 Azure Portal로 이동하고 Azure 계정으로 로그인합니다.
 
-1. 포털에서 검색 상자에 Virtual WAN 입력하고 결과 목록에서 **Virtual WAN을** 선택합니다.
+1. 포털에서 검색 상자에 Virtual WAN을 입력하고 결과 목록에서 Virtual WAN을** 선택합니다**.
 
    ![Azure Portal에서 Virtual WAN 검색](../media/search-for-virtual-wan.png)
 
@@ -108,7 +108,7 @@ Exercise:
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
-1. Azure Portal **Cloud Shell** 창 내에서 **PowerShell** 세션을 엽니다.
+1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
 
 1. 다음 명령을 실행하여 이 모듈의 랩 전체에서 만든 모든 리소스 그룹을 삭제합니다.
 

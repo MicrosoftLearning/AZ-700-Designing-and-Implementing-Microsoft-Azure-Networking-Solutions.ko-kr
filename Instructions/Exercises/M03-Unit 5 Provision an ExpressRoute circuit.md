@@ -3,11 +3,11 @@ Exercise:
   title: M03 - 단원 5 ExpressRoute 회로 프로비전
   module: Module 03 - Design and implement Azure ExpressRoute
 ---
-# M03-단원 5 ExpressRoute 회로 프로비전
+# M03-Unit 5 ExpressRoute 회로 프로비전
 
 이 연습에서는 Azure Portal 및 Azure Resource Manager 배포 모델을 사용하여 ExpressRoute 회로를 만듭니다. 
 
-                **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 #### 예상 소요 시간: 15분
 
@@ -37,7 +37,7 @@ Exercise:
 
    ![Azure Portal - ExpressRoute 회로 만들기 메뉴](../media/create-expressroute-circuit-menu.png)
 
-1. **ExpressRoute 만들기** 페이지에서 회로의 **리소스 그룹**, **지역** 및 **이름**을 다음과 같이 입력합니다. ExpressRouteResourceGroup, 미국 동부 2, TestERCircuit. 그다움에 **다음: 구성&gt;** 을 클릭합니다.
+1. **ExpressRoute 만들기** 페이지에서 ExpressRouteResourceGroup, East US 2, TestERCircuit을 사용하여 회로에 대한 **리소스 그룹**, **지역** 및 **이름**을 제공합니다. 그다움에 **다음: 구성&gt;** 을 클릭합니다.
 
 1. 이 페이지의 값을 입력하는 경우, 이 예제에서는 올바른 SKU 계층(**표준**) 데이터 계량 청구 모델(**요금제**) 공급자(**Equinix**) 피어링 위치(**시애틀**) 및 대역폭(**50Mbps**)을 지정해야 합니다.
 
@@ -93,16 +93,16 @@ Exercise:
 1. 새 ExpressRoute 회로를 만들면 회로는 다음 상태가 됩니다.
 
    - 공급자 상태: 프로비전되지 않음
-   -  회로 상태: 활성화됨
+   - 회로 상태: 활성화됨
 
 
 
    - 연결 공급자가 사용자에 대해 현재 활성화하고 있을 때 회로가 다음 상태로 변경됩니다.
      - 공급자 상태: 프로비전 중
-     -  회로 상태: 활성화됨
+     - 회로 상태: 활성화됨
    - ExpressRoute 회로를 사용하려면 다음 상태여야 합니다.
      - 공급자 상태: 프로비전됨
-     -  회로 상태: 활성화됨
+     - 회로 상태: 활성화됨
    - 주기적으로 프로비저닝 상태와 회로 상태를 확인해야 합니다.
 
 ![Azure Portal - 상태가 이제 프로비저닝됨을 표시하는 ExpressRoute 회로 속성](../media/provisioned.png)
@@ -130,7 +130,7 @@ ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
-1. Azure Portal **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
+1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
 
 1. 다음 명령을 실행하여 이 모듈의 랩 전체에서 만든 모든 리소스 그룹을 삭제합니다.
 

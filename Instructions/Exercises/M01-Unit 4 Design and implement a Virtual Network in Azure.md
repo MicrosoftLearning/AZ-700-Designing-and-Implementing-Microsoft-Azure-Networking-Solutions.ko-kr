@@ -3,7 +3,7 @@ Exercise:
   title: M01 - 단원 4 Azure에서 가상 네트워크 설계 및 구현
   module: Module 01 - Introduction to Azure Virtual Networks
 ---
-# M01-단원 4 Azure에서 가상 네트워크 설계 및 구현
+# M01-Unit 4 Azure에서 Virtual Network 디자인 및 구현
 
 
 ## 연습 시나리오 
@@ -12,7 +12,7 @@ Exercise:
 
 가상의 조직 Contoso Ltd.에서 인프라 및 애플리케이션을 Azure로 마이그레이션하는 과정에 있다고 가정해봅니다. 본인이 네트워크 엔지니어의 역할을 맡고 있어서 이러한 가상 네트워크의 리소스를 지원하기 위해 세 개의 가상 네트워크와 서브넷을 계획하고 구현해야 합니다.
 
-                **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 #### 예상 소요 시간: 20분
 
@@ -57,11 +57,11 @@ Exercise:
 
 ## 작업 1: Contoso 리소스 그룹 만들기
 
-1. [Azure 포털](https://portal.azure.com/)로 이동합니다.
+1. [Azure Portal](https://portal.azure.com/)로 이동합니다.
 
 2. 홈페이지의 **Azure 서비스**에서 **리소스 그룹**을 선택합니다.  
 
-3. 리소스 그룹에서 **+ 만들기**를 선택합니다.
+3. 리소스 그룹에서 + 만들기**를 선택합니다**.
 
 4. 다음 표의 정보를 사용하여 리소스 그룹을 만듭니다.
 
@@ -80,7 +80,7 @@ Exercise:
 ## 작업 2: CoreServicesVnet 가상 네트워크 및 서브넷 만들기
 
 1. Azure Portal 홈페이지에서 전역 검색 표시줄로 이동하여 **가상 네트워크**를 검색하고 서비스 아래에서 가상 네트워크를 선택합니다.  ![가상 네트워크에 대한 Azure Portal 홈페이지 전역 검색 표시줄 결과](../media/global-search-bar.PNG)
-2. 가상 네트워크 페이지에서 **만들기**를 선택합니다.  ![가상 네트워크 만들기 마법사](../media/create-virtual-network.png)
+2. 가상 네트워크 페이지에서 **만들기**를 선택합니다.  ![네트워크 만들기 마법사](../media/create-virtual-network.png)
 3. 다음 표의 정보를 사용하여 CoreServicesVnet 가상 네트워크를 만듭니다.  
    ‎기본 IP 주소 공간 제거 또는 덮어쓰기![Azure 가상 네트워크 배포용 IP 주소 구성  ](../media/default-vnet-ip-address-range-annotated.png)
 
@@ -89,7 +89,7 @@ Exercise:
 | **Tab**      | **옵션**         | **값**            |
 | ------------ | ------------------ | -------------------- |
 | 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
-|              | Name               | CoreServicesVnet     |
+|              | 이름               | CoreServicesVnet     |
 |              | 지역             | (미국) 미국 동부         |
 | IP 주소 | IPv4 주소 공간 | 10.20.0.0/16         |
 
@@ -120,7 +120,7 @@ Exercise:
 | **Tab**      | **옵션**         | **값**             |
 | ------------ | ------------------ | --------------------- |
 | 기본 사항       | 리소스 그룹     | ContosoResourceGroup  |
-|              | Name               | ManufacturingVnet     |
+|              | 이름               | ManufacturingVnet     |
 |              | 지역             | (유럽) 서유럽  |
 | IP 주소 | IPv4 주소 공간 | 10.30.0.0/16          |
 
@@ -144,7 +144,7 @@ Exercise:
 | **Tab**      | **옵션**         | **값**            |
 | ------------ | ------------------ | -------------------- |
 | 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
-|              | Name               | ResearchVnet         |
+|              | 이름               | ResearchVnet         |
 |              | 지역             | 동남 아시아       |
 | IP 주소 | IPv4 주소 공간 | 10.40.0.0/16         |
 
@@ -160,14 +160,14 @@ Exercise:
 
 2. CoreServicesVnet, ManufacturingVnet 및 ResearchVnet이 표시되는지 확인합니다.
 
-3 **CoreServicesVnet을** 선택합니다. 
+3 CoreServicesVnet**을 선택합니다**. 
 
 4. CoreServicesVnet의 **설정**에서 **서브넷**을 선택합니다.
 
 5. CoreServicesVnet | 서브넷에서, 만든 서브넷이 나열되고 IP 주소 범위가 맞는지 확인합니다.
 
-   ![CoreServicesVnet의 서브넷 목록.](../media/verify-subnets-annotated.png)
+   ![CoreServicesVnet의 서브넷 목록](../media/verify-subnets-annotated.png)
 
-6. 각 VNet에 대해 3~5단계를 반복합니다.
+6. 각 VNet에 대해 3-5단계를 반복합니다.
 
 축하합니다! 리소스 그룹, 3개의 Vnet, 연결된 서브넷을 성공적으로 만들었습니다. 
