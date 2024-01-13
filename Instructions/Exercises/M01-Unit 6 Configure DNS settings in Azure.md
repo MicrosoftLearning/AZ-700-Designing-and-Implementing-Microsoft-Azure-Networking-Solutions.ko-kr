@@ -16,7 +16,7 @@ Exercise:
 + 작업 3: 구성을 테스트할 가상 머신 만들기
 + 작업 4: 레코드가 DNS 영역에 있는지 확인
 
-                **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 #### 예상 소요 시간: 25분
 
@@ -25,7 +25,7 @@ Exercise:
 1. [Azure Portal](https://portal.azure.com/)로 이동합니다.
 
 2. Azure 홈페이지의 검색 창에 dns를 입력한 다음 **프라이빗 DNS 영역**을 선택합니다.  
-   ‎![DNS를 검색한 Azure Portal 홈 페이지](../media/create-private-dns-zone.png)
+   ![Dns 검색이 있는 Azure Portal 홈페이지.](../media/create-private-dns-zone.png)
 
 3. 프라이빗 DNS 영역에서 **만들기**를 선택합니다.
 
@@ -34,7 +34,7 @@ Exercise:
 | **Tab**         | **옵션**                             | **값**            |
 | --------------- | -------------------------------------- | -------------------- |
 | 기본 사항          | Resource group                         | ContosoResourceGroup |
-|                 | Name                                   | Contoso.com          |
+|                 | 이름                                   | Contoso.com          |
 | 태그            | 변경 필요 없음                    |                      |
 | 검토 + 만들기 | 설정 검토 및 만들기 선택 |                      |
 
@@ -58,7 +58,7 @@ Exercise:
 | 링크 이름                           | CoreServicesVnetLink                    |
 | 구독                        | 변경 필요 없음                     |
 | Virtual Network                     | CoreServicesVnet(ContosoResourceGroup) |
-| 자동 등록 사용            | 선택됨                                |
+| 자동 등록 사용            | 선택한 상태                                |
 | 설정을 검토하고 확인을 선택합니다. |                                         |
 
 
@@ -73,7 +73,7 @@ Exercise:
 | 링크 이름                           | ManufacturingVnetLink                    |
 | 구독                        | 변경 필요 없음                      |
 | Virtual Network                     | ManufacturingVnet(ContosoResourceGroup) |
-| 자동 등록 사용            | 선택됨                                 |
+| 자동 등록 사용            | 선택한 상태                                 |
 | 설정을 검토하고 확인을 선택합니다. |                                          |
 
 
@@ -88,7 +88,7 @@ Exercise:
 | 링크 이름                           | ResearchVnetLink                    |
 | 구독                        | 변경 필요 없음                 |
 | Virtual Network                     | ResearchVnet(ContosoResourceGroup) |
-| 자동 등록 사용            | 선택됨                            |
+| 자동 등록 사용            | 선택한 상태                            |
 | 설정을 검토하고 확인을 선택합니다. |                                     |
 
 
@@ -102,11 +102,11 @@ Exercise:
 
 이 섹션에서는 프라이빗 DNS 영역 구성을 테스트할 두 개의 테스트 VM을 만듭니다.
 
-1. Azure Portal **Cloud Shell** 창 내에서 **PowerShell** 세션을 엽니다.
+1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
     
-    > **참고:** Cloud Shell을 처음 연 경우에는 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. **스토리지 만들기**를 선택합니다.
+    > **참고:** Cloud Shell을 처음 여는 경우 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. 스토리지** 만들기를 선택합니다**.
 
-2. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택하고 다음 파일 **azuredeploy.json** 및 **azuredeploy.parameters.json**을 원본 폴더 **F:\Allfiles\Exercises\M01**에서 하나씩 Cloud Shell 홈 디렉터리에 업로드합니다.
+2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드** 아이콘을 선택하고 **드롭다운 메뉴에서 **다음 파일 azuredeploy.json 및 **azuredeploy.parameters.json**** 파일을 **원본 폴더 **F:\Allfiles\Exercises\M01**에서 하나씩 Cloud Shell 홈 디렉터리에 업로드**합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -126,9 +126,9 @@ Exercise:
 
 ## 작업 4: 레코드가 DNS 영역에 있는지 확인
 
-1. Azure Portal 홈 페이지에서 **프라이빗 DNS 영역**을 선택합니다.
+1. Azure Portal 홈페이지에서 프라이빗 DNS 영역을** 선택합니다**.
 
-2. 프라이빗 DNS 영역에서 **contoso.com** 선택합니다.
+2. 프라이빗 DNS 영역에서 contoso.com** 선택합니다**.
 
 3. 다음과 같이 두 VM 모두 호스트 (A) 레코드가 표시되는지 확인합니다.
 
@@ -142,21 +142,21 @@ Exercise:
 
 ### RDP를 사용하여 테스트 VM에 연결
 
-1. Azure Portal 홈 페이지에서 **가상 머신**을 선택합니다.
+1. Azure Portal 홈페이지에서 Virtual Machines**를 선택합니다**.
 
 1. **TestVM1**을 선택합니다.
 
-1. TestVM1에서 **RDP 연결을 &gt; 선택하고 RDP** 파일을 다운로드합니다.
+1. TestVM1에서 RDP** 커넥트 &gt; 선택하고 **RDP 파일을 다운로드합니다.
 
     ![연결과 RDP가 강조 표시된 TestVM1.](../media/connect-to-am.png)
 
-1. RDP 파일을 바탕화면에 저장합니다.
+1. RDP 파일을 데스크톱에 저장합니다.
 
-1. **TestVM2**에 대해 동일한 단계를 수행합니다.
+1. TestVM2에 대해 **동일한 단계를 수행합니다.**
 
-1. RDP 파일 및 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하여 TestVM1에 연결합니다.
+1. RDP 파일 및 사용자 이름을 ** 사용하여 TestVM1에 커넥트TestUser** 및 배포 중에 제공한 암호입니다.
 
-1. RDP 파일 및 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하여 TestVM2에 연결합니다.
+1. RDP 파일 및 사용자 이름을 ** 사용하여 TestVM2에 커넥트TestUser** 및 배포 중에 제공한 암호입니다.
 
 1. 두 VM의 **디바이스에 대한 개인 정보 설정 선택**에서 **동의**를 선택합니다.
 

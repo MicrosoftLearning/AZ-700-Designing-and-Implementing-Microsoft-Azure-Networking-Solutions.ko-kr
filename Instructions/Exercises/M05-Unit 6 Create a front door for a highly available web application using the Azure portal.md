@@ -6,7 +6,7 @@ Exercise:
 
 
 
-# M05-단원 6 Azure Portal을 사용하여 고가용성 웹 애플리케이션용 Front Door 만들기
+# M05-Unit 6 Azure Portal을 사용하여 고가용성 웹 애플리케이션을 위한 Front Door 만들기
 
  
 
@@ -21,7 +21,7 @@ Exercise:
 + 작업 3: 작동 중인 Azure Front Door 보기
 + 작업 4: 리소스 정리
 
-                **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 
 #### 예상 소요 시간: 30분
@@ -30,40 +30,40 @@ Exercise:
 
 이 연습에서는 서로 다른 Azure 지역에서 실행되는 웹 애플리케이션의 두 인스턴스가 필요합니다. 두 웹 애플리케이션 인스턴스는 모두 활성/활성 모드로 실행되므로 두 인스턴스 중 하나에서 트래픽을 수행할 수 있습니다. 이 구성은 장애 조치(failover)로 작동하는 활성/대기 구성과 다릅니다.
 
-1. [https://portal.azure.com](https://portal.azure.com/)에서 Azure Portal에 로그인합니다.
+1. [https://portal.azure.com](https://portal.azure.com/) 에서 Azure Portal에 로그인합니다.
 
-1. Azure 홈페이지에서 전역 검색 사용하여 **WebApp**을 입력하고 서비스에서 **App Services를** 선택합니다.
+1. Azure 홈페이지에서 전역 검색을 사용하여 WebApp을** 입력**하고 서비스에서 App Services를** 선택합니다**.
 
-1. **+ 만들기**를 선택하여 웹앱을 만듭니다.
+1. + 만들기**를 선택하여 **웹앱을 만듭니다.
 
 1. 웹앱 만들기 페이지의 **기본 사항** 탭에서 다음 정보를 입력하거나 선택합니다.
 
    | **설정**      | **값**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | 구독을 선택합니다.                                    |
-   | Resource group   | 리소스 그룹 ContosoResourceGroup을 선택합니다.               |
-   | Name             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예에서는 WebAppContoso-1을 사용합니다. |
+   | Resource group   | 리소스 그룹 ContosoResourceGroup 선택               |
+   | 이름             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예에서는 WebAppContoso-1을 사용합니다. |
    | 게시          | **코드**를 선택합니다.                                             |
    | 런타임 스택    | **.NET 6(LTS)** 를 선택합니다.                                     |
    | 운영 체제 | **Windows**를 선택합니다.                                          |
    | 지역           | **미국 중부**를 선택합니다.                                       |
    | Windows 플랜     | **새로 만들기**를 선택하고 텍스트 상자에 myAppServicePlanCentralUS를 입력합니다. |
-   | Princing 계획    | **Standard S1 100 총 ACU, 1.75GB 메모리**를 선택합니다.        |
+   | 기본 계획    | **Standard S1 100 총 ACU, 1.75GB 메모리**를 선택합니다.        |
 
 1. **검토 + 만들기**를 선택하고, 요약을 검토한 다음, **만들기**를 선택합니다.   
    배포가 완료되는 데 몇 분 정도 걸릴 수 있습니다.
 
 1. 두 번째 웹앱을 만듭니다. Azure Portal 홈페이지에서 **WebApp**을 검색합니다.
 
-1. **+ 만들기**를 선택하여 웹앱을 만듭니다.
+1. + 만들기**를 선택하여 **웹앱을 만듭니다.
 
 1. 웹앱 만들기 페이지의 **기본 사항** 탭에서 다음 정보를 입력하거나 선택합니다.
 
    | **설정**      | **값**                                                    |
    | ---------------- | ------------------------------------------------------------ |
    | Subscription     | 구독을 선택합니다.                                    |
-   | Resource group   | 리소스 그룹 ContosoResourceGroup을 선택합니다.               |
-   | Name             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예제에서는 WebAppContoso-2를 사용합니다. |
+   | Resource group   | 리소스 그룹 ContosoResourceGroup 선택               |
+   | 이름             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예제에서는 WebAppContoso-2를 사용합니다. |
    | 게시          | **코드**를 선택합니다.                                             |
    | 런타임 스택    | **.NET 6(LTS)** 를 선택합니다.                                     |
    | 운영 체제 | **Windows**를 선택합니다.                                          |
@@ -80,7 +80,7 @@ Exercise:
 
 1. Azure Portal 페이지의 **검색 리소스, 서비스 및 문서(G+/)** 에서 Front Door 및 CDN 프로필을 검색한 다음, **Front Door 및 CDN 프로필**을 선택합니다.
 
-1. **Front Door 및 CDN 프로필 만들기**를 선택합니다. 제품 비교 페이지에서 **빨리 만들기**를 선택합니다. 그런 다음, **계속 Front Door 만들기**를 선택합니다.
+1. **Front Door 및 CDN 프로필 만들기**를 선택합니다. 제품 비교 페이지에서 빠른 만들기**를 선택합니다**. 그런 다음, 계속을 선택하여 **Front Door**를 만듭니다.
 
 1. 기본 탭에서 다음 정보를 입력하거나 선택합니다.
 
@@ -90,11 +90,11 @@ Exercise:
    | Subscription            | 구독을 선택합니다.                    |
    | Resource group          | ContosoResourceGroup 선택                  |
    | 리소스 그룹 위치 | 기본 설정 적용                       |
-   | Name                    | FrontDoor(yourinitials)와 같은 고유한 이름을 이 구독에 입력합니다.   |
-   | 계층                    | Standard   |
+   | 이름                    | FrontDoor(yourinitials)와 같은 고유한 이름을 이 구독에 입력합니다.   |
+   | 서비스 계층                    | Standard   |
    | 엔드포인트 이름           | FDendpoint   |
    | 원본 형식             | App Service| 
-   | 원래 호스트 이름        | 이전에 배포한 웹앱의 이름 |
+   | 원본 호스트 이름        | 이전에 배포한 웹앱의 이름 |
    
 
 1. **검토 및 만들기**를 선택한 후 **만들기**를 선택합니다.
@@ -118,13 +118,13 @@ Front Door를 만들면 구성이 전역적으로 배포되는 데 몇 분 정�
 
 1. 웹앱 중 하나를 선택한 다음, **중지**를 선택한 다음, **예**를 선택하여 확인합니다.
 
-   ![중지된 웹앱이 표시된 Azure Portal](../media/stop-web-app.png)
+   ![중지된 웹앱을 보여 주는 Azure Portal](../media/stop-web-app.png)
 
 1. 브라우저로 다시 전환하고 새로 고침을 선택합니다. 동일한 정보 페이지가 표시됩니다.
 
 **웹앱이 중지되는 동안 지연이 발생할 수 있습니다. 브라우저에서 오류 페이지가 표시되면 페이지를 새로 고칩니다.**
 
-1. Azure Portal로 다시 전환한 후 다른 웹앱을 찾아서 중지합니다.
+1. Azure Portal로 다시 전환하고 다른 웹앱을 찾아 중지합니다.
 
 1. 브라우저로 다시 전환하고 새로 고침을 선택합니다. 이번에는 오류 메시지가 표시됩니다.
 
@@ -137,7 +137,7 @@ Front Door를 만들면 구성이 전역적으로 배포되는 데 몇 분 정�
    
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
-1. Azure Portal **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
+1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
 
 1. 다음 명령을 실행하여 이 모듈의 랩 전체에서 만든 모든 리소스 그룹을 삭제합니다.
 

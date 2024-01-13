@@ -4,11 +4,11 @@ Exercise:
   module: Module 04 - Load balancing non-HTTP(S) traffic in Azure
 ---
 
-# M04-단원 6 Azure Portal을 사용하여 Traffic Manager 프로필 만들기
+# M04-Unit 6 Azure Portal을 사용하여 Traffic Manager 프로필 만들기
 
 이 연습에서는 가상의 Contoso Ltd 조직 웹 애플리케이션에 고가용성을 제공하는 Traffic Manager 프로필을 만듭니다. 
 
-                **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Traffic%20Manager%20profile%20using%20the%20Azure%20portal)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 #### 예상 시간: 35분
 
@@ -50,7 +50,7 @@ Exercise:
    | 요금제     | **표준 S1 총 ACU 100개, 메모리 1.75GB**               |
 
 
-1. **모니터링 탭을** 선택합니다.
+1. 모니터링 탭을** 선택합니다**.
 
 1. **모니터링** 탭의 **Application Insights 사용**에서 **아니요** 옵션을 선택합니다.
 
@@ -84,7 +84,7 @@ Exercise:
 
 1. Azure Portal 홈페이지에서 **리소스 만들기**를 선택합니다.
 
-1. 페이지 위쪽의 검색 상자에 **Traffic Manager 프로필을** 입력한 다음 팝업 목록에서 선택합니다.
+1. 페이지 위쪽의 검색 상자에 Traffic Manager 프로필을** 입력**한 다음 팝업 목록에서 선택합니다.
 
    ![그림 20](../media/create-tmprofile-1.png)
 
@@ -139,7 +139,7 @@ Exercise:
 
 1. 우선 순위를 2로 설정하면 구성된 주 엔드포인트가 비정상 상태가 될 경우 해당 트래픽이 이 장애 조치(failover) 엔드포인트로 라우팅됩니다.
 
-1. **설정**에서 **구성**을 선택한 다음 엔드포인트 모니터 설정 **프로토콜**을 HTTPS 및 **포트** 443으로 업데이트하고 **저장**을 선택합니다.
+1. 설정 구성**을 선택한 **다음 엔드포인트 모니터 설정 **프로토콜**을 HTTPS 및 포트**로 업데이트하고 **저장**을 선택합니다**.****
 
 1. 두 개의 새 엔드포인트가 Traffic Manager 프로필에 표시됩니다. 몇 분 뒤 **모니터링 상태**가 **온라인**으로 변경되어야 합니다.
 
@@ -186,7 +186,7 @@ Exercise:
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
-1. Azure Portal **Cloud Shell** 창 내에서 **PowerShell** 세션을 엽니다.
+1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
 
 1. 다음 명령을 실행하여 이 모듈의 랩 전체에서 만든 모든 리소스 그룹을 삭제합니다.
 
