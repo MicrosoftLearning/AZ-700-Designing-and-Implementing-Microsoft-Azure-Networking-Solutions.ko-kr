@@ -6,8 +6,10 @@ Exercise:
 
 # M02-단원 7 Azure Portal을 사용하여 Virtual WAN 만들기
 
-
 이 연습에서는 Contoso용 Virtual WAN을 만듭니다.
+
+![가상 네트워크 WAN 아키텍처의 다이어그램.](../media/7-exercise-create-virtual-wan-by-using-azure-portal.png)
+
 
 이 연습에서 다음을 수행합니다.
 

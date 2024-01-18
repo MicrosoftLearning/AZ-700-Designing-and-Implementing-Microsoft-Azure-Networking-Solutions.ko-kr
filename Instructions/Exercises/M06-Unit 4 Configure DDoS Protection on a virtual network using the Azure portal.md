@@ -8,6 +8,9 @@ Exercise:
 
 Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모의 DDoS 공격을 실행하려고 합니다. 다음 단계는 가상 네트워크를 만들고, DDoS Protection을 구성하고, 원격 분석 및 메트릭의 도움을 통해 관찰하고 모니터링할 수 있는 공격을 만드는 과정을 안내합니다.
 
+![DDoS 아키텍처 다이어그램.](../media/4-exercise-configure-ddos-protection-virtual-network-using-azure-portal.png)
+
+
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: 리소스 그룹 만들기

@@ -9,6 +9,9 @@ Exercise:
 
 이 연습에서는 스포크 가상 네트워크를 만들고 보안 가상 허브를 만든 다음, 허브 및 스포크 가상 네트워크를 연결하고 트래픽을 허브로 라우팅합니다. 그런 다음 워크로드 서버를 배포하고, 방화벽 정책을 만들고, 허브를 보호하고, 마지막으로 방화벽을 테스트합니다.
 
+![보안 허브를 사용하는 가상 네트워크 아키텍처 다이어그램.](../media/9-exercise-secure-your-virtual-hub-using-azure-firewall-manager.png)
+
+
 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Secure%20your%20virtual%20hub%20using%20Azure%20Firewall%20Manager)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 ## 허브 및 스포크 아키텍처 만들기

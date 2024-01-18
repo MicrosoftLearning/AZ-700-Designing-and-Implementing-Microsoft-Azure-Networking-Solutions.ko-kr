@@ -15,9 +15,8 @@ Exercise:
 
 내부 부하 분산 장치를 만드는 단계는 이 모듈에서 이미 배운 공용 부하 분산 장치를 만드는 과정과 매우 유사합니다. 주요 차이점은 공용 부하 분산 장치를 사용하면 공용 IP 주소를 통해 프런트 엔드에 액세스하고, 가상 네트워크 외부에 있는 호스트에서 연결을 테스트한다는 것입니다. 반면, 내부 부하 분산 장치를 사용하면 프런트 엔드가 가상 네트워크 내부에 있는 개인 IP 주소이며, 동일한 네트워크 내부에 있는 호스트에서 연결을 테스트합니다.
 
-아래의 다이어그램에는 이 연습에서 배포하게 될 환경이 나와 있습니다.
 
-![내부 표준 부하 분산 장치 다이어그램](../media/exercise-internal-standard-load-balancer-environment-diagram.png)
+![내부 표준 부하 분산 장치 다이어그램](../media/4-exercise-create-configure-azure-load-balancer.png)
 
  
 이 연습에서 다음을 수행합니다.
@@ -58,7 +57,7 @@ Exercise:
 
 9. **추가**를 선택합니다.
 
-10. 서브넷** 추가를 선택하고 **myFrontEndSubnet의 **서브넷** 이름 및 10.1.2.0/24**의 **서브넷 주소 범위를 제공합니다. **추가**를 선택합니다.
+10. 서브넷** 추가를 선택하고 **myFrontEndSubnet의 **서브넷** 이름 및 10.1.2.0/24**의 **서브넷 주소 범위를 제공합니다. **추가** 선택
 
 11. 다음: 보안을** 선택합니다**.
 
@@ -81,7 +80,7 @@ Exercise:
 
 1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
  > **참고:** Cloud Shell을 처음 여는 경우 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. 스토리지** 만들기를 선택합니다**.
-2. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드** 아이콘을 선택하고 **드롭다운 메뉴에서 azuredeploy.json, **azuredeploy.parameters.vm1.json, azuredeploy.parameters.vm2.json 및 azuredeploy.parameters.vm3.json 파일을 Cloud Shell 홈 디렉터리에 하나씩 업로드**합니다.
+2. Cloud Shell 창의 도구 모음에서 파일** 업로드/다운로드 아이콘을 선택하고 **드롭다운 메뉴에서 다음 파일 azuredeploy.json 업로드**를 선택하고 **azuredeploy.parameters.json 파일을 Cloud Shell 홈 디렉터리에 하나씩 업로드합니다.
 
 3. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -90,9 +89,7 @@ Exercise:
    ```powershell
    $RGName = "IntLB-RG"
    
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm1.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm2.json
-   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.vm3.json
+   New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
 이러한 세 개의 VM을 만드는 데 5~10분이 걸릴 수 있습니다. 이 작업이 완료될 때까지 기다릴 필요가 없으며 이미 다음 작업을 계속할 수 있습니다.
@@ -117,8 +114,9 @@ Exercise:
    | Resource group        | **IntLB-RG**             |
    | 속성                  | **myIntLoadBalancer**    |
    | 지역                | **(미국) 미국 동부**         |
-   | 유형                  | **내부**             |
    | SKU                   | **표준**             |
+   | 형식                  | **내부**             |
+   | 서비스 계층                  | **Regional**             |
 
 
 1. 다음: 프런트 엔드 IP 구성을** 선택합니다**.
@@ -161,7 +159,7 @@ Exercise:
 
 1. 3개 VM(myVM1 **, myVM2** 및 **myVM3**)** 에 대한 검사 상자를 선택한 다음, 추가**를 선택합니다****.
 
-1. **추가**를 선택합니다.
+1. **저장**을 선택합니다.
    ![그림 7](../media/add-vms-backendpool.png)
    
 
@@ -180,7 +178,6 @@ Exercise:
    | 포트                | **80**            |
    | 경로                | **/**             |
    | 간격            | **15**            |
-   | 비정상 임계값 | **2**             |
 
 
 1. **추가**를 선택합니다.
@@ -192,7 +189,7 @@ Exercise:
 
 부하 분산 장치 규칙은 VM으로 트래픽이 분산되는 방법을 정의하는 데 사용됩니다. 들어오는 트래픽에 대한 프런트 엔드 IP 구성 및 트래픽을 받는 백 엔드 IP 풀을 정의합니다. 원본 및 대상 포트는 규칙에 정의됩니다. 여기서는 부하 분산 장치 규칙을 만듭니다.
 
-1. **부하 분산 장치의 백 엔드 풀** 페이지의 설정** 아래에서 **부하 분산 규칙을** 선택한 **다음 추가**를 선택합니다**.
+1. 설정 부하 **분산 규칙을** 선택한 **다음, 추가**를 선택합니다**.**
 
 1. **부하 분산 규칙 추가** 페이지에 아래 표의 정보를 입력합니다.
 
@@ -201,17 +198,17 @@ Exercise:
    | 속성                   | **myHTTPRule**           |
    | IP 버전             | **IPv4**                 |
    | 프런트 엔드 IP 주소    | **LoadBalancerFrontEnd** |
+   | 백 엔드 풀           | **myBackendPool**        |
    | 프로토콜               | **TCP**                  |
    | 포트                   | **80**                   |
    | 백 엔드 포트           | **80**                   |
-   | 백 엔드 풀           | **myBackendPool**        |
    | 상태 프로브           | **myHealthProbe**        |
    | 세션 지속성    | **없음**                 |
    | 유휴 제한 시간(분) | **15**                   |
    | 부동 IP            | **사용 안 함**             |
 
 
-1. **추가**를 선택합니다.
+1. **저장**을 선택합니다.
    ![그림 6](../media/create-loadbalancerrule.png)
 
  

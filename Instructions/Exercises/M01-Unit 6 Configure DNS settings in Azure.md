@@ -9,6 +9,8 @@ Exercise:
 ## 연습 시나리오 
 이 단원에서는 Contoso Ltd.의 DNS 이름 확인을 구성합니다. contoso.com이라는 프라이빗 DNS 영역을 만들고, 등록 및 확인용 VNnet을 연결한 다음, 두 개의 가상 머신을 만들어 해당 구성을 테스트합니다.
 
+![DNS 아키텍처의 다이어그램](../media/6-exercise-configure-domain-name-servers-configuration-azure.png)
+
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: 프라이빗 DNS 영역 만들기
@@ -56,7 +58,7 @@ Exercise:
 | **옵션**                          | **값**                               |
 | ----------------------------------- | --------------------------------------- |
 | 링크 이름                           | CoreServicesVnetLink                    |
-| 구독                        | 변경 필요 없음                     |
+| Subscription                        | 변경 필요 없음                     |
 | Virtual Network                     | CoreServicesVnet(ContosoResourceGroup) |
 | 자동 등록 사용            | 선택한 상태                                |
 | 설정을 검토하고 확인을 선택합니다. |                                         |
@@ -71,7 +73,7 @@ Exercise:
 | **옵션**                          | **값**                                |
 | ----------------------------------- | ---------------------------------------- |
 | 링크 이름                           | ManufacturingVnetLink                    |
-| 구독                        | 변경 필요 없음                      |
+| Subscription                        | 변경 필요 없음                      |
 | Virtual Network                     | ManufacturingVnet(ContosoResourceGroup) |
 | 자동 등록 사용            | 선택한 상태                                 |
 | 설정을 검토하고 확인을 선택합니다. |                                          |
@@ -86,7 +88,7 @@ Exercise:
 | **옵션**                          | **값**                           |
 | ----------------------------------- | ----------------------------------- |
 | 링크 이름                           | ResearchVnetLink                    |
-| 구독                        | 변경 필요 없음                 |
+| Subscription                        | 변경 필요 없음                 |
 | Virtual Network                     | ResearchVnet(ContosoResourceGroup) |
 | 자동 등록 사용            | 선택한 상태                            |
 | 설정을 검토하고 확인을 선택합니다. |                                     |

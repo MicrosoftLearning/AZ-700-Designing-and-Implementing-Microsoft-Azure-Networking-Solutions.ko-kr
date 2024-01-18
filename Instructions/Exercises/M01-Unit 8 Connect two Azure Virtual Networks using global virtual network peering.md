@@ -8,6 +8,8 @@ Exercise:
 ## 연습 시나리오 
 이 단원에서는 트래픽 흐름을 허용하는 피어링을 추가하여 CoreServicesVnet과 ManufacturingVnet 간의 연결을 구성합니다. 
 
+![가상 네트워크 피어링의 다이어그램](../media/8-exercise-connect-two-azure-virtual-networks-global.png)
+
 이 단원에서 학습할 내용은 다음과 같습니다.
 
 + 작업 1: 구성을 테스트할 가상 머신 만들기
