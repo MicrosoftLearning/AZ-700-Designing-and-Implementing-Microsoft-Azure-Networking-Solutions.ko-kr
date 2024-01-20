@@ -12,7 +12,7 @@ Exercise:
 
 이 연습에서는 여러 다른 Azure 지역에서 실행되는 웹 애플리케이션의 두 인스턴스를 풀링하는 Azure Front Door 구성을 설정합니다. 이 구성은 애플리케이션을 실행하는 가장 가까운 사이트로 트래픽을 보냅니다. Azure Front Door는 웹 애플리케이션을 지속적으로 모니터링합니다. 가장 가까운 사이트를 사용할 수 없는 경우 사용 가능한 다음 사이트에 대한 자동 장애 조치(failover)를 진행합니다. 네트워크 구성은 다음 다이어그램에 표시됩니다.
 
-![Azure Front Door에 대한 네트워크 구성](../media/front-door-environment-diagram.png)
+![Azure Front Door에 대한 네트워크 구성](../media/6-exercise-create-front-door-for-highly-available.png)
 
 이 연습에서 다음을 수행합니다.
 

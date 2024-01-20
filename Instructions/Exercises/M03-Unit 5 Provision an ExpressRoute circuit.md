@@ -11,7 +11,7 @@ Exercise:
 
 #### 예상 소요 시간: 15분
 
-![연습에 필요한 ExpressRoute 회로 레이아웃 다이어그램](../media/environment-diagram.png)
+![연습에 필요한 ExpressRoute 회로 레이아웃 다이어그램](../media/5-exercise-provision-expressroute-circuit.png)
 
 
 

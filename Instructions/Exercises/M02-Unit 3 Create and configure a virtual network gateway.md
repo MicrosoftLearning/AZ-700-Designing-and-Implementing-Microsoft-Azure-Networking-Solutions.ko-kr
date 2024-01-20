@@ -9,6 +9,8 @@ Exercise:
 
 이 연습에서는 Contoso Core Services VNet 및 Manufacturing VNet을 연결하도록 가상 네트워크 게이트웨이를 구성합니다. 
 
+![가상 네트워크 게이트웨이 다이어그램.](../media/3-exercise-create-configure-local-network-gateway.png)
+
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: CoreServicesVnet 및 ManufacturingVnet 만들기
@@ -41,6 +43,7 @@ Exercise:
    New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
+ > **참고:** 현재 서유럽 지역에서 게이트웨이 배포에 영향을 주는 지속적인 문제가 있습니다. 이 배포를 위해 ManufacturingVnet 지역이 북유럽으로 변경되었습니다. 
 
 ## 작업 2: CoreServicesVM 만들기
 
@@ -165,7 +168,7 @@ Exercise:
    | 기본 사항          | 프로젝트 세부 정보   | Subscription                                | 변경 필요 없음          |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | 인스턴스 정보  | 속성                                        | ManufacturingVnetGateway     |
-   |                 |                   | 지역                                      | 서유럽                  |
+   |                 |                   | 지역                                      | 북유럽                  |
    |                 |                   | 게이트웨이 유형                                | VPN                          |
    |                 |                   | VPN 유형                                    | 경로 기반                  |
    |                 |                   | SKU                                         | VpnGw1                       |

@@ -8,6 +8,9 @@ Exercise:
 
 Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Private Link를 시작합니다. 포털, CLI, PowerShell 등을 포함하여 엔드포인트를 만드는 방법에는 여러 가지가 있습니다. 
 
+![프라이빗 엔드포인트 아키텍처의 다이어그램.](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
+
+
 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 #### 예상 시간: 45분

@@ -11,7 +11,7 @@ Exercise:
 
 아래 다이어그램은 이 연습에서 배포하는 환경을 보여 줍니다.
 
-![연습에서 생성되는 부하 분산 장치 아키텍처를 보여 주는 다이어그램 - 부하 분산 장치, VNet, 서브넷, Bastionsubnet 및 VM 포함](../media/exercise-internal-standard-load-balancer-environment-diagram.png)
+![연습에서 생성되는 부하 분산 장치 아키텍처를 보여 주는 다이어그램 - 부하 분산 장치, VNet, 서브넷, Bastionsubnet 및 VM 포함](../media/3-exercise-monitor-load-balancer-resource-using-azure-monitor.png)
 
  이 연습에서 다음을 수행합니다.
 
