@@ -8,7 +8,7 @@ Exercise:
 
 이 연습에서는 Contoso용 Virtual WAN을 만듭니다.
 
-![가상 네트워크 WAN 아키텍처의 다이어그램.](../media/7-exercise-create-virtual-wan-by-using-azure-portal.png)
+![가상 네트워크 WAN 아키텍처의 다이어그램](../media/7-exercise-create-virtual-wan-by-using-azure-portal.png)
 
 
 이 연습에서 다음을 수행합니다.
@@ -26,7 +26,7 @@ Exercise:
 
 1. 브라우저에서 Azure Portal로 이동하고 Azure 계정으로 로그인합니다.
 
-1. 포털에서 검색 상자에 Virtual WAN을 입력하고 결과 목록에서 Virtual WAN을** 선택합니다**.
+1. 포털의 검색 상자에 Virtual WAN을 입력하고 결과 목록에서 **Virtual WAN**을 선택합니다.
 
    ![Azure Portal에서 Virtual WAN 검색](../media/search-for-virtual-wan.png)
 
@@ -63,13 +63,13 @@ Exercise:
    - **이름:** ContosoVirtualWANHub-WestUS
    - **허브 프라이빗 주소 공간:** 10.60.0.0/24
    - **가상 허브 용량:** 2 라우팅 인프라 단위
-   - **허브 라우팅 기본 설정:** 기본값을 그대로 둡니다.
+   - **허브 라우팅 기본 설정:** 기본값을 그대로 사용합니다.
 1. 완료되면 **다음: 사이트 대 사이트**
 1. **사이트 대 사이트** 탭에서 다음 필드를 완료합니다.
    - **사이트 간 (VPN Gateway)를 만드시겠습니까?** 예
    - **AS 번호** 필드는 편집할 수 없습니다.
    - **게이트웨이 배율 단위** 1 배율 단위 = 500Mbps x 2
-   - **라우팅 기본 설정:** 기본값을 그대로 둡니다. 
+   - **라우팅 기본 설정:** 기본값을 그대로 사용합니다. 
 1. **검토 + 만들기**를 선택하여 유효한지 확인합니다.
 1. **만들기**를 선택하여 허브를 만듭니다. 
 1. 30분 후에 **새로 고침**을 선택하여 허브 페이지에서 허브를 봅니다. 
@@ -110,7 +110,7 @@ Exercise:
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
-1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
+1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
 1. 다음 명령을 실행하여 이 모듈의 랩 전체에서 만든 모든 리소스 그룹을 삭제합니다.
 
