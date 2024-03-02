@@ -6,7 +6,7 @@ Exercise:
 
 # M07-단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기
 
-Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Private Link를 시작합니다. 포털, CLI, PowerShell 등을 포함하여 엔드포인트를 만드는 방법에는 여러 가지가 있습니다. 
+Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Private Link를 시작합니다. Portal, CLI, PowerShell 등의 다양한 방법을 사용하여 엔드포인트를 만들 수 있습니다. 
 
 ![프라이빗 엔드포인트 아키텍처의 다이어그램.](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
 
@@ -27,9 +27,9 @@ Azure SQL과 Azure Storage 같은 다양한 종류의 Azure 서비스에 대한 
 
 1. M07 폴더에서 **parameters.json**을 찾아서 엽니다. 메모장에서 열어 “value” 줄을 찾습니다. "GEN-UNIQUE". 자리 표시자 GEN-UNIQUE 문자열을 웹앱 이름의 고유 값으로 바꿉니다. 이 변경 사항을 저장합니다.
 
-1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
+1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-1. Cloud Shell 창의 도구 모음에서 파일** 업로드/다운로드 아이콘을 선택하고 **드롭다운 메뉴에서 업로드**를 선택하고 **다음 파일 **template.json 및 **parameters.json**** 을 Cloud Shell 홈 디렉터리에 하나씩 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고, 드롭다운 메뉴에서 **업로드**를 선택한 후 **template.json** 및 **parameters.json** 파일을 Cloud Shell 홈 디렉터리에 하나씩 업로드합니다.
 
 PowerShell을 로컬로 설치하고 사용하도록 선택하는 경우, 이 예에서는 Azure PowerShell 모듈 버전 5.4.1 이상이 필요합니다. 설치되어 있는 버전을 확인하려면 ```Get-Module -ListAvailable Az```을 실행합니다. 업그레이드해야 하는 경우 [Azure PowerShell 모듈 설치](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)를 참조하세요. 또한 PowerShell을 로컬로 실행하는 경우 ```Connect-AzAccount```를 실행하여 Azure와 연결해야 합니다.
 
@@ -43,7 +43,7 @@ PowerShell을 로컬로 설치하고 사용하도록 선택하는 경우, 이 �
 + 작업 6: 프라이빗 엔드포인트에 대한 연결 테스트
 + 작업 7: 리소스 정리
 
-## 작업 1: 리소스 그룹 만들기 및 필수 구성 요소 웹앱 배포
+## 작업 1: 리소스 그룹 만들기 및 필수 요건 웹앱 배포
 
 Azure 리소스 그룹은 Azure 리소스가 배포 및 관리되는 논리적 컨테이너입니다.
 
@@ -52,7 +52,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리되는 논리적 �
 ```PowerShell
 New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
 ```
-다음 ARM 템플릿을 배포하여 이 연습에 필요한 PremiumV2 계층 Azure 웹앱을 만듭니다.
+다음 ARM 템플릿을 배포하여 이 연습에 필요한 PremiumV2-tier Azure 웹앱을 만듭니다.
 
    ```powershell
    $RGName = "CreatePrivateEndpointQS-rg"
