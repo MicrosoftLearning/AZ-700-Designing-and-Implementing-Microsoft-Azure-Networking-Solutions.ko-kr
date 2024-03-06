@@ -3,7 +3,7 @@ Exercise:
   title: M03 - 단원 5 ExpressRoute 회로 프로비전
   module: Module 03 - Design and implement Azure ExpressRoute
 ---
-# M03-Unit 5 ExpressRoute 회로 프로비전
+# M03-단원 5 ExpressRoute 회로 프로비전
 
 이 연습에서는 Azure Portal 및 Azure Resource Manager 배포 모델을 사용하여 ExpressRoute 회로를 만듭니다. 
 
@@ -130,7 +130,7 @@ ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
-1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
+1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
 1. 다음 명령을 실행하여 이 모듈의 랩 전체에서 만든 모든 리소스 그룹을 삭제합니다.
 
