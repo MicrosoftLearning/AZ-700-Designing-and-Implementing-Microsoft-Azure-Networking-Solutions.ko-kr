@@ -5,7 +5,7 @@ Exercise:
 ---
 
 
-# M02-Unit 3 가상 네트워크 게이트웨이 만들기 및 구성
+# M02-단원 3 가상 네트워크 게이트웨이 만들기 및 구성
 
 이 연습에서는 Contoso Core Services VNet 및 Manufacturing VNet을 연결하도록 가상 네트워크 게이트웨이를 구성합니다. 
 
@@ -31,9 +31,9 @@ Exercise:
 
 ## 작업 1: CoreServicesVnet 및 ManufacturingVnet 만들기
 
-1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
- > **참고:** Cloud Shell을 처음 여는 경우 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. 스토리지** 만들기를 선택합니다**.
-1. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드** 아이콘을 선택하고 **드롭다운 메뉴에서 **다음 파일 azuredeploy.json 및 **azuredeploy.parameters.json**** 파일을 **원본 폴더 **F:\Allfiles\Exercises\M02에서 하나씩 Cloud Shell 홈 디렉터리에 업로드**합니다.**
+1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
+ > **참고:** Cloud Shell을 처음 연 경우에는 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. **스토리지 만들기**를 선택합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드 아이콘**을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크 및 서브넷을 만듭니다.
 
@@ -43,13 +43,13 @@ Exercise:
    New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
- > **참고:** 현재 서유럽 지역에서 게이트웨이 배포에 영향을 주는 지속적인 문제가 있습니다. 이 배포를 위해 ManufacturingVnet 지역이 북유럽으로 변경되었습니다. 
+ > **참고:** 현재 서유럽 지역에는 게이트웨이 배포에 영향을 미치는 문제가 진행 중입니다. 해결 방법으로 이 배포를 위해 ManufacturingVNet 지역이 북유럽으로 변경되었습니다. 
 
 ## 작업 2: CoreServicesVM 만들기
 
-1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
+1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-1. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드 아이콘을 선택하고 **드롭다운 메뉴에서 **CoreServicesVMazuredeploy.json 및 **CoreServicesVMazuredeploy.parameters.json**** 파일을 **원본 폴더 **F:\Allfiles\Exercises\M02**에서 하나씩 Cloud Shell 홈 디렉터리에 업로드**합니다.**
+1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 클릭하고, 드롭다운 메뉴에서 **업로드**를 클릭한 다음, **CoreServicesVMazuredeploy.json** 및 **CoreServicesVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -67,9 +67,9 @@ Exercise:
 
 ## 작업 3: ManufacturingVM 만들기
 
-1. Azure Portal에서 Cloud Shell 창 내에서 **PowerShell** 세션을 엽니다**.**
+1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-1. Cloud Shell 창의 도구 모음에서 파일 업로드/다운로드** 아이콘을 선택하고 **드롭다운 메뉴에서 **다음 파일 ManufacturingVMazuredeploy.json**** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 **원본 폴더 **F:\Allfiles\Exercises\M02**에서 하나씩 Cloud Shell 홈 디렉터리에 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음 **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -88,21 +88,21 @@ Exercise:
 
 ## 작업 4: RDP를 사용하여 VM에 연결
 
-1. Azure Portal 홈페이지에서 Virtual Machines**를 선택합니다**.
+1. Azure Portal 홈 페이지에서 **Virtual Machines**를 선택합니다.
 1. **ManufacturingVM**을 선택합니다.
-1. ManufacturingVM에서 **RDP**를 커넥트 &gt; 선택합니다****.
-1. **ManufacturingVM | **커넥트 RDP 파일** 다운로드를 선택합니다**.
+1. **ManufacturingVM**에서 **연결 &gt; RDP**를 선택합니다.
+1. **ManufacturingVM | 연결**에서 **RDP 파일 다운로드**를 선택합니다.
 1. RDP 파일을 데스크톱에 저장합니다.
-1. ** 커넥트RDP 파일 및 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하는 ManufacturingVM**입니다. 연결한 후 RDP 세션을 최소화합니다.
-1. Azure Portal 홈페이지에서 Virtual Machines**를 선택합니다**.
+1. RDP 파일, 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하여 **ManufacturingVM**에 연결합니다. 연결한 후 RDP 세션을 최소화합니다.
+1. Azure Portal 홈 페이지에서 **Virtual Machines**를 선택합니다.
 1. **CoreServicesVM**을 선택합니다.
-1. CoreServicesVM**에서 **커넥트 &gt; RDP**를 선택합니다**.
-1. **CoreServicesVM | **커넥트 RDP 파일** 다운로드를 선택합니다**.
+1. **CoreServicesTestVM**에서 **연결 &gt; RDP**를 선택합니다.
+1. **CoreServicesTestVM | 연결**에서 **RDP 파일 다운로드**를 선택합니다.
 1. RDP 파일을 데스크톱에 저장합니다.
-1. ** 커넥트RDP 파일 및 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하는 CoreServicesVM**입니다.
+1. RDP 파일, 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하여 **CoreServicesVM**에 연결합니다.
 1. 두 VM의 **디바이스에 대한 개인 정보 설정 선택**에서 **동의**를 선택합니다.
 1. 두 VM의 **네트워크**에서 **예**를 선택합니다.
-1. CoreServicesVM**에서 **PowerShell을 열고 ipconfig 명령을 실행합니다.
+1. **CoreServicesVM**에서 PowerShell을 열고 ipconfig 명령을 실행합니다.
 1. IPv4 주소를 기록해 두세요. 
 
  

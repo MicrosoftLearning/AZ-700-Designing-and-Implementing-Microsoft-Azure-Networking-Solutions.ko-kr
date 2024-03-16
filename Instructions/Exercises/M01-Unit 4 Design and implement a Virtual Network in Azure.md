@@ -3,7 +3,7 @@ Exercise:
   title: M01 - 단원 4 Azure에서 가상 네트워크 설계 및 구현
   module: Module 01 - Introduction to Azure Virtual Networks
 ---
-# M01-Unit 4 Azure에서 Virtual Network 디자인 및 구현
+# M01-단원 4 Azure에서 가상 네트워크 설계 및 구현
 
 
 ## 연습 시나리오 
@@ -41,7 +41,7 @@ Exercise:
 |                     |              |                                   | SensorSubnet1             | 10.30.20.0/24 |
 |                     |              |                                   | SensorSubnet2             | 10.30.21.0/24 |
 |                     |              |                                   | SensorSubnet3             | 10.30.22.0/24 |
-| ResearchVnet        |동남 아시아| 10.40.0.0/16                      |                           |               |
+| ResearchVnet        |동남아시아| 10.40.0.0/16                      |                           |               |
 |                     |              |                                   | ResearchSystemSubnet      | 10.40.0.0/24  |
 
 
@@ -61,7 +61,7 @@ Exercise:
 
 2. 홈페이지의 **Azure 서비스**에서 **리소스 그룹**을 선택합니다.  
 
-3. 리소스 그룹에서 + 만들기**를 선택합니다**.
+3. 리소스 그룹에서 **+ 만들기**를 선택합니다.
 
 4. 다음 표의 정보를 사용하여 리소스 그룹을 만듭니다.
 
@@ -145,7 +145,7 @@ Exercise:
 | ------------ | ------------------ | -------------------- |
 | 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
 |              | 이름               | ResearchVnet         |
-|              | 지역             | 동남 아시아       |
+|              | 지역             | 동남아시아       |
 | IP 주소 | IPv4 주소 공간 | 10.40.0.0/16         |
 
 | **서브넷**           | **옵션**           | **값**            |
@@ -160,7 +160,7 @@ Exercise:
 
 2. CoreServicesVnet, ManufacturingVnet 및 ResearchVnet이 표시되는지 확인합니다.
 
-3 CoreServicesVnet**을 선택합니다**. 
+3 **CoreServicesVnet**을 선택합니다. 
 
 4. CoreServicesVnet의 **설정**에서 **서브넷**을 선택합니다.
 
@@ -168,6 +168,6 @@ Exercise:
 
    ![CoreServicesVnet의 서브넷 목록](../media/verify-subnets-annotated.png)
 
-6. 각 VNet에 대해 3-5단계를 반복합니다.
+6. 각 VNet마다 3~5단계를 반복합니다.
 
 축하합니다! 리소스 그룹, 3개의 Vnet, 연결된 서브넷을 성공적으로 만들었습니다. 
