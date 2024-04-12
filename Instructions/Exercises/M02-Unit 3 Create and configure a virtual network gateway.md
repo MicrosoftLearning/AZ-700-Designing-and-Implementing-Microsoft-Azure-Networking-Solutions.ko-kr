@@ -7,7 +7,9 @@ Exercise:
 
 # M02-단원 3 가상 네트워크 게이트웨이 만들기 및 구성
 
-이 연습에서는 Contoso Core Services VNet 및 Manufacturing VNet을 연결하도록 가상 네트워크 게이트웨이를 구성합니다. 
+## 연습 시나리오
+
+이 연습에서는 Contoso Core Services VNet 및 Manufacturing VNet을 연결하도록 가상 네트워크 게이트웨이를 구성합니다.
 
 ![가상 네트워크 게이트웨이 다이어그램.](../media/3-exercise-create-configure-local-network-gateway.png)
 
@@ -20,19 +22,21 @@ Exercise:
 + 작업 5: VM 간 연결 테스트
 + 작업 6: CoreServicesVnet 게이트웨이 만들기
 + 작업 7: ManufacturingVnet 게이트웨이 만들기
-+ 작업 8: CoreServicesVnet을 ManufacturingVnet에 연결 
++ 작업 8: CoreServicesVnet을 ManufacturingVnet에 연결
 + 작업 9: CoreServicesVnet에 ManufacturingVnet 연결
-+ 작업 10: 연결 확인 
++ 작업 10: 연결 확인
 + 작업 11: VM 간 연결 테스트
 
 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
-#### 예상 시간: 70분(배포 대기 시간 ~45분 포함)
+### 예상 시간: 70분(배포 대기 시간 ~45분 포함)
 
 ## 작업 1: CoreServicesVnet 및 ManufacturingVnet 만들기
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
+
  > **참고:** Cloud Shell을 처음 연 경우에는 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. **스토리지 만들기**를 선택합니다.
+
 1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드 아이콘**을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크 및 서브넷을 만듭니다.
@@ -43,7 +47,8 @@ Exercise:
    New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
- > **참고:** 현재 서유럽 지역에는 게이트웨이 배포에 영향을 미치는 문제가 진행 중입니다. 해결 방법으로 이 배포를 위해 ManufacturingVNet 지역이 북유럽으로 변경되었습니다. 
+
+ > **참고:** 현재 서유럽 지역에는 게이트웨이 배포에 영향을 미치는 문제가 진행 중입니다. 해결 방법으로 이 배포를 위해 ManufacturingVNet 지역이 북유럽으로 변경되었습니다.
 
 ## 작업 2: CoreServicesVM 만들기
 
@@ -85,7 +90,6 @@ Exercise:
 
 1. 가상 머신이 만들어졌는지 확인합니다.
 
-
 ## 작업 4: RDP를 사용하여 VM에 연결
 
 1. Azure Portal 홈 페이지에서 **Virtual Machines**를 선택합니다.
@@ -103,9 +107,7 @@ Exercise:
 1. 두 VM의 **디바이스에 대한 개인 정보 설정 선택**에서 **동의**를 선택합니다.
 1. 두 VM의 **네트워크**에서 **예**를 선택합니다.
 1. **CoreServicesVM**에서 PowerShell을 열고 ipconfig 명령을 실행합니다.
-1. IPv4 주소를 기록해 두세요. 
-
- 
+1. IPv4 주소를 기록해 두세요.
 
 ## 작업 5: VM 간 연결 테스트
 
@@ -121,9 +123,7 @@ Exercise:
 
    ![Test-NetConnection이 실패했습니다.](../media/test-netconnection-fail.png)
 
- 
-
-##  작업 6: CoreServicesVnet 게이트웨이 만들기
+## 작업 6: CoreServicesVnet 게이트웨이 만들기
 
 1. **리소스, 서비스, 문서 검색(G+/)** 에서 **가상 네트워크 게이트웨이**를 입력한 다음, 결과에서 **가상 네트워크 게이트웨이**를 선택합니다.
    ![Azure Portal에서 가상 네트워크 게이트웨이를 검색합니다.](../media/virtual-network-gateway-search.png)
@@ -151,9 +151,9 @@ Exercise:
    |                 |                   | BGP 구성                               | 사용 안 함                     |
    | 검토 + 만들기 |                   | 설정을 검토하고 **만들기**를 선택합니다. |                              |
 
-   > [!NOTE] 
+   > [!NOTE]
    >
-   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 45분이 걸릴 수 있습니다. 
+   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 45분이 걸릴 수 있습니다.
 
 ## 작업 7: ManufacturingVnet 게이트웨이 만들기
 
@@ -181,14 +181,12 @@ Exercise:
    |                 |                   | 활성-활성 모드 사용                   | 사용 안 함                     |
    |                 |                   | BGP 구성                               | 사용 안 함                     |
    | 검토 + 만들기 |                   | 설정을 검토하고 **만들기**를 선택합니다. |                              |
-   
+
    > [!NOTE]
    >
-   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 45분이 걸릴 수 있습니다. 
+   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 45분이 걸릴 수 있습니다.
 
- 
-
-## 작업 8: ManufacturingVnet에 CoreServicesVnet 연결 
+## 작업 8: ManufacturingVnet에 CoreServicesVnet 연결
 
 1. **리소스, 서비스, 문서 검색(G+/)** 에서 **가상 네트워크 게이트웨이**를 입력한 다음, 결과에서 **가상 네트워크 게이트웨이**를 선택합니다.
 
@@ -217,7 +215,6 @@ Exercise:
    | 위치                       | 미국 동부                           |
 
 1. 연결을 만들려면 **확인**을 선택합니다.
-   
 
 ## 작업 9: CoreServicesVnet에 ManufacturingVnet 연결
 
@@ -245,15 +242,13 @@ Exercise:
 
 1. 연결을 만들려면 **확인**을 선택합니다.
 
-## 작업 10: 연결 확인 
+## 작업 10: 연결 확인
 
 1. **리소스, 서비스, 문서 검색(G+/)** 에서 **연결**을 입력한 다음 결과에서 **연결**을 선택합니다.
 
-1. 두 연결의 상태가 **연결됨**이 될 때까지 기다립니다. 화면을 새로 고쳐야 할 수도 있습니다. 
+1. 두 연결의 상태가 **연결됨**이 될 때까지 기다립니다. 화면을 새로 고쳐야 할 수도 있습니다.
 
    ![VPN Gateway 연결을 만들었습니다.](../media/connections-status-connected.png)
-
- 
 
 ## 작업 11: VM 간 연결 테스트
 
