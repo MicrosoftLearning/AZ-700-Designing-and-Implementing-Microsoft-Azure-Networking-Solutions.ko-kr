@@ -6,14 +6,16 @@ Exercise:
 
 # M07-단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기
 
-Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Private Link를 시작합니다. Portal, CLI, PowerShell 등의 다양한 방법을 사용하여 엔드포인트를 만들 수 있습니다. 
+## 연습 시나리오
+
+Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Private Link를 시작합니다. Portal, CLI, PowerShell 등의 다양한 방법을 사용하여 엔드포인트를 만들 수 있습니다.
 
 ![프라이빗 엔드포인트 아키텍처의 다이어그램.](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
 
 
 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
-#### 예상 시간: 45분
+### 예상 시간: 45분
 
 Azure 웹앱용 프라이빗 엔드포인트를 만들고, 가상 머신을 배포하여 프라이빗 연결을 테스트합니다.
 
@@ -35,13 +37,13 @@ PowerShell을 로컬로 설치하고 사용하도록 선택하는 경우, 이 �
 
 이 연습에서 다음을 수행합니다.
 
-+ 작업 1: 리소스 그룹 만들기
-+ 작업 2: 가상 네트워크 및 베스천 호스트 만들기
-+ 작업 3: 테스트 가상 머신 만들기
-+ 작업 4: 프라이빗 엔드포인트 만들기
-+ 작업 5: 프라이빗 DNS 영역 구성
-+ 작업 6: 프라이빗 엔드포인트에 대한 연결 테스트
-+ 작업 7: 리소스 정리
+- 작업 1: 리소스 그룹 만들기
+- 작업 2: 가상 네트워크 및 베스천 호스트 만들기
+- 작업 3: 테스트 가상 머신 만들기
+- 작업 4: 프라이빗 엔드포인트 만들기
+- 작업 5: 프라이빗 DNS 영역 구성
+- 작업 6: 프라이빗 엔드포인트에 대한 연결 테스트
+- 작업 7: 리소스 정리
 
 ## 작업 1: 리소스 그룹 만들기 및 필수 요건 웹앱 배포
 
@@ -52,6 +54,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리되는 논리적 �
 ```PowerShell
 New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
 ```
+
 다음 ARM 템플릿을 배포하여 이 연습에 필요한 PremiumV2-tier Azure 웹앱을 만듭니다.
 
    ```powershell
@@ -59,6 +62,7 @@ New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile template.json -TemplateParameterFile parameters.json
    ```
+
 (예를 들어 포털에서 배포 상태를 조사하는 동안) “이름이 GEN-UNIQUE인 웹 사이트가 이미 있음”과 같은 오류가 표시되는 경우 템플릿 편집과 관련하여 위에서 언급한 필수 구성 요소로 이동하세요.
 
 ## 작업 2: 가상 네트워크 및 베스천 호스트 만들기
@@ -74,8 +78,6 @@ New-AzResourceGroup -Name 'CreatePrivateEndpointQS-rg' -Location 'eastus'
 - New-AzPublicIpAddress
 
 - New-AzBastion
-
- 
 
 ```PowerShell
 ## Create backend subnet config. ##
@@ -138,9 +140,6 @@ $parameters3 = @{
 
 New-AzBastion @parameters3
 ```
-
-
-
 
 ## 작업 3: 테스트 가상 머신 만들기
 
@@ -226,9 +225,6 @@ New-AzVM -ResourceGroupName 'CreatePrivateEndpointQS-rg' -Location 'eastus' -VM 
 
 ```
 
-
-
-
 Azure는 공용 IP 주소가 할당되지 않았거나 내부 기본 Azure Load Balancer의 백 엔드 풀에 있는 Azure Virtual Machines에 대한 임시 IP를 제공합니다. 임시 IP 메커니즘은 구성할 수 없는 아웃바운드 IP 주소를 제공합니다.
 
 공용 IP 주소가 가상 머신에 할당되거나 아웃바운드 규칙이 있거나 없는 표준 Load Balancer의 백 엔드 풀에 가상 머신이 배치되면 임시 IP가 비활성화됩니다. Azure Virtual Network NAT 게이트웨이 리소스가 가상 머신의 서브넷에 할당되면 임시 IP가 비활성화됩니다.
@@ -242,8 +238,6 @@ Azure의 아웃바운드 연결에 대한 자세한 내용은 아웃바운드 �
 - New-AzPrivateLinkServiceConnection
 
 - New-AzPrivateEndpoint
-
- 
 
 ```PowerShell
 ## Place web app into variable. This assumes that only one web app exists in the resource group. ##
@@ -292,9 +286,6 @@ $parameters2 = @{
 
 New-AzPrivateEndpoint @parameters2 
 ```
-
-
-
 
 ## 작업 5: 프라이빗 DNS 영역 구성
 
@@ -370,7 +361,6 @@ $parameters4 = @{
 New-AzPrivateDnsZoneGroup @parameters4 
 ```
 
-
 ## 작업 6: 프라이빗 엔드포인트에 대한 연결 테스트
 
 이 섹션에서는 이전 단계에서 만든 가상 머신을 사용하여 프라이빗 엔드포인트에서 웹앱에 연결합니다.
@@ -407,13 +397,12 @@ New-AzPrivateDnsZoneGroup @parameters4
   Aliases: mywebapp8675.azurewebsites.net 
   ```  
 
-
 웹앱 이름에 대해 **10.0.0.5**의 개인 IP 주소가 반환됩니다. 이 주소는 이전에 만든 가상 네트워크의 서브넷에 있습니다.
 
 1. **myVM**에 대한 베스천 연결에서 Internet Explorer를 엽니다.
 1. 웹앱의 URL, **https://&lt;your-webapp-name&gt;.azurewebsites.net**을 입력합니다.
 1. 애플리케이션이 배포되지 않은 경우 기본 웹앱 페이지를 받게 됩니다. ![앱 서비스가 실행 중임을 나타내는 Azure 페이지의 스크린샷](../media/web-app-default-page.png)
-1. **myVM**에 대한 연결을 닫습니다. 
+1. **myVM**에 대한 연결을 닫습니다.
 
 ## 작업 7: 리소스 정리
 
@@ -422,8 +411,3 @@ New-AzPrivateDnsZoneGroup @parameters4
 ```PowerShell
 Remove-AzResourceGroup -Name CreatePrivateEndpointQS-rg -Force -AsJob
 ```
-
-
-
-
-

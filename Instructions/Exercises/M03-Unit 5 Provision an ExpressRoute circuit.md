@@ -5,15 +5,15 @@ Exercise:
 ---
 # M03-단원 5 ExpressRoute 회로 프로비전
 
-이 연습에서는 Azure Portal 및 Azure Resource Manager 배포 모델을 사용하여 ExpressRoute 회로를 만듭니다. 
+## 연습 시나리오
+
+이 연습에서는 Azure Portal 및 Azure Resource Manager 배포 모델을 사용하여 ExpressRoute 회로를 만듭니다.
 
 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
-#### 예상 소요 시간: 15분
+### 예상 소요 시간: 15분
 
 ![연습에 필요한 ExpressRoute 회로 레이아웃 다이어그램](../media/5-exercise-provision-expressroute-circuit.png)
-
-
 
 이 연습에서 다음을 수행합니다.
 
@@ -22,14 +22,11 @@ Exercise:
 + 작업 3: ExpressRoute 회로 프로비저닝 해제
 + 작업 4: 리소스 정리
 
-
 ## 작업 1: ExpressRoute 회로 만들기 및 프로비저닝
-
- 
 
 1. 브라우저에서 [Azure 포털](https://portal.azure.com/) 로 이동하고 Azure 계정으로 로그인합니다.
 
-   > [!Important] 
+   > [!Important]
    >
    > ExpressRoute 회로는 서비스 키가 발급된 순간부터 비용이 청구됩니다. 연결 공급자가 회로를 프로비전할 준비가 된 후에 이 작업을 수행하도록 하십시오.
 
@@ -45,42 +42,38 @@ Exercise:
 
 1. ExpressRoute 구성이 유효성 검사를 통과하는지 확인한 다음, **만들기**를 선택합니다.
 
-
 ![Azure Portal - ExpressRoute 만들기 구성 탭](../media/expressroute-create-configuration2.png)
 
- 
-
-- 포트 유형은 피어링 위치에서 서비스 공급자에 연결하거나 Microsoft의 글로벌 네트워크에 직접 연결하는지 결정합니다.
-- 새로 만들기 또는 클래식에서 가져오기는 새 회로를 만들지 또는 클래식 회로를 Azure Resource Manager로 마이그레이션할지를 결정합니다.
-- 공급자는 서비스를 요청하는 인터넷 서비스 공급자입니다.
-- 피어링 위치는 Microsoft와 피어링하는 물리적 위치입니다.
++ 포트 유형은 피어링 위치에서 서비스 공급자에 연결하거나 Microsoft의 글로벌 네트워크에 직접 연결하는지 결정합니다.
++ 새로 만들기 또는 클래식에서 가져오기는 새 회로를 만들지 또는 클래식 회로를 Azure Resource Manager로 마이그레이션할지를 결정합니다.
++ 공급자는 서비스를 요청하는 인터넷 서비스 공급자입니다.
++ 피어링 위치는 Microsoft와 피어링하는 물리적 위치입니다.
 
 > [!Important]
 >
 > 피어링 위치는 Microsoft와 피어링하는 [물리적 위치](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-locations)를 나타냅니다. 이 위치는 Azure Network Resource Provider가 있는 지리적 위치를 참조하는 "Location" 속성에 연결되지 않습니다 . 이 속성에 연결되지 않는 대신 회로의 피어링 위치와 지리적으로 가까운 네트워크 리소스 공급자를 선택 하는 것이 좋습니다.
 
-- **SKU**는 ExpressRoute 로컬, ExpressRoute 표준 또는 ExpressRoute 프리미엄 추가 기능이 사용되는지 여부를 결정합니다. **로컬**을 지정하여 로컬 SKU를 가져오거나, **표준**을 지정하여 표준 SKU를 가져오거나, 프리미엄 추가 기능을 위해 **프리미엄**을 지정할 수 있습니다. SKU를 변경하여 프리미엄 추가 기능을 사용하도록 설정할 수 있습니다.
++ **SKU**는 ExpressRoute 로컬, ExpressRoute 표준 또는 ExpressRoute 프리미엄 추가 기능이 사용되는지 여부를 결정합니다. **로컬**을 지정하여 로컬 SKU를 가져오거나, **표준**을 지정하여 표준 SKU를 가져오거나, 프리미엄 추가 기능을 위해 **프리미엄**을 지정할 수 있습니다. SKU를 변경하여 프리미엄 추가 기능을 사용하도록 설정할 수 있습니다.
 
 > [!Important]
 >
 > SKU를 표준/프리미엄에서 로컬로 변경할 수 없습니다.
 
-- **청구 모델**은 청구서 유형을 결정합니다. 데이터 요금제의 경우 **Metered**를 선택하고 무제한 데이터 요금제의 경우 **Unlimited**를 선택할 수 있습니다. 청구 유형을 **Metered**에서 **Unlimited**로 변경할 수 있습니다.
++ **청구 모델**은 청구서 유형을 결정합니다. 데이터 요금제의 경우 **Metered**를 선택하고 무제한 데이터 요금제의 경우 **Unlimited**를 선택할 수 있습니다. 청구 유형을 **Metered**에서 **Unlimited**로 변경할 수 있습니다.
 
 > [!Important]
 >
 > 청구 유형을 무제한에서 데이터 요금제로 변경할 수는 없습니다.
 
-- **클래식 작업 허용**을 사용하여 클래식 가상 네트워크를 회로에 연결할 수 있습니다.
++ **클래식 작업 허용**을 사용하여 클래식 가상 네트워크를 회로에 연결할 수 있습니다.
 
 ## 작업 2: 서비스 키 검색
- 
 
 1. **모든 서비스 &gt; 네트워킹 &gt; ExpressRoute 회로**를 선택하여 만든 모든 회로를 볼 수 있습니다.
 
    ![Azure Portal - ExpressRoute 만들기 리소스 메뉴](../media/expressroute-circuit-menu.png)
 
-1. 구독에서 만든 모든 ExpressRoute 회로가 여기에 표시됩니다. 
+1. 구독에서 만든 모든 ExpressRoute 회로가 여기에 표시됩니다.
 
    ![Azure Portal - 기존 Expressroute 회로 표시](../media/expressroute-circuit-list.png)
 
@@ -88,26 +81,22 @@ Exercise:
 
    ![Azure Portal - 서비스 키를 표시하는 ExpressRoute 회로 속성](../media/expressroute-circuit-overview.png)
 
-1. 이 페이지에서 **공급자 상태**는 서비스 공급자 측의 현재 프로비저닝 상태를 제공합니다. **회로 상태**는 Microsoft 측의 상태를 제공합니다. 
+1. 이 페이지에서 **공급자 상태**는 서비스 공급자 측의 현재 프로비저닝 상태를 제공합니다. **회로 상태**는 Microsoft 측의 상태를 제공합니다.
 
 1. 새 ExpressRoute 회로를 만들면 회로는 다음 상태가 됩니다.
 
-   - 공급자 상태: 프로비전되지 않음
-   - 회로 상태: 활성화됨
+   + 공급자 상태: 프로비전되지 않음
+   + 회로 상태: 활성화됨
 
-
-
-   - 연결 공급자가 사용자에 대해 현재 활성화하고 있을 때 회로가 다음 상태로 변경됩니다.
-     - 공급자 상태: 프로비전 중
-     - 회로 상태: 활성화됨
-   - ExpressRoute 회로를 사용하려면 다음 상태여야 합니다.
-     - 공급자 상태: 프로비전됨
-     - 회로 상태: 활성화됨
-   - 주기적으로 프로비저닝 상태와 회로 상태를 확인해야 합니다.
+   + 연결 공급자가 사용자에 대해 현재 활성화하고 있을 때 회로가 다음 상태로 변경됩니다.
+     + 공급자 상태: 프로비전 중
+     + 회로 상태: 활성화됨
+   + ExpressRoute 회로를 사용하려면 다음 상태여야 합니다.
+     + 공급자 상태: 프로비전됨
+     + 회로 상태: 활성화됨
+   + 주기적으로 프로비저닝 상태와 회로 상태를 확인해야 합니다.
 
 ![Azure Portal - 상태가 이제 프로비저닝됨을 표시하는 ExpressRoute 회로 속성](../media/provisioned.png)
-
- 
 
 축하합니다! ExpressRoute 회로를 만들었고 회로 프로비저닝을 완료하는 데 필요한 서비스 키를 찾았습니다.
 
@@ -127,7 +116,6 @@ ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저
 
 ![Azure Portal - ExpressRoute 회로 삭제](../media/expressroute-circuit-delete.png)
 
-
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
@@ -138,6 +126,5 @@ ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저
    Remove-AzResourceGroup -Name 'ContosoResourceGroup' -Force -AsJob
    Remove-AzResourceGroup -Name 'ExpressRouteResourceGroup' -Force -AsJob
    ```
+
    >**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
-
-
