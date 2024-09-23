@@ -3,7 +3,8 @@ Exercise:
   title: M01 - 단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
   module: Module 01 - Introduction to Azure Virtual Networks
 ---
-# M01-단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
+
+# M01 - 단원 8 전역 가상 네트워크 피어링을 사용해 Azure Virtual Network 2개 연결
 
 ## 연습 시나리오
 
@@ -30,8 +31,10 @@ Exercise:
 
 ### ManufacturingVM 만들기
 
-1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
-  > **참고:** Cloud Shell을 처음 연 경우에는 스토리지 계정을 만들라는 메시지가 표시될 수 있습니다. **스토리지 만들기**를 선택합니다.
+1. Azure Portal 오른쪽 상단에 있는 Cloud Shell 아이콘을 선택합니다. 필요한 경우 셸을 구성합니다.  
+    + **PowerShell**을 선택합니다.
+    + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
+    + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
 1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음 **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 
@@ -57,7 +60,7 @@ Exercise:
 
 1. ManufacturingVM에서 **연결 &gt; RDP**를 선택합니다.
 
-1. ManufacturingVM | 연결에서 **RDP 파일 다운로드**를 선택합니다.
+1. ManufacturingVM \| 연결에서 **RDP 파일 다운로드**를 선택합니다.
 
 1. RDP 파일을 데스크톱에 저장합니다.
 
@@ -69,7 +72,7 @@ Exercise:
 
 1. TestVM1에서 **연결 &gt; RDP**를 선택합니다.
 
-1. TestVM1 | 연결에서 **RDP 파일 다운로드**를 선택합니다.
+1. TestVM1 \| 연결에서 **RDP 파일 다운로드**를 선택합니다.
 
 1. RDP 파일을 데스크톱에 저장합니다.
 
@@ -102,32 +105,32 @@ Exercise:
 1. CoreServicesVnet의 **설정**에서 **피어링**을 선택합니다.
    ![핵심 서비스 VNet 피어링 설정 스크린샷 ](../media/create-peering-on-coreservicesvnet.png)
 
-1. CoreServicesVnet | 피어링에서 **+ 추가**를 선택합니다.
+1. CoreServicesVnet \| 피어링에서 **+ 추가**를 선택합니다.
 
 1. 다음 표의 정보를 사용하여 피어링을 만듭니다.
 
-| **섹션**                          | **옵션**                                    | **값**                             |
-| ------------------------------------ | --------------------------------------------- | ------------------------------------- |
-| 이 가상 네트워크                 |                                               |                                       |
-|                                      | 피어링 링크 이름                             | CoreServicesVnet-to-ManufacturingVnet |
-|                                      | 원격 가상 네트워크로의 트래픽             | 허용(기본값)                       |
-|                                      | 원격 가상 네트워크에서 전달된 트래픽 | 허용(기본값)                       |
-|                                      | 가상 네트워크 게이트웨이 또는 Route Server       | 없음(기본값)                        |
-| 원격 가상 네트워크               |                                               |                                       |
-|                                      | 피어링 링크 이름                             | ManufacturingVnet-to-CoreServicesVnet |
-|                                      | 가상 네트워크 배포 모델              | 리소스 관리자                      |
-|                                      | 리소스 ID를 알고 있음                         | 선택 안 됨                          |
-|                                      | 구독                                  | 제공된 구독 선택      |
-|                                      | 가상 네트워크                               | ManufacturingVnet                     |
-|                                      | 원격 가상 네트워크로의 트래픽             | 허용(기본값)                       |
-|                                      | 원격 가상 네트워크에서 전달된 트래픽 | 허용(기본값)                       |
-|                                      | 가상 네트워크 게이트웨이 또는 Route Server       | 없음(기본값)                        |
-| 설정을 검토하고 추가를 선택합니다. |                                               |                                       |
-|                                      |                                               |                                       |
+   | **섹션**                          | **옵션**                                    | **값**                             |
+   | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
+   | 이 가상 네트워크                 |                                               |                                       |
+   |                                      | 피어링 링크 이름                             | CoreServicesVnet-to-ManufacturingVnet |
+   |                                      | 원격 가상 네트워크로의 트래픽             | 허용(기본값)                       |
+   |                                      | 원격 가상 네트워크에서 전달된 트래픽 | 허용(기본값)                       |
+   |                                      | 가상 네트워크 게이트웨이 또는 Route Server       | 없음(기본값)                        |
+   | 원격 가상 네트워크               |                                               |                                       |
+   |                                      | 피어링 링크 이름                             | ManufacturingVnet-to-CoreServicesVnet |
+   |                                      | 가상 네트워크 배포 모델              | 리소스 관리자                      |
+   |                                      | 리소스 ID를 알고 있음                         | 선택 안 됨                          |
+   |                                      | 구독                                  | 제공된 구독 선택      |
+   |                                      | 가상 네트워크                               | ManufacturingVnet                     |
+   |                                      | 원격 가상 네트워크로의 트래픽             | 허용(기본값)                       |
+   |                                      | 원격 가상 네트워크에서 전달된 트래픽 | 허용(기본값)                       |
+   |                                      | 가상 네트워크 게이트웨이 또는 Route Server       | 없음(기본값)                        |
+   | 설정을 검토하고 추가를 선택합니다. |                                               |                                       |
+   |                                      |                                               |                                       |
 
- >**참고**: “MOC 구독”이 없는 경우 이전에 사용한 구독을 사용합니다. 단지 이름일 뿐입니다.
+   >**참고**: “MOC 구독”이 없는 경우 이전에 사용한 구독을 사용합니다.
 
-1. CoreServicesVnet | 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 표시되는지 확인합니다.
+1. CoreServicesVnet \| 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 표시되는지 확인합니다.
 
 1. 가상 네트워크에서 **ManufacturingVnet**을 선택하고, **ManufacturingVnet-to-CoreServicesVnet** 피어링이 표시되는지 확인합니다.
 
@@ -157,4 +160,4 @@ Exercise:
    Remove-AzResourceGroup -Name 'ContosoResourceGroup' -Force -AsJob
    ```
 
-    >**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+   >**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
