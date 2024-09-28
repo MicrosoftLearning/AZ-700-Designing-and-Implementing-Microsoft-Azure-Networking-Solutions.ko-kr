@@ -158,12 +158,28 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile backend.json -TemplateParameterFile backend.parameters.json
    ```
+>**참고**: 시간을 내어 **backend.json** 파일을 검토합니다. 두 개의 가상 머신이 배포되고 있습니다. 이 작업은 몇 분 정도 걸립니다. 
 
->**참고**: 시간을 내어 **backend.json** 파일을 검토합니다. 두 개의 가상 머신이 배포되고 있습니다. 또한 IIS는 각 머신에 설치됩니다. 이 작업은 몇 분 정도 걸립니다. 
+1. 명령이 성공적으로 완료되고 **BackendVM1** 및 **BackendVM2**가 나열되어야 합니다.
 
-1. 배포가 완료되면 Azure Portal 홈페이지로 이동한 다음 **가상 머신**을 선택합니다.
+### 각 가상 머신에 IIS 설치
 
-1. 두 가상 머신이 모두 만들어졌는지 확인합니다.
+1. 각 백엔드 서버에는 IIS가 설치되어 있어야 합니다.
+
+1. PowerShell 프롬프트에서 계속 진행하여 제공된 스크립트를 사용하여 **BackendVM1**에 IIS를 설치합니다.
+
+   ```powershell
+   Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM1' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
+   ```
+
+>**참고**: 기다리는 동안 PowerShell 스크립트를 검토합니다. 가상 머신 이름을 제공하도록 IIS 홈 페이지가 사용자 지정되고 있음을 알 수 있습니다.
+
+1. 이번에는 **BackendVM2**에 대해 명령을 다시 실행합니다.
+
+   ```powershell
+   Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM2' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
+   ```
+>**참고:** 각 명령을 완료하는 데 몇 분 정도 걸립니다.
 
 ## 작업 3: 백 엔드 풀에 백 엔드 서버 추가
 
@@ -175,17 +191,19 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
 
 1. 백 엔드 풀 편집 페이지의 **백 엔드 대상** 아래에 있는 **대상 유형**에서 **가상 머신**을 선택합니다.
 
-1. **대상** 아래에서 **BackendVM1**을 선택합니다.
+1. **대상**에서 **BackendVM1-nic**을 선택합니다.
 
 1. **대상 유형**에서 **가상 머신**을 선택합니다.
 
-1. **대상** 아래에서 **BackendVM2**를 선택합니다.
+1. **대상**에서 **BackendVM2-nic**을 선택합니다.
 
    ![Azure Portal의 백 엔드 풀에 대상 백 엔드 추가 화면](../media/edit-backend-pool.png)
 
-1. **저장**을 선택합니다.
+1. **저장**을 선택하고 대상이 추가될 때까지 기다립니다. 
 
-배포가 완료될 때까지 기다렸다가 다음 단계로 진행합니다.
+1. 백 엔드 서버가 정상 상태인지 확인합니다. **모니터링**을 선택한 다음 **백 엔드 상태**를 선택합니다. 두 대상 모두 정상이어야 합니다. 
+
+   ![Azure Portal에서 백 엔드 상태를 확인합니다.](../media/contoso-backend-health.png)
 
 ## 작업 4: 애플리케이션 게이트웨이 테스트
 
@@ -204,5 +222,6 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
    ![브라우저 - 요청에 응답하는 백 엔드 서버에 따라 BackendVM1 또는 BackendVM2를 표시합니다.](../media/browse-to-backend.png)
 
 1. 브라우저를 여러 번 새로 고치면 BackendVM1 및 BackendVM2에 대한 연결이 표시됩니다.
+
 
 축하합니다! Azure Application Gateway를 구성하고 테스트했습니다.

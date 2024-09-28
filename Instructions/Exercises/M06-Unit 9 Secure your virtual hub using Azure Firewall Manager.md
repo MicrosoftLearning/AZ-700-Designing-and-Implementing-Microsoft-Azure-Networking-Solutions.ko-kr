@@ -135,7 +135,10 @@ Exercise:
 
 ## 작업 4: 서버 배포
 
-1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
+1. Azure Portal 오른쪽 상단에 있는 Cloud Shell 아이콘을 선택합니다. 필요한 경우 셸을 구성합니다.  
+    + **PowerShell**을 선택합니다.
+    + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
+    + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
 1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음 **FirewallManager.json** 및 **FirewallManager.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M06**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
 

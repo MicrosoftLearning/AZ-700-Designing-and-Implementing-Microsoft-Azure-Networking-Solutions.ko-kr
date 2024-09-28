@@ -3,7 +3,8 @@ Exercise:
   title: M01 - 단원 4 Azure에서 가상 네트워크 설계 및 구현
   module: Module 01 - Introduction to Azure Virtual Networks
 ---
-# M01-단원 4 Azure에서 가상 네트워크 설계 및 구현
+
+# M01 - 단원 4 Azure에서 가상 네트워크 설계 및 구현
 
 ## 연습 시나리오
 
@@ -56,104 +57,105 @@ Exercise:
 
 1. [Azure Portal](https://portal.azure.com/)로 이동합니다.
 
-2. 홈페이지의 **Azure 서비스**에서 **리소스 그룹**을 선택합니다.  
+1. 홈페이지의 **Azure 서비스**에서 **리소스 그룹**을 선택합니다.  
 
-3. 리소스 그룹에서 **+ 만들기**를 선택합니다.
+1. 리소스 그룹에서 **+ 만들기**를 선택합니다.
 
-4. 다음 표의 정보를 사용하여 리소스 그룹을 만듭니다.
+1. 다음 표의 정보를 사용하여 리소스 그룹을 만듭니다.
 
-| **Tab**         | **옵션**                                 | **값**            |
-| --------------- | ------------------------------------------ | -------------------- |
-| 기본 사항          | Resource group                             | ContosoResourceGroup |
-|                 | 지역                                     | (미국) 미국 동부         |
-| 태그            | 변경 필요 없음                        |                      |
-| 검토 + 만들기 | 설정을 검토하고 **만들기**를 선택합니다. |                      |
+   | **Tab**         | **옵션**                                 | **값**            |
+   | --------------- | ------------------------------------------ | -------------------- |
+   | 기본 사항          | Resource group                             | ContosoResourceGroup |
+   |                 | 지역                                     | (미국) 미국 동부         |
+   | 태그            | 변경 필요 없음                        |                      |
+   | 검토 + 만들기 | 설정을 검토하고 **만들기**를 선택합니다. |                      |
 
-5. 리소스 그룹에서 **ContosoResourceGroup**이 목록에 표시되는지 확인합니다.
+1. 리소스 그룹에서 **ContosoResourceGroup**이 목록에 표시되는지 확인합니다.
 
 ## 작업 2: CoreServicesVnet 가상 네트워크 및 서브넷 만들기
 
 1. Azure Portal 홈페이지에서 전역 검색 표시줄로 이동하여 **가상 네트워크**를 검색하고 서비스 아래에서 가상 네트워크를 선택합니다.  ![가상 네트워크에 대한 Azure Portal 홈페이지 전역 검색 표시줄 결과](../media/global-search-bar.PNG)
-2. 가상 네트워크 페이지에서 **만들기**를 선택합니다.  ![네트워크 만들기 마법사](../media/create-virtual-network.png)
-3. 다음 표의 정보를 사용하여 CoreServicesVnet 가상 네트워크를 만듭니다.  
-   ‎기본 IP 주소 공간 제거 또는 덮어쓰기![Azure 가상 네트워크 배포용 IP 주소 구성  ](../media/default-vnet-ip-address-range-annotated.png)
 
-| **Tab**      | **옵션**         | **값**            |
-| ------------ | ------------------ | -------------------- |
-| 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
-|              | 이름               | CoreServicesVnet     |
-|              | 지역             | (미국) 미국 동부         |
-| IP 주소 | IPv4 주소 공간 | 10.20.0.0/16         |
+1. 가상 네트워크 페이지에서 **만들기**를 선택합니다.  ![네트워크 만들기 마법사](../media/create-virtual-network.png)
+1. 다음 표의 정보를 사용하여 CoreServicesVnet 가상 네트워크를 만듭니다.  
+   기본 IP 주소 공간 제거 또는 덮어쓰기 ![Azure 가상 네트워크 배포용 IP 주소 구성  ](../media/default-vnet-ip-address-range-annotated.png)
 
- 4. 다음 표의 정보를 사용하여 CoreServicesVnet 서브넷을 만듭니다.
+   | **Tab**      | **옵션**         | **값**            |
+   | ------------ | ------------------ | -------------------- |
+   | 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
+   |              | 이름               | CoreServicesVnet     |
+   |              | 지역             | (미국) 미국 동부         |
+   | IP 주소 | IPv4 주소 공간 | 10.20.0.0/16         |
 
- 5. 각 서브넷 만들기를 시작하려면 **+ 서브넷 추가**를 선택합니다. 각 서브넷 만들기를 마치려면 **추가**를 선택합니다.
+1. 다음 표의 정보를 사용하여 CoreServicesVnet 서브넷을 만듭니다.
 
-| **서브넷**             | **옵션**           | **값**              |
-| ---------------------- | -------------------- | ---------------------- |
-| GatewaySubnet          | 서브넷 이름          | GatewaySubnet          |
-|                        | 서브넷 주소 범위 | 10.20.0.0/27           |
-| SharedServicesSubnet   | 서브넷 이름          | SharedServicesSubnet   |
-|                        | 서브넷 주소 범위 | 10.20.10.0/24          |
-| DatabaseSubnet         | 서브넷 이름          | DatabaseSubnet         |
-|                        | 서브넷 주소 범위 | 10.20.20.0/24          |
-| PublicWebServiceSubnet | 서브넷 이름          | PublicWebServiceSubnet |
-|                        | 서브넷 주소 범위 | 10.20.30.0/24          |
+1. 각 서브넷 만들기를 시작하려면 **+ 서브넷 추가**를 선택합니다. 각 서브넷 만들기를 마치려면 **추가**를 선택합니다.
 
- 6. CoreServicesVnet 및 연결된 서브넷 만들기를 마치려면 **검토 + 만들기**를 선택합니다.
+   | **서브넷**             | **옵션**           | **값**              |
+   | ---------------------- | -------------------- | ---------------------- |
+   | GatewaySubnet          | 서브넷 이름          | GatewaySubnet          |
+   |                        | 서브넷 주소 범위 | 10.20.0.0/27           |
+   | SharedServicesSubnet   | 서브넷 이름          | SharedServicesSubnet   |
+   |                        | 서브넷 주소 범위 | 10.20.10.0/24          |
+   | DatabaseSubnet         | 서브넷 이름          | DatabaseSubnet         |
+   |                        | 서브넷 주소 범위 | 10.20.20.0/24          |
+   | PublicWebServiceSubnet | 서브넷 이름          | PublicWebServiceSubnet |
+   |                        | 서브넷 주소 범위 | 10.20.30.0/24          |
 
- 7. 구성이 유효성 검사를 통과했는지 확인한 다음 **만들기**를 선택합니다.
+1. CoreServicesVnet 및 연결된 서브넷 만들기를 마치려면 **검토 + 만들기**를 선택합니다.
 
- 8. 아래 표에 따라 각 VNet마다 1 -8 단계를 반복합니다.  
+1. 구성이 유효성 검사를 통과했는지 확인한 다음 **만들기**를 선택합니다.
+
+1. 아래 표에 따라 각 VNet마다 1 -8 단계를 반복합니다.  
 
 ## 작업 3: ManufacturingVnet 가상 네트워크 및 서브넷 만들기
 
-| **Tab**      | **옵션**         | **값**            |
-| ------------ | ------------------ | -------------------- |
-| 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
-|              | 이름               | ManufacturingVnet    |
-|              | 지역             | (유럽) 서유럽 |
-| IP 주소 | IPv4 주소 공간 | 10.30.0.0/16         |
+   | **Tab**      | **옵션**         | **값**            |
+   | ------------ | ------------------ | -------------------- |
+   | 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
+   |              | 이름               | ManufacturingVnet    |
+   |              | 지역             | (유럽) 서유럽 |
+   | IP 주소 | IPv4 주소 공간 | 10.30.0.0/16         |
 
-| **서브넷**                | **옵션**           | **값**                 |
-| ------------------------- | -------------------- | ------------------------- |
-| ManufacturingSystemSubnet | 서브넷 이름          | ManufacturingSystemSubnet |
-|                           | 서브넷 주소 범위 | 10.30.10.0/24             |
-| SensorSubnet1             | 서브넷 이름          | SensorSubnet1             |
-|                           | 서브넷 주소 범위 | 10.30.20.0/24             |
-| SensorSubnet2             | 서브넷 이름          | SensorSubnet2             |
-|                           | 서브넷 주소 범위 | 10.30.21.0/24             |
-| SensorSubnet3             | 서브넷 이름          | SensorSubnet3             |
-|                           | 서브넷 주소 범위 | 10.30.22.0/24             |
+   | **서브넷**                | **옵션**           | **값**                 |
+   | ------------------------- | -------------------- | ------------------------- |
+   | ManufacturingSystemSubnet | 서브넷 이름          | ManufacturingSystemSubnet |
+   |                           | 서브넷 주소 범위 | 10.30.10.0/24             |
+   | SensorSubnet1             | 서브넷 이름          | SensorSubnet1             |
+   |                           | 서브넷 주소 범위 | 10.30.20.0/24             |
+   | SensorSubnet2             | 서브넷 이름          | SensorSubnet2             |
+   |                           | 서브넷 주소 범위 | 10.30.21.0/24             |
+   | SensorSubnet3             | 서브넷 이름          | SensorSubnet3             |
+   |                           | 서브넷 주소 범위 | 10.30.22.0/24             |
 
 ## 작업 4: ResearchVnet 가상 네트워크 및 서브넷 만들기
 
-| **Tab**      | **옵션**         | **값**            |
-| ------------ | ------------------ | -------------------- |
-| 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
-|              | 이름               | ResearchVnet         |
-|              | 지역             | 동남아시아       |
-| IP 주소 | IPv4 주소 공간 | 10.40.0.0/16         |
+   | **Tab**      | **옵션**         | **값**            |
+   | ------------ | ------------------ | -------------------- |
+   | 기본 사항       | 리소스 그룹     | ContosoResourceGroup |
+   |              | 이름               | ResearchVnet         |
+   |              | 지역             | 동남아시아       |
+   | IP 주소 | IPv4 주소 공간 | 10.40.0.0/16         |
 
-| **서브넷**           | **옵션**           | **값**            |
-| -------------------- | -------------------- | -------------------- |
-| ResearchSystemSubnet | 서브넷 이름          | ResearchSystemSubnet |
-|                      | 서브넷 주소 범위 | 10.40.0.0/24         |
+   | **서브넷**           | **옵션**           | **값**            |
+   | -------------------- | -------------------- | -------------------- |
+   | ResearchSystemSubnet | 서브넷 이름          | ResearchSystemSubnet |
+   |                      | 서브넷 주소 범위 | 10.40.0.0/24         |
 
 ## 작업 5: VNet 및 서브넷 만들기 확인
 
 1. Azure Portal 홈페이지에서 **모든 리소스**를 선택합니다.
 
-2. CoreServicesVnet, ManufacturingVnet 및 ResearchVnet이 표시되는지 확인합니다.
+1. CoreServicesVnet, ManufacturingVnet 및 ResearchVnet이 표시되는지 확인합니다.
 
-3. **CoreServicesVnet**을 선택합니다.
+1. **CoreServicesVnet**을 선택합니다.
 
-4. CoreServicesVnet의 **설정**에서 **서브넷**을 선택합니다.
+1. CoreServicesVnet의 **설정**에서 **서브넷**을 선택합니다.
 
-5. CoreServicesVnet | 서브넷에서, 만든 서브넷이 나열되고 IP 주소 범위가 맞는지 확인합니다.
+1. CoreServicesVnet \| 서브넷에서, 만든 서브넷이 나열되고 IP 주소 범위가 맞는지 확인합니다.
 
    ![CoreServicesVnet의 서브넷 목록](../media/verify-subnets-annotated.png)
 
-6. 각 VNet마다 3~5단계를 반복합니다.
+1. 각 VNet마다 3~5단계를 반복합니다.
 
 축하합니다! 리소스 그룹, 3개의 Vnet, 연결된 서브넷을 성공적으로 만들었습니다.
