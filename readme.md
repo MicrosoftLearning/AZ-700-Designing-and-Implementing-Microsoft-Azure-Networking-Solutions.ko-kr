@@ -2,7 +2,7 @@
 
 ## 환영
 
-- **[연습 링크(HTML 형식)](https://microsoftlearning.github.io/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/)**
+- **[연습 및 데모에 대한 링크(HTML 형식)](https://microsoftlearning.github.io/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/)**
 - **MCT이신가요?** - [MCT를 위한 GitHub 사용자 가이드](https://microsoftlearning.github.io/MCT-User-Guide/)를 살펴보세요.
 - 자기 주도적 형식으로 이 과정을 미리 보려면 **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulations%20-%20Designing%20and%20implementing%20Microsoft%20Azure%20networking%20solutions)** . 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
