@@ -1,7 +1,7 @@
 ---
 demo:
   module: Module 01 - Introduction to Azure Virtual Networks
-  title: 모듈 01 - 사용자 지정 경로
+  title: 사용자 지정 경로(모듈 01)
 ---
 ## 네트워크 라우팅 및 엔드포인트 구성
 
@@ -9,7 +9,7 @@ demo:
 
 **참고:**  이 데모를 진행하려면 하나 이상의 서브넷이 포함된 가상 네트워크가 필요합니다.
 
-**참조**: [네트워크 트래픽 경로 지정 - 자습서 - Azure Portal](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
+**참조**: [네트워크 트래픽 라우팅 - 자습서 - Azure Portal](https://learn.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal#create-a-route-table)
 
 **라우팅 테이블 생성**
 
@@ -17,7 +17,7 @@ demo:
 
 1. Azure Portal에 액세스합니다.
 
-1. **경로 테이블**을 검색하여 선택합니다. **게이트웨이 경로를 전파**해야 하는 시기를 설명합니다. 
+1. **경로 테이블**을 검색하여 선택합니다. **게이트웨이 경로 전파**를 언제 사용해야 하는지 논의합니다. 
 
 1. 라우팅 테이블을 만들고 일반적이지 않은 설정을 설명합니다. 
 

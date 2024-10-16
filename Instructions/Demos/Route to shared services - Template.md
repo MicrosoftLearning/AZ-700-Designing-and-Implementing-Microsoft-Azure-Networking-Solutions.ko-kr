@@ -1,6 +1,6 @@
 ---
 demo:
-  title: 공유 서비스로 라우팅
+  title: 모듈 02 - 공유 서비스로 라우팅
   module: Module 02 - Design and implement hybrid networking
 ---
 이 데모를 수강생들에게 보여주는 것을 고려해 보세요. 
