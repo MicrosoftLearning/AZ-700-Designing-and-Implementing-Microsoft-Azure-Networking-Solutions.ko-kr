@@ -36,7 +36,7 @@ Exercise:
     + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
     + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
-1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**에서 Cloud Shell 홈 디렉터리에 하나씩 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음, **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**로부터 Cloud Shell 홈 디렉토리에 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -120,8 +120,8 @@ Exercise:
    
    | **옵션**                                    | **값**                             |
    | ------------------------------------ | --------------------------------------------- | 
-   | ManufacturingVnet이 CoreServicesVnet에 액세스하도록 허용 | 사용 |
-   |ManufacturingVnet이 CoreServicesVnet에서 전달된 트래픽을 수신하도록 허용 | 사용 |
+   | 'ManufacturingVnet'이 'CoreServicesVnet'에 액세스하도록 허용 | 사용 |
+   |'ManufacturingVnet'이 'CoreServicesVnet'에서 전달된 트래픽을 수신하도록 허용 | 사용 |
  
     **로컬 가상 네트워크 요약**
 
@@ -134,11 +134,11 @@ Exercise:
     | **옵션**                                    | **값**                             |
     | ------------------------------------ | --------------------------------------------- | 
     | 'CoreServicesVnet'이 'ManufacturingVnet'에 액세스하도록 허용 | 사용
-    | CoreServicesVnet이 ManufacturingVnet에서 전달된 트래픽을 수신하도록 허용 | 사용 |
+    | 'CoreServicesVnet'이 'ManufacturingVnet'에서 전달된 트래픽을 수신하도록 허용 | 사용 |
  
-1. CoreServicesVnet \| 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 표시되는지 확인합니다.
+1. CoreServicesVnet \| 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 **연결되었는지** 확인하십시오.
 
-1. 가상 네트워크에서 **ManufacturingVnet**을 선택하고, **ManufacturingVnet-to-CoreServicesVnet** 피어링이 표시되는지 확인합니다.
+1. 가상 네트워크에서 **ManufacturingVnet**을 선택하고, **ManufacturingVnet-to-CoreServicesVnet** 피어링이 **연결되었는지** 표시합니다.
 
 ## 작업 5: VM 간 연결 테스트
 

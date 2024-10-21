@@ -38,7 +38,7 @@ Exercise:
     + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
     + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
-1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**에서 Cloud Shell 홈 디렉토리로 하나씩 업로드합니다.
+1. Cloud Shell 창 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음, **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**로부터 Cloud Shell 홈 디렉토리에 차례대로 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크 및 서브넷을 만듭니다.
 
@@ -55,7 +55,7 @@ Exercise:
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 다음 파일 **CoreServicesVMazuredeploy.json** 및 **CoreServicesVMazuredeploy.parameters.json**을 소스 폴더 **F:\Allfiles\Exercises\M02**에서 Cloud Shell 홈 디렉터리에 하나씩 업로드합니다.
+1. Cloud Shell 창 도구 모음에서 **파일 관리** 아이콘을 선택하고, 드롭다운 메뉴에서 **업로드**를 클릭한 다음, **CoreServicesVMazuredeploy.json** 및 **CoreServicesVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**로부터 Cloud Shell 홈 디렉토리에 차례대로 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -75,7 +75,7 @@ Exercise:
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 다음 파일 **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json**을 소스 폴더 **F:\Allfiles\Exercises\M02**에서 Cloud Shell 홈 디렉터리에 하나씩 업로드합니다.
+1. Cloud Shell 창 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음, **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**로부터 Cloud Shell 홈 디렉토리에 차례대로 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -154,15 +154,32 @@ Exercise:
 
    > [!NOTE]
    >
-   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 45분이 걸릴 수 있습니다.
+   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 15 - 30분이 걸릴 수 있습니다. 배포가 완료될 때까지 기다릴 필요는 없습니다. 다음 게이트웨이 만들기를 계속합니다. 
 
 ## 작업 7: ManufacturingVnet 게이트웨이 만들기
+
+### GatewaySubnet 만들기
+
+**참고:** 템플릿이 CoreServicesVnet에 대한 GatewaySubnet을 만들었습니다. 여기서는 서브넷을 수동으로 만듭니다. 
+
+1. **ManufacturingVnet**을 검색하여 선택합니다.
+
+1. **설정** 블레이드에서 **서브넷**을 선택한 다음, **+ 서브넷**을 선택합니다. 
+
+    | 매개 변수 | 값 |
+    | --------------- | ----------------- | 
+    | 서브넷 목적 | **가상 네트워크 게이트웨이** |
+    | 크기 | **/27(32개 주소)** |
+
+1. **추가**를 선택합니다. 
+
+### 가상 네트워크 게이트웨이 만들기
 
 1. **리소스, 서비스, 문서 검색(G+/)** 에서 **가상 네트워크 게이트웨이**를 입력한 다음, 결과에서 **가상 네트워크 게이트웨이**를 선택합니다.
 
 1. 가상 네트워크 게이트웨이에서 **+ 만들기**를 선택합니다.
 
-1. 다음 표의 정보를 사용하여 가상 네트워크 게이트웨이를 만듭니다.
+1. 이 정보 및 **설정** 탭을 사용하여 가상 네트워크 게이트웨이를 만듭니다. 
 
    | **Tab**         | **섹션**       | **옵션**                                  | **값**                    |
    | --------------- | ----------------- | ------------------------------------------- | ---------------------------- |
@@ -185,7 +202,7 @@ Exercise:
 
    > [!NOTE]
    >
-   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 45분이 걸릴 수 있습니다.
+   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 15 - 30분이 걸릴 수 있습니다.
 
 ## 작업 8: ManufacturingVnet에 CoreServicesVnet 연결
 
@@ -199,12 +216,14 @@ Exercise:
    >
    >  가상 네트워크 게이트웨이가 완전히 배포될 때까지 이 구성을 완료할 수 없습니다.
 
-1. 다음 표의 정보를 사용하여 연결을 만듭니다.
+1. 이 정보 및 **설정** 탭을 사용하여 가상 네트워크 게이트웨이를 만듭니다. 
+
 
    | **옵션**                     | **값**                         |
    | ------------------------------ | --------------------------------- |
    | 속성                           | CoreServicesGW-to-ManufacturingGW |
    | 연결 형식                | VNet 간                      |
+   | 지역                         | 미국 동부                           |
    | 첫 번째 가상 네트워크 게이트웨이  | CoreServicesVnetGateway           |
    | 두 번째 가상 네트워크 게이트웨이 | ManufacturingVnetGateway          |
    | 공유 키(PSK)               | abc123                            |
@@ -213,9 +232,9 @@ Exercise:
    | IKE 프로토콜                   | IKEv2                             |
    | Subscription                   | 변경 필요 없음               |
    | Resource group                 | 변경 필요 없음               |
-   | 위치                       | 미국 동부                           |
 
-1. 연결을 만들려면 **확인**을 선택합니다.
+
+1. **검토 + 만들기**를 선택한 다음, **만들기**를 선택하여 연결을 만듭니다.
 
 ## 작업 9: CoreServicesVnet에 ManufacturingVnet 연결
 
@@ -231,6 +250,7 @@ Exercise:
    | ------------------------------ | --------------------------------- |
    | 속성                           | ManufacturingGW-to-CoreServicesGW |
    | 연결 형식                | VNet 간                      |
+   | 위치                       | 서유럽                       |
    | 첫 번째 가상 네트워크 게이트웨이  | ManufacturingVnetGateway          |
    | 두 번째 가상 네트워크 게이트웨이 | CoreServicesVnetGateway           |
    | 공유 키(PSK)               | abc123                            |
@@ -239,9 +259,9 @@ Exercise:
    | IKE 프로토콜                   | IKEv2                             |
    | Subscription                   | 변경 필요 없음               |
    | Resource group                 | 변경 필요 없음               |
-   | 위치                       | 서유럽                       |
 
-1. 연결을 만들려면 **확인**을 선택합니다.
+
+1. **검토 + 만들기**를 선택한 다음, **만들기**를 선택하여 연결을 만듭니다.
 
 ## 작업 10: 연결 확인
 
