@@ -31,7 +31,7 @@ Azure SQL과 Azure Storage 같은 다양한 종류의 Azure 서비스에 대한 
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
-1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고, 드롭다운 메뉴에서 **업로드**를 선택한 후 **template.json** 및 **parameters.json** 파일을 Cloud Shell 홈 디렉터리에 하나씩 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 **template.json** 및 **parameters.json** 파일을 Cloud Shell 홈 디렉터리에 하나씩 업로드합니다.
 
 PowerShell을 로컬로 설치하고 사용하도록 선택하는 경우, 이 예에서는 Azure PowerShell 모듈 버전 5.4.1 이상이 필요합니다. 설치되어 있는 버전을 확인하려면 ```Get-Module -ListAvailable Az```을 실행합니다. 업그레이드해야 하는 경우 [Azure PowerShell 모듈 설치](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)를 참조하세요. 또한 PowerShell을 로컬로 실행하는 경우 ```Connect-AzAccount```를 실행하여 Azure와 연결해야 합니다.
 

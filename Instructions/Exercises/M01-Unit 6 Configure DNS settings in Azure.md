@@ -47,7 +47,7 @@ Exercise:
 
 ## 작업 2: 자동 등록을 위한 서브넷 연결
 
-1. Contoso.com의 **설정**에서 **가상 네트워크 링크**를 선택합니다.
+1. Contoso.com의 **DNS 관리**에서 **가상 네트워크 링크**를 선택합니다.
 
 1. Contoso.com \| 가상 네트워크 링크에서 **+ 추가**를 선택합니다.
 
@@ -104,7 +104,7 @@ Exercise:
     + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
     + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
-1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드 아이콘**을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후, **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**에서 Cloud Shell 홈 디렉토리로 하나씩 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
