@@ -36,7 +36,7 @@ Exercise:
     + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
     + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
-1. Cloud Shell 창의 도구 모음에서 **파일 업로드/다운로드** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음 **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**의 Cloud Shell 홈 디렉터리에 차례대로 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음, **ManufacturingVMazuredeploy.json** 및 **ManufacturingVMazuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**로부터 Cloud Shell 홈 디렉토리에 업로드합니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -107,32 +107,38 @@ Exercise:
 
 1. CoreServicesVnet \| 피어링에서 **+ 추가**를 선택합니다.
 
-1. 다음 표의 정보를 사용하여 피어링을 만듭니다.
+1. 이 정보를 사용하여 피어링을 만듭니다. 작업을 마쳤으면 **추가**를 선택합니다. 
 
-   | **섹션**                          | **옵션**                                    | **값**                             |
-   | ------------------------------------ | --------------------------------------------- | ------------------------------------- |
-   | 이 가상 네트워크                 |                                               |                                       |
-   |                                      | 피어링 링크 이름                             | CoreServicesVnet-to-ManufacturingVnet |
-   |                                      | 원격 가상 네트워크로의 트래픽             | 허용(기본값)                       |
-   |                                      | 원격 가상 네트워크에서 전달된 트래픽 | 허용(기본값)                       |
-   |                                      | 가상 네트워크 게이트웨이 또는 Route Server       | 없음(기본값)                        |
-   | 원격 가상 네트워크               |                                               |                                       |
-   |                                      | 피어링 링크 이름                             | ManufacturingVnet-to-CoreServicesVnet |
-   |                                      | 가상 네트워크 배포 모델              | 리소스 관리자                      |
-   |                                      | 리소스 ID를 알고 있음                         | 선택 안 됨                          |
-   |                                      | 구독                                  | 제공된 구독 선택      |
-   |                                      | 가상 네트워크                               | ManufacturingVnet                     |
-   |                                      | 원격 가상 네트워크로의 트래픽             | 허용(기본값)                       |
-   |                                      | 원격 가상 네트워크에서 전달된 트래픽 | 허용(기본값)                       |
-   |                                      | 가상 네트워크 게이트웨이 또는 Route Server       | 없음(기본값)                        |
-   | 설정을 검토하고 추가를 선택합니다. |                                               |                                       |
-   |                                      |                                               |                                       |
+   **원격 가상 네트워크 요약**
 
-   >**참고**: “MOC 구독”이 없는 경우 이전에 사용한 구독을 사용합니다.
+   | **옵션**                                    | **값**                             |
+   | ------------------------------------ | --------------------------------------------- | 
+   | 피어링 링크 이름    | `CoreServicesVnet-to-ManufacturingVnet` |
+   | 가상 네트워크 | ManufacturingVnet |
 
-1. CoreServicesVnet \| 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 표시되는지 확인합니다.
+    **원격 가상 네트워크 피어링 설정**
+   
+   | **옵션**                                    | **값**                             |
+   | ------------------------------------ | --------------------------------------------- | 
+   | 'ManufacturingVnet'이 'CoreServicesVnet'에 액세스하도록 허용 | 사용 |
+   |'ManufacturingVnet'이 'CoreServicesVnet'에서 전달된 트래픽을 수신하도록 허용 | 사용 |
+ 
+    **로컬 가상 네트워크 요약**
 
-1. 가상 네트워크에서 **ManufacturingVnet**을 선택하고, **ManufacturingVnet-to-CoreServicesVnet** 피어링이 표시되는지 확인합니다.
+    | **옵션**                                    | **값**                             |
+    | ------------------------------------ | --------------------------------------------- | 
+    | 피어링 링크 이름 | `CoreServicesVnet-to-ManufacturingVnet` |
+ 
+    **원격 가상 네트워크 피어링 설정**
+   
+    | **옵션**                                    | **값**                             |
+    | ------------------------------------ | --------------------------------------------- | 
+    | 'CoreServicesVnet'이 'ManufacturingVnet'에 액세스하도록 허용 | 사용
+    | 'CoreServicesVnet'이 'ManufacturingVnet'에서 전달된 트래픽을 수신하도록 허용 | 사용 |
+ 
+1. CoreServicesVnet \| 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 **연결되었는지** 확인하십시오.
+
+1. 가상 네트워크에서 **ManufacturingVnet**을 선택하고, **ManufacturingVnet-to-CoreServicesVnet** 피어링이 **연결되었는지** 표시합니다.
 
 ## 작업 5: VM 간 연결 테스트
 
