@@ -164,4 +164,22 @@ Exercise:
 
 1. 또는 nslookup TestVM2.contoso.com 명령을 입력하고 VM2의 이름 확인 레코드를 수신했는지 확인할 수 있습니다.
 
-축하합니다! 프라이빗 DNS 영역을 만들고, 이름 확인 및 자동 등록 링크를 추가하고, 구성에서 이름 확인을 테스트했습니다.
+## Copilot을 사용하여 학습 확장
+
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ Azure DNS와 Azure 프라이빗 DNS 차이점은 무엇인가요? Azure 프라이빗 DNS를 사용하는 경우의 예를 제공합니다.
++ Azure DNS 영역을 만들 때 자동 등록의 목적은 무엇인가요?
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [Azure DNS 소개](https://learn.microsoft.com/training/modules/intro-to-azure-dns/). 이 모듈에서는 Azure DNS가 수행하는 작업, 작동 방식, 조직의 요구 사항에 맞게 Azure DNS를 솔루션으로 사용하도록 선택해야 하는 경우를 설명합니다.
++ [Azure DNS에서 도메인을 호스팅합니다](https://learn.microsoft.com/training/modules/host-domain-azure-dns/). 이 모듈에서는 DNS 영역 및 DNS 레코드를 만들어 도메인을 IP 주소에 매핑합니다. 도메인 이름이 웹 서버로 확인되는지 테스트합니다.
+
+## 핵심 내용
+
+축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
+
++ Azure DNS는 DNS 영역이라고도 하는 DNS(Domain Name System) 도메인을 호스트하고 관리할 수 있는 클라우드 서비스입니다. 
++ Azure DNS 퍼블릭 영역은 인터넷의 호스트에서 확인하려는 레코드에 대한 도메인 이름 영역 데이터를 호스트합니다.
++ Azure 프라이빗 DNS 영역을 사용하면 프라이빗 Azure 리소스에 대한 프라이빗 DNS 영역 네임스페이스를 구성할 수 있습니다.
++ DNS 영역은 DNS 레코드의 컬렉션입니다. DNS 레코드는 도메인에 대한 정보를 제공합니다.

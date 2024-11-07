@@ -24,7 +24,7 @@ Contoso의 네트워크 보안 팀에서 수행할 다음 작업은 특정 웹 �
 + 작업 8: DNAT(대상 NAT) 규칙 구성
 + 작업 9: 서버 네트워크 인터페이스에 대한 기본 및 보조 DNS 주소 변경
 + 작업 10: 방화벽 테스트
-+ 작업 11: 리소스 정리
+
 
 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20and%20configure%20Azure%20Firewall%20using%20the%20Azure%20portal)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
@@ -364,7 +364,7 @@ Contoso의 네트워크 보안 팀에서 수행할 다음 작업은 특정 웹 �
 
     ![Srv-work 서버의 RDP 세션 - microsoft.com에서 브라우저가 차단됨](../media/remote-desktop-connection-3.png)
 
-## 작업 11: 리소스 정리
+## 리소스 정리
 
 >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
@@ -376,4 +376,24 @@ Contoso의 네트워크 보안 팀에서 수행할 다음 작업은 특정 웹 �
    Remove-AzResourceGroup -Name 'Test-FW-RG' -Force -AsJob
    ```
 
-    >**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+>**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+
+## Copilot을 사용하여 학습 확장
+
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ 방화벽에 대한 세 가지 일반적인 사용 시나리오를 제공합니다. 
++ Azure Firewall SKU의 기능을 비교하는 표를 제공합니다.
++ Azure Firewall에 대해 만들 수 있는 세 가지 유형의 규칙에 대해 설명합니다.
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [Azure Firewall 소개](https://learn.microsoft.com/training/modules/introduction-azure-firewall/) 이 모듈에서는 기능, 규칙 및 배포 옵션을 포함하여 Azure Firewall이 Azure 가상 네트워크 리소스를 보호하는 방법에 대해 알아봅니다.
++ [Azure Firewall Manager 소개](https://learn.microsoft.com/training/modules/intro-to-azure-firewall-manager/) 이 모듈에서는 Azure Firewall Manager가 클라우드 기반 보안 경계에 중앙 보안 정책 및 경로 지정 관리를 제공하는 방법을 알아봅니다.
+
+## 핵심 내용
+
+축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
++ 방화벽은 신뢰할 수 있는 네트워크와 신뢰할 수 없는 네트워크(예: 인터넷) 사이에 있는 네트워크 보안 기능입니다. 방화벽의 작업은 네트워크 트래픽을 분석한 다음 허용 또는 거부하는 것입니다.
++ Azure Firewall은 클라우드 기반 방화벽 서비스입니다. 대부분의 구성에서 Azure Firewall은 허브 가상 네트워크 내에서 프로비저닝됩니다. 스포크 가상 네트워크와 온-프레미스 네트워크를 오가는 트래픽은 방화벽으로 전달됩니다.
++ 방화벽 규칙은 네트워크 트래픽을 합니다. Azure Firewall에는 세 가지 유형의 규칙, 즉 애플리케이션, 네트워크, NAT이 있습니다. 
++ Azure Firewall은 Standard, Premium 및 Basic의 세 가지 SKU로 제공됩니다.

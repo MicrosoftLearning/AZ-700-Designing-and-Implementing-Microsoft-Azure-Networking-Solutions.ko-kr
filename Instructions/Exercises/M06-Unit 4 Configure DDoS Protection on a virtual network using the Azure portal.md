@@ -21,7 +21,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 + 작업 5: DDoS 진단 로그 구성
 + 작업 6: DDoS 경고 구성
 + 작업 7: 시뮬레이션 파트너와 함께 테스트
-+ 작업 8: 리소스 정리
+
 
 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20Azure%20DDoS%20Protection%20on%20a%20virtual%20network)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
@@ -228,7 +228,7 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
    ![DDoS 공격을 받는 리소스를 보여 주는 메트릭](../media/metrics-showing-resource-under-attack.png)
 
-## 작업 8: 리소스 정리
+## 리소스 정리
 
 >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
@@ -240,4 +240,26 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
    Remove-AzResourceGroup -Name 'MyResourceGroup' -Force -AsJob
    ```
 
-    >**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+>**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+
+## Copilot을 사용하여 학습 확장
+
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ DDoS 공격이란? DDoS 공격은 어떻게 분류되며 완화 전략이 있나요?
++ 두 가지 다른 Azure DDoS Protection 계층을 요약한 표를 제공하세요.
++ DDoS Protection을 통해 보호할 수 있는 Azure 리소스는 무엇인가요?
+
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [Azure DDoS Protection 소개](https://learn.microsoft.com/training/modules/introduction-azure-ddos-protection/). 이 모듈에서는 Azure DDoS Protection, 해당 기능 및 아키텍처 옵션을 평가합니다.
++ [네트워크 보안 설계 및 구현](https://learn.microsoft.com/training/modules/design-implement-network-security-monitoring/). 이 모듈에서는 Azure DDoS Protection을 학습하고 배포합니다.
+
+  
+## 핵심 내용
+
+축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
++ DDoS 공격은 애플리케이션의 리소스를 과부하시켜 정상적인 사용자가 애플리케이션을 사용할 수 없게 만드는 악의적인 시도입니다. 
++ Azure DDoS Protection은 DDoS 공격을 방어합니다. 가상 네트워크에서 특정 Azure 리소스를 보호하도록 자동으로 조정됩니다. 
++ Azure DDoS Proectection 기능에는 Always On 트래픽 모니터링, 적응형 실시간 튜닝, 원격 분석 및 경고가 포함됩니다.  
++ Azure DDoS Protection은 DDoS IP 보호와 DDoS 네트워크 보호라는 두 가지 계층 형식을 지원합니다.

@@ -157,5 +157,26 @@ Exercise:
    ![CoreServicesVnet의 서브넷 목록](../media/verify-subnets-annotated.png)
 
 1. 각 VNet마다 3~5단계를 반복합니다.
+   
+## Copilot을 사용하여 학습 확장
 
-축하합니다! 리소스 그룹, 3개의 Vnet, 연결된 서브넷을 성공적으로 만들었습니다.
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ 실제 시나리오에서 10.30.0.0/16 IP 주소가 사용되는 방법의 예를 제공할 수 있나요?
++ 미국 동부 지역에 CoreServicesVnet라는 가상 네트워크를 만드는 Azure PowerShell 명령은 무엇인가요? 가상 네트워크의 IP 주소 공간은 10.20.0.0/16입니다.
++ 서유럽 지역에서 ManufacturingVnet라는 가상 네트워크를 만드는 Azure CLI 명령은 무엇인가요? 가상 네트워크의 IP 주소 공간은 10.30.0.0/16입니다.
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [Azure 배포에 대한 IP 주소 지정 스키마 설계](https://learn.microsoft.com/en-us/training/modules/design-ip-addressing-for-azure/). 이 모듈에서는 Azure 가상 네트워크의 퍼블릭 및 프라이빗 IP 주소 지정 기능에 대해 알아봅니다.
++ [Azure Virtual Network 소개](https://learn.microsoft.com/en-us/training/modules/introduction-to-azure-virtual-networks/). 이 모듈에서는 Azure 네트워킹 서비스를 디자인하고 구현하는 방법을 알아봅니다. 가상 네트워크, 퍼블릭 및 프라이빗 IP, DNS, 가상 네트워크 피어링, 라우팅 및 Azure Virtual NAT에 대해 알아봅니다.
+
+## 핵심 내용
+
++ Azure Virtual Network는 Azure의 프라이빗 네트워크에 대한 기본 구성 요소를 제공하는 서비스입니다. 서비스 인스턴스(가상 네트워크)를 사용하면 다양한 종류의 Azure 리소스에서 서로, 인터넷 및 온-프레미스 네트워크와 안전하게 통신할 수 있습니다. 겹치지 않는 주소 공간을 확보합니다. 가상 네트워크 주소 공간(CIDR 블록)이 조직의 다른 네트워크 범위와 겹치지 않는지 확인합니다.
++ 가상 네트워크의 모든 Azure 리소스는 가상 네트워크 내의 서브넷에 배포됩니다. 서브넷을 사용하면 가상 네트워크를 하나 이상의 하위 네트워크로 분할하고 가상 네트워크 주소 공간의 일부를 각 서브넷에 할당합니다. 서브넷은 가상 네트워크의 전체 주소 공간을 사용하지 않아야 합니다. 미래를 위해 미리 계획하고 일부 주소 공간을 예약합니다.
+
+
+
+
+
+

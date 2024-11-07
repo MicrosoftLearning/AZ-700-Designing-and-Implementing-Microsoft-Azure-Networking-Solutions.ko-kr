@@ -223,5 +223,37 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
 
 1. 브라우저를 여러 번 새로 고치면 BackendVM1 및 BackendVM2에 대한 연결이 표시됩니다.
 
+## 리소스 정리
 
-축하합니다! Azure Application Gateway를 구성하고 테스트했습니다.
+>**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
+
+1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
+
+1. 다음 명령을 실행하여 이 모듈의 랩 전체에서 만든 모든 리소스 그룹을 삭제합니다.
+
+   ```powershell
+   Remove-AzResourceGroup -Name 'IntLB-RG' -Force -AsJob
+   ```
+
+>**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+
+## Copilot을 사용하여 학습 확장
+
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ Azure Application Gateway는 요청을 어떻게 라우팅하나요?
++ Azure Application Gateway에는 어떤 보안 기능이 포함되어 있나요?
++ Azure Application Gateway와 Azure Load Balancer를 비교합니다. 각 제품의 사용 시기를 예로 들어 설명합니다.
+
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [Azure Application Gateway 소개](https://learn.microsoft.com/training/modules/intro-to-azure-application-gateway/) 이 모듈에서는 Azure Application Gateway가 수행하는 작업, 작동 방식, 조직의 요구 사항을 충족하기 위해 Application Gateway를 솔루션으로 사용해야 하는 경우를 설명합니다.
++ [Application Gateway를 사용하여 웹 서비스 트래픽 부하를 분산합니다](https://learn.microsoft.com/training/modules/load-balancing-https-traffic-azure/). 이 모듈에서는 URL 경로 기반 라우팅이 있는 애플리케이션 게이트웨이를 만들고 구성하는 방법에 대해 알아봅니다.
++ [Azure에서 HTTP(S) 트래픽의 부하를 분산합니다](https://learn.microsoft.com/training/modules/load-balancing-https-traffic-azure/). 이 모듈에서는 Azure Application Gateway를 설계하고 구현하는 방법을 알아봅니다.
+
+## 핵심 내용
+
+축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
++ Azure Application Gateway는 웹 애플리케이션 트래픽을 관리할 수 있는 웹 트래픽(OSI 계층 7) 부하 분산 장치입니다.
++ Application Gateway는 URI 경로 또는 호스트 헤더와 같은 HTTP 요청의 추가 특성을 기반으로 라우팅 결정을 내릴 수 있습니다.
++ 단일 지역에서 호스팅되는 애플리케이션과 URL 기반 라우팅이 필요한 경우 애플리케이션 게이트웨이를 사용합니다. 
