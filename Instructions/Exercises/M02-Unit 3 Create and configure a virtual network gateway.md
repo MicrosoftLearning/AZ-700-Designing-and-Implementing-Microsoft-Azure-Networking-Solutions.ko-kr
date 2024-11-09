@@ -287,4 +287,26 @@ Exercise:
 
 1. 원격 데스크톱 연결 창을 닫습니다.
 
-축하합니다! 가상 네트워크 게이트웨이를 사용하여 VNet 간 연결을 구성했습니다.
+## Copilot을 사용하여 학습 확장
+
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ Azure VPN Gateway의 주요 유형은 무엇이며 각 유형의 사용 이유는 무엇인가요?
++ Azure VPN Gateway sku를 선택할 때 고려해야 하는 요소는 무엇인가요? 예제 제공
++ Azure VPN Gateway와 관련된 비용이 있나요?
+
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [VPN Gateway를 사용하여 온-프레미스 네트워크를 Azure에 연결](https://learn.microsoft.com/training/modules/connect-on-premises-network-with-vpn-gateway/). 이 모듈에서는 CLI를 사용하여 VPN Gateway를 프로비전합니다.
++ [Microsoft Azure의 VPN Gateway 문제 해결](https://learn.microsoft.com/training/modules/troubleshoot-vpn-gateways/). 이 모듈에서는 사이트 간 VPN, 지점 및 사이트 간 VPN을 모니터링하고 문제를 해결하는 방법을 살펴봅니다.
+
+## 핵심 내용
+
+축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
+
++ Azure VPN Gateway는 온-프레미스 네트워크와 Azure 가상 네트워크 간에 보안 연결을 제공합니다.
++ S2S(사이트 간) 연결은 IPsec/IKE VPN 터널을 통해 온-프레미스 네트워크를 Azure 가상 네트워크에 연결합니다. 하이브리드 클라우드 시나리오에 적합합니다.
++ P2S(지점 및 사이트 간) 연결은 원격 위치에서 Azure 가상 네트워크에 개별 클라이언트를 연결합니다. VPN 프로토콜은 OpenVPN, IKEv2 또는 SSTP를 포함합니다. 원격 작업자에게 유용합니다.
++ VNet 간 연결은 IPsec/IKE VPN 터널을 사용하여 둘 이상의 Azure 가상 네트워크를 연결합니다. 다중 지역 또는 다중 VNet 배포에 적합합니다.
++ 다른 VPN Gateway SKU는 다양한 수준의 성능, 처리량 및 기능을 제공합니다. 
+

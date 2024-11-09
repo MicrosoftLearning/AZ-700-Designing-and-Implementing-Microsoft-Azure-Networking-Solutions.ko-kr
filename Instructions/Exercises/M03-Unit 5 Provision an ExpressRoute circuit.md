@@ -19,8 +19,8 @@ Exercise:
 
 + 작업 1: ExpressRoute 회로 만들기 및 프로비저닝
 + 작업 2: 서비스 키 검색
-+ 작업 3: ExpressRoute 회로 프로비저닝 해제
-+ 작업 4: 리소스 정리
++ 작업 3: ExpressRoute 회로 프로비전 해제
+
 
 ## 작업 1: ExpressRoute 회로 만들기 및 프로비저닝
 
@@ -110,13 +110,13 @@ ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저
 >
 > 서비스 공급자가 회로 프로비전을 해제하여 서비스 공급자 프로비전 상태가 프로비전되지 않음이 되면 회로를 삭제할 수 있습니다. 그러면 회로에 대한 요금 청구가 중지됩니다.
 
-## 작업 4: 리소스 정리
+## 리소스 정리
 
 **삭제** 아이콘을 선택하여 ExpressRoute 회로를 삭제할 수 있습니다. 계속하기 전에 공급자 상태가 프로비전 안 됨인지 확인합니다.
 
 ![Azure Portal - ExpressRoute 회로 삭제](../media/expressroute-circuit-delete.png)
 
-   >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
+>**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
@@ -127,4 +127,23 @@ ExpressRoute 회로 서비스 공급자 프로비저닝 상태가 **프로비저
    Remove-AzResourceGroup -Name 'ExpressRouteResourceGroup' -Force -AsJob
    ```
 
-   >**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+>**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+
+## Copilot을 사용하여 학습 확장
+
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ Azure ExpressRoute에 사용할 수 있는 서비스 제공업체는 어디인가요?
++ Azure ExpressRoute의 가장 일반적인 구성 문제는 무엇인가요? 해당 문제가 있는 경우 어떻게 해야 하나요?
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [Azure ExpressRoute 소개](https://learn.microsoft.com/training/modules/intro-to-azure-expressroute/) 이 모듈에서는 Azure ExpressRoute의 정의와 제공 기능을 알아봅니다.
++ [ExpressRoute 설계 및 구현](https://learn.microsoft.com/training/modules/design-implement-azure-expressroute/) 이 모듈에서는 Azure ExpressRoute, ExpressRoute Global Reach, ExpressRoute FastPath를 설계하고 구현하는 방법을 알아봅니다.
+
+## 핵심 내용
+
+축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
++ Azure ExpressRoute를 사용하면 조직이 온-프레미스 네트워크를 Microsoft Azure 및 Microsoft 365 클라우드에 직접 연결할 수 있습니다. Azure ExpressRoute는 Microsoft 파트너가 제공하는 전용 고대역폭 연결을 사용합니다.
++ Microsoft는 최소 99.95%의 ExpressRoute 전용 연결 가용성을 보장합니다. 연결은 비공개이며 전용 선을 통해 이동하며, 제3자가 트래픽을 가로챌 수 없습니다.
++ 온-프레미스 네트워크와 Microsoft 클라우드 간 연결은 CloudExchange 공동 배치, 지점 간 이더넷 연결, Any-to-Any(IPVPN) 연결, ExpressRoute Direct라는 네 가지 방법으로 만들 수 있습니다.
++ ExpressRoute 기능은 SKU(로컬, 표준, 프리미엄)에 의해 결정됩니다. 

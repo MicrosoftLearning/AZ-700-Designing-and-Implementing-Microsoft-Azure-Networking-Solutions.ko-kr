@@ -28,7 +28,6 @@ Exercise:
 + 작업 2: Traffic Manager 프로필 만들기
 + 작업 3: Traffic Manager 엔드포인트 추가
 + 작업 4: Traffic Manager 프로필 테스트
-+ 작업 5: 리소스 정리
 
 ## 작업 1: 웹앱 만들기
 
@@ -171,9 +170,9 @@ Exercise:
 
 1. 웹앱이 계속 응답하는지 확인합니다. 주 엔드포인트를 사용할 수 없기 때문에 웹 사이트가 계속 작동할 수 있도록 트래픽이 대신 장애 조치(failover) 엔드포인트로 라우팅되었습니다.
 
-## 작업 5: 리소스 정리
+## 리소스 정리
 
-   >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
+>**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 
@@ -186,4 +185,23 @@ Exercise:
 
    ```
 
-    >**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+>**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+
+## Copilot을 사용하여 학습 확장
+
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ Azure Traffic Manager를 구성하기 위한 개략적인 단계는 무엇인가요?
++ Azure Load Balancer 및 Azure Traffic Manager를 사용하는 시기를 비교하고 대조합니다.
++ Traffic Manager 라우팅 프로필 및 사용해야 하는 시기를 설명합니다.
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [Azure Traffic Manager를 사용하여 서비스 가용성 및 데이터 지역성 개선](https://learn.microsoft.com/training/modules/distribute-load-with-traffic-manager/) 이 모듈에서는 Traffic Manager를 사용하여 네트워크 트래픽을 동적으로 분산시키는 방법을 알아봅니다.
++ [Azure에서 비HTTP(S) 트래픽 부하 분산](https://learn.microsoft.com/training/modules/load-balancing-non-https-traffic-azure/). 이 모듈에서는 Azure Traffic Manager 및 라우팅 메서드 구현에 대해 알아봅니다. 
+
+## 핵심 내용
+
+축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
++ Azure Traffic Manager는 DNS 기반 트래픽 부하 분산 장치입니다. 이 서비스를 사용하면 글로벌 Azure 지역에서 공용 연결 애플리케이션에 트래픽을 배포할 수 있습니다.
++ Traffic Manager에는 Traffic Manager가 각 최종 사용자의 트래픽을 수신할 엔드포인트를 선택하는 방법을 제어할 수 있는 여섯 가 트래픽 라우팅 방법이 포함되어 있습니다. 얼마나 많은 이름을 지정할 수 있나요?
++ 둘 이상의 트래픽 라우팅 메서드의 장점을 결합하기 위해 Traffic Manager 프로필을 중첩할 수 있습니다. 중첩된 프로필을 사용하여 더 크고 복잡한 애플리케이션 배포를 지원하기 위해 기본 Traffic Manager 동작을 재정의할 수 있습니다.
