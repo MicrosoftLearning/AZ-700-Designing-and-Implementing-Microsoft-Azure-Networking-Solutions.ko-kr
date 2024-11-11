@@ -29,7 +29,7 @@ Exercise:
 + 작업 11: 자세한 메트릭 보기
 + 작업 12: 리소스 상태 보기
 + 작업 13: 진단 설정 구성
-+ 작업 14: 리소스 정리
+
 
 **참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
@@ -397,7 +397,7 @@ Exercise:
 
    ![부하 분산 장치에 대한 진단 설정 페이지](../media/diagnostic-settings-2.png)
 
-## 작업 14: 리소스 정리
+## 리소스 정리
 
    >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
@@ -409,4 +409,26 @@ Exercise:
    Remove-AzResourceGroup -Name 'IntLB-RG' -Force -AsJob
    ```
 
-    >**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+>**참고**: 이 명령은 -AsJob 매개 변수에 의해 결정되어 비동기로 실행되므로, 동일한 PowerShell 세션 내에서 이 명령을 실행한 직후 다른 PowerShell 명령을 실행할 수 있지만 리소스 그룹이 실제로 제거되기까지는 몇 분 정도 걸립니다.
+    
+## Copilot을 사용하여 학습 확장
+
+Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도움을 줍니다. 또한 Copilot은 랩에서 다루지 않는 영역이나 추가 정보가 필요한 영역을 지원할 수 있습니다. Edge 브라우저를 열고 Copilot(오른쪽 위)을 선택하거나 *copilot.microsoft.com*으로 이동하세요. 몇 분 정도 시간을 내어 이러한 프롬프트를 사용해 보세요.
++ 가상 네트워크를 모니터링하는 데 사용할 수 있는 Azure 도구를 요약합니다.
++ 사용할 수 있는 Azure Network Watcher 모니터링 도구로는 무엇이 있나요?
+
+## 자기 주도적 학습을 통해 자세히 알아보기
+
++ [Azure Monitor 소개](https://learn.microsoft.com/training/modules/intro-to-azure-monitor/). 이 모듈에서는 Azure Monitor를 사용하여 Azure 리소스 성능 및 작업에 대한 인사이트를 얻는 방법을 알아봅니다.
++ [네트워크 모니터링 도구를 사용하여 엔드투엔드 Azure 네트워크 인프라 모니터링 및 문제 해결](https://learn.microsoft.com/training/modules/troubleshoot-azure-network-infrastructure/). 이 모듈에서는 Azure 인프라에서 네트워킹 문제를 찾아 해결하는 데 도움이 되는 Azure Network Watcher 도구, 진단, 로그를 사용하는 방법을 알아봅니다.
+
+## 핵심 내용
+
+축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
+
++ Azure Monitor는 모든 Azure, 다른 클라우드 및 온-프레미스 리소스에서 IT 데이터를 수집, 관리 및 분석하기 위한 기능과 도구를 제공합니다.
++ 메트릭은 애플리케이션 또는 리소스 성능의 스냅샷을 보여 주는 정량적 측정값입니다. 메트릭은 일반적으로 시간이 지남에 따라 측정할 수 있는 숫자 값입니다.
++ 로그는 리소스나 애플리케이션에서 발생하는 이벤트, 작업 및 메시지에 대한 텍스트 기록입니다. 
++ Azure Monitor Insights, 시각화, 대시보드는 애플리케이션에 대한 모니터링 정보를 사용하고 전송할 수 있습니다.
++ 경고는 위험 상황을 알리고 정정 작업을 수행할 수 있습니다. 경고 규칙은 메트릭 또는 로그 데이터를 기반으로 할 수 있습니다.+ 
+    
