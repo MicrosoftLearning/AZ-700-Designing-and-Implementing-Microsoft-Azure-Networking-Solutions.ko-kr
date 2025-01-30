@@ -12,7 +12,7 @@ Exercise:
 
 가상의 조직 Contoso Ltd.에서 인프라 및 애플리케이션을 Azure로 마이그레이션하는 과정에 있다고 가정해봅니다. 본인이 네트워크 엔지니어의 역할을 맡고 있어서 이러한 가상 네트워크의 리소스를 지원하기 위해 세 개의 가상 네트워크와 서브넷을 계획하고 구현해야 합니다.
 
-**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Design%20and%20implement%20a%20virtual%20network%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 ### 예상 소요 시간: 20분
 
@@ -77,6 +77,7 @@ Exercise:
 1. Azure Portal 홈페이지에서 전역 검색 표시줄로 이동하여 **가상 네트워크**를 검색하고 서비스 아래에서 가상 네트워크를 선택합니다.  ![가상 네트워크에 대한 Azure Portal 홈페이지 전역 검색 표시줄 결과](../media/global-search-bar.PNG)
 
 1. 가상 네트워크 페이지에서 **만들기**를 선택합니다.  ![네트워크 만들기 마법사](../media/create-virtual-network.png)
+   
 1. 다음 표의 정보를 사용하여 CoreServicesVnet 가상 네트워크를 만듭니다.  
    기본 IP 주소 공간 제거 또는 덮어쓰기 ![Azure 가상 네트워크 배포용 IP 주소 구성  ](../media/default-vnet-ip-address-range-annotated.png)
 

@@ -11,6 +11,8 @@ Exercise:
 
 이 연습에서는 Contoso Core Services VNet 및 Manufacturing VNet을 연결하도록 가상 네트워크 게이트웨이를 구성합니다.
 
+   >**중요**: 이 설계를 자세히 살펴보세요. CoreServicesSubnet이 GatewaySubnet과 겹치는 것을 확인했나요? 가장 좋은 방법은 잠재적인 연결 문제를 방지하기 위해 이러한 서브넷을 분리하는 것입니다. 
+
 ![가상 네트워크 게이트웨이 다이어그램.](../media/3-exercise-create-configure-local-network-gateway.png)
 
 이 연습에서 다음을 수행합니다.
@@ -27,7 +29,7 @@ Exercise:
 + 작업 10: 연결 확인
 + 작업 11: VM 간 연결 테스트
 
-**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+>**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 ### 예상 시간: 70분(배포 대기 시간 ~45분 포함)
 
@@ -49,7 +51,7 @@ Exercise:
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
 
- > **참고:** 현재 서유럽 지역에는 게이트웨이 배포에 영향을 미치는 문제가 진행 중입니다. 해결 방법으로 이 배포를 위해 ManufacturingVNet 지역이 북유럽으로 변경되었습니다.
+   >**참고:** 현재 서유럽 지역에는 게이트웨이 배포에 영향을 미치는 문제가 진행 중입니다. 해결 방법으로 이 배포를 위해 ManufacturingVNet 지역이 북유럽으로 변경되었습니다.
 
 ## 작업 2: CoreServicesVM 만들기
 
@@ -94,20 +96,35 @@ Exercise:
 ## 작업 4: RDP를 사용하여 VM에 연결
 
 1. Azure Portal 홈 페이지에서 **Virtual Machines**를 선택합니다.
+
 1. **ManufacturingVM**을 선택합니다.
-1. **ManufacturingVM**에서 **연결 &gt; RDP**를 선택합니다.
-1. **ManufacturingVM | 연결**에서 **RDP 파일 다운로드**를 선택합니다.
+
+1. **ManufacturingVM**에서 **연결**, **RDP**를 차례로 선택합니다.
+
+1. **RDP 파일 다운로드**를 선택합니다.
+
 1. RDP 파일을 데스크톱에 저장합니다.
+
 1. RDP 파일, 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하여 **ManufacturingVM**에 연결합니다. 연결한 후 RDP 세션을 최소화합니다.
+
 1. Azure Portal 홈 페이지에서 **Virtual Machines**를 선택합니다.
+
 1. **CoreServicesVM**을 선택합니다.
-1. **CoreServicesTestVM**에서 **연결 &gt; RDP**를 선택합니다.
-1. **CoreServicesTestVM | 연결**에서 **RDP 파일 다운로드**를 선택합니다.
+
+1. **CoreServicesVM**에서 **연결**을 선택한 다음 **RDP**를 선택합니다.
+
+1. **RDP 파일 다운로드**를 선택합니다.
+
 1. RDP 파일을 데스크톱에 저장합니다.
+
 1. RDP 파일, 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하여 **CoreServicesVM**에 연결합니다.
+
 1. 두 VM의 **디바이스에 대한 개인 정보 설정 선택**에서 **동의**를 선택합니다.
+
 1. 두 VM의 **네트워크**에서 **예**를 선택합니다.
+
 1. **CoreServicesVM**에서 PowerShell을 열고 ipconfig 명령을 실행합니다.
+
 1. IPv4 주소를 기록해 두세요.
 
 ## 작업 5: VM 간 연결 테스트
@@ -152,15 +169,13 @@ Exercise:
    |                 |                   | BGP 구성                               | 사용 안 함                     |
    | 검토 + 만들기 |                   | 설정을 검토하고 **만들기**를 선택합니다. |                              |
 
-   > [!NOTE]
-   >
-   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 15 - 30분이 걸릴 수 있습니다. 배포가 완료될 때까지 기다릴 필요는 없습니다. 다음 게이트웨이 만들기를 계속합니다. 
+   >**참고**: 가상 네트워크 게이트웨이를 만드는 데 최대 15~30분이 소요될 수 있습니다. 배포가 완료될 때까지 기다릴 필요는 없습니다. 다음 게이트웨이 만들기를 계속합니다. 
 
 ## 작업 7: ManufacturingVnet 게이트웨이 만들기
 
 ### GatewaySubnet 만들기
 
-**참고:** 템플릿이 CoreServicesVnet에 대한 GatewaySubnet을 만들었습니다. 여기서는 서브넷을 수동으로 만듭니다. 
+   >**참고:** 템플릿이 CoreServicesVnet에 대한 GatewaySubnet을 만들었습니다. 여기서는 서브넷을 수동으로 만듭니다. 
 
 1. **ManufacturingVnet**을 검색하여 선택합니다.
 
@@ -200,9 +215,7 @@ Exercise:
    |                 |                   | BGP 구성                               | 사용 안 함                     |
    | 검토 + 만들기 |                   | 설정을 검토하고 **만들기**를 선택합니다. |                              |
 
-   > [!NOTE]
-   >
-   > 가상 네트워크 게이트웨이 하나를 만드는 데 최대 15 - 30분이 걸릴 수 있습니다.
+   >**참고**: 가상 네트워크 게이트웨이를 만드는 데 최대 15~30분이 소요될 수 있습니다.
 
 ## 작업 8: ManufacturingVnet에 CoreServicesVnet 연결
 
@@ -212,9 +225,7 @@ Exercise:
 
 1. CoreServicesGateway에서 **연결**을 선택한 다음 **+ 추가**를 선택합니다.
 
-   > [!NOTE]
-   >
-   >  가상 네트워크 게이트웨이가 완전히 배포될 때까지 이 구성을 완료할 수 없습니다.
+   >**참고**: 가상 네트워크 게이트웨이가 완전히 배포될 때까지는 이 구성을 완료할 수 없습니다.
 
 1. 이 정보 및 **설정** 탭을 사용하여 가상 네트워크 게이트웨이를 만듭니다. 
 
