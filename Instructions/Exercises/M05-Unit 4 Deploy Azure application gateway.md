@@ -13,7 +13,7 @@ Exercise:
 ![애플리케이션 게이트웨이 아키텍처의 다이어그램.](../media/4-exercise-deploy-azure-application-gateway.png)
 
 
->**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 ### 예상 소요 시간: 25분
 
@@ -151,14 +151,14 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
->**참고**: 관리 암호를 입력하라는 메시지가 표시됩니다. 
+   >**참고**: 관리 암호를 입력하라는 메시지가 표시됩니다. 
 
    ```powershell
    $RGName = "ContosoResourceGroup"
    
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile backend.json -TemplateParameterFile backend.parameters.json
    ```
->**참고**: 시간을 내어 **backend.json** 파일을 검토합니다. 두 개의 가상 머신이 배포되고 있습니다. 이 작업은 몇 분 정도 걸립니다. 
+   >**참고**: 시간을 내어 **backend.json** 파일을 검토합니다. 두 개의 가상 머신이 배포되고 있습니다. 이 작업은 몇 분 정도 걸립니다. 
 
 1. 명령이 성공적으로 완료되고 **BackendVM1** 및 **BackendVM2**가 나열되어야 합니다.
 
@@ -172,14 +172,14 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
    Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM1' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
    ```
 
->**참고**: 기다리는 동안 PowerShell 스크립트를 검토합니다. 가상 머신 이름을 제공하도록 IIS 홈 페이지가 사용자 지정되고 있음을 알 수 있습니다.
+   >**참고**: 기다리는 동안 PowerShell 스크립트를 검토합니다. 가상 머신 이름을 제공하도록 IIS 홈 페이지가 사용자 지정되고 있음을 알 수 있습니다.
 
 1. 이번에는 **BackendVM2**에 대해 명령을 다시 실행합니다.
 
    ```powershell
    Invoke-AzVMRunCommand -ResourceGroupName 'ContosoResourceGroup' -Name 'BackendVM2' -CommandId 'RunPowerShellScript' -ScriptPath 'install-iis.ps1'
    ```
->**참고:** 각 명령을 완료하는 데 몇 분 정도 걸립니다.
+   >**참고:** 각 명령을 완료하는 데 몇 분 정도 걸립니다.
 
 ## 작업 3: 백 엔드 풀에 백 엔드 서버 추가
 
@@ -225,7 +225,7 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
 
 ## 리소스 정리
 
->**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
+   >**참고**: 더 이상 사용하지 않는 새로 만든 Azure 리소스는 모두 제거하세요. 사용되지 않는 리소스를 제거하면 예기치 않은 요금이 발생하지 않습니다.
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
 

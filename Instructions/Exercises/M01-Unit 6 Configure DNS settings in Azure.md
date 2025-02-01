@@ -19,7 +19,7 @@ Exercise:
 + 작업 3: 구성을 테스트할 가상 머신 만들기
 + 작업 4: 레코드가 DNS 영역에 있는지 확인
 
-**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
 
 ### 예상 소요 시간: 25분
 
@@ -108,7 +108,7 @@ Exercise:
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
-    >**참고**: 관리 암호를 입력하라는 메시지가 표시됩니다.
+   >**참고**: 관리 암호를 입력하라는 메시지가 표시됩니다.
 
    ```powershell
    $RGName = "ContosoResourceGroup"
