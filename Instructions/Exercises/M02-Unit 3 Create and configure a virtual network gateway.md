@@ -11,8 +11,6 @@ Exercise:
 
 이 연습에서는 Contoso Core Services VNet 및 Manufacturing VNet을 연결하도록 가상 네트워크 게이트웨이를 구성합니다.
 
-   >**중요**: 이 설계를 자세히 살펴보세요. CoreServicesSubnet이 GatewaySubnet과 겹치는 것을 확인했나요? 가장 좋은 방법은 잠재적인 연결 문제를 방지하기 위해 이러한 서브넷을 분리하는 것입니다. 
-
 ![가상 네트워크 게이트웨이 다이어그램.](../media/3-exercise-create-configure-local-network-gateway.png)
 
 이 연습에서 다음을 수행합니다.
@@ -50,9 +48,7 @@ Exercise:
    New-AzResourceGroup -Name $RGName -Location "eastus"
    New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
    ```
-
-   >**참고:** 현재 서유럽 지역에는 게이트웨이 배포에 영향을 미치는 문제가 진행 중입니다. 해결 방법으로 이 배포를 위해 ManufacturingVNet 지역이 북유럽으로 변경되었습니다.
-
+   
 ## 작업 2: CoreServicesVM 만들기
 
 1. Azure Portal의 **Cloud Shell** 창에서 **PowerShell** 세션을 엽니다.
@@ -157,7 +153,6 @@ Exercise:
    |                 | 인스턴스 정보  | 속성                                        | CoreServicesVnetGateway      |
    |                 |                   | 지역                                      | 미국 동부                      |
    |                 |                   | 게이트웨이 유형                                | VPN                          |
-   |                 |                   | VPN 유형                                    | 경로 기반                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | 생성 1                  |
    |                 |                   | 가상 네트워크                             | CoreServicesVnet             |
@@ -201,13 +196,12 @@ Exercise:
    | 기본 사항          | 프로젝트 세부 정보   | Subscription                                | 변경 필요 없음          |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | 인스턴스 정보  | 속성                                        | ManufacturingVnetGateway     |
-   |                 |                   | 지역                                      | 북유럽                  |
+   |                 |                   | 지역                                      | 북유럽                 |
    |                 |                   | 게이트웨이 유형                                | VPN                          |
-   |                 |                   | VPN 유형                                    | 경로 기반                  |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | 생성 1                  |
    |                 |                   | 가상 네트워크                             | ManufacturingVnet            |
-   |                 |                   | 서브넷                                      | GatewaySubnet(10.30.0.0/27) |
+   |                 |                   | 서브넷                                      | GatewaySubnet |
    |                 |                   | 공용 IP 주소 형식                      | Standard                     |
    |                 | 공용 IP 주소 | 공용 IP 주소                           | 새로 만들기                   |
    |                 |                   | 공용 IP 주소 이름                      | ManufacturingVnetGateway-ip  |
@@ -261,7 +255,7 @@ Exercise:
    | ------------------------------ | --------------------------------- |
    | 속성                           | ManufacturingGW-to-CoreServicesGW |
    | 연결 형식                | VNet 간                      |
-   | 위치                       | 서유럽                       |
+   | 위치                       | 북유럽                      |
    | 첫 번째 가상 네트워크 게이트웨이  | ManufacturingVnetGateway          |
    | 두 번째 가상 네트워크 게이트웨이 | CoreServicesVnetGateway           |
    | 공유 키(PSK)               | abc123                            |
