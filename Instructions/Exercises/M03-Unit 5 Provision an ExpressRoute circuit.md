@@ -32,9 +32,9 @@ Exercise:
 
    ![Azure Portal - ExpressRoute 회로 만들기 메뉴](../media/create-expressroute-circuit-menu.png)
 
-1. **ExpressRoute 만들기** 페이지에서 ExpressRouteResourceGroup, East US 2, TestERCircuit을 사용하여 회로에 대한 **리소스 그룹**, **지역** 및 **이름**을 제공합니다. 그다움에 **다음: 구성&gt;** 을 클릭합니다.
+1. **ExpressRoute 생성** 페이지에서 **리소스 그룹**을 ExpressRouteResourceGroup으로 입력합니다. 그런 다음 **복원력**에서 **표준 복원력**을 선택합니다.
 
-1. 이 페이지의 값을 입력하는 경우, 이 예제에서는 올바른 SKU 계층(**표준**) 데이터 계량 청구 모델(**요금제**) 공급자(**Equinix**) 피어링 위치(**시애틀**) 및 대역폭(**50Mbps**)을 지정해야 합니다.
+1. ***회로 세부 정보**의 경우, 올바른 지역(**미국 동부 2**), 회로 이름(**TestERCircuit**), 피어링 위치(**시애틀**), 공급자(**Equinix**), 대역폭(**50Mbps**), SKU 계층(**Standard**) 및 데이터 계량 청구 모델(**데이터**)을 지정했는지 확인합니다.
 
 1. **검토 + 생성**를 선택합니다.
 

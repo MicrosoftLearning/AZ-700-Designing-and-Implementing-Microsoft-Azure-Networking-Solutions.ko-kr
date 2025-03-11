@@ -201,7 +201,7 @@ Exercise:
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | 생성 1                  |
    |                 |                   | 가상 네트워크                             | ManufacturingVnet            |
-   |                 |                   | 서브넷                                      | GatewaySubnet |
+   |                 |                   | 서브넷                                      | GatewaySubnet(10.30.0.0/27) |
    |                 |                   | 공용 IP 주소 형식                      | Standard                     |
    |                 | 공용 IP 주소 | 공용 IP 주소                           | 새로 만들기                   |
    |                 |                   | 공용 IP 주소 이름                      | ManufacturingVnetGateway-ip  |
