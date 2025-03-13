@@ -26,7 +26,7 @@ Exercise:
 
 ## 작업 1: 구성을 테스트할 가상 머신 만들기
 
-이 섹션에서는 ManufacturingVnet에서 다른 Azure 가상 네트워크 내의 리소스에 액세스할 수 있는지 테스트할 테스트 VM을 Manufacturing VNet에 만듭니다.
+이 섹션에서는 Vnet에서 다른 Azure 가상 네트워크 내의 리소스에 액세스할 수 있는지 테스트할 테스트 VM을 VNet에 만듭니다.
 
 ### ManufacturingVM 만들기
 
@@ -112,7 +112,7 @@ Exercise:
 
    | **옵션**                                    | **값**                             |
    | ------------------------------------ | --------------------------------------------- | 
-   | 피어링 링크 이름    | `CoreServicesVnet-to-ManufacturingVnet` |
+   | 피어링 링크 이름    | `ManufacturingVnet-to-CoreServicesVnet` |
    | 가상 네트워크 | ManufacturingVnet |
 
     **원격 가상 네트워크 피어링 설정**
