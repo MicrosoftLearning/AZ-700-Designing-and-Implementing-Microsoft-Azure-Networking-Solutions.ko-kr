@@ -43,7 +43,7 @@ Exercise:
    | Resource group   | 리소스 그룹 ContosoResourceGroup을 선택합니다.               |
    | 이름             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예에서는 WebAppContoso-1을 사용합니다. |
    | 게시          | **코드**를 선택합니다.                                             |
-   | 런타임 스택    | **.NET 6(LTS)** 를 선택합니다.                                     |
+   | 런타임 스택    | **.NET 8(LTS)** 을 선택합니다.                                     |
    | 운영 체제 | **Windows**를 선택합니다.                                          |
    | 지역           | **미국 중부**를 선택합니다.                                       |
    | Windows 플랜     | **새로 만들기**를 선택하고 텍스트 상자에 myAppServicePlanCentralUS를 입력합니다. |
@@ -64,7 +64,7 @@ Exercise:
    | Resource group   | 리소스 그룹 ContosoResourceGroup을 선택합니다.               |
    | 이름             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예제에서는 WebAppContoso-2를 사용합니다. |
    | 게시          | **코드**를 선택합니다.                                             |
-   | 런타임 스택    | **.NET 6(LTS)** 를 선택합니다.                                     |
+   | 런타임 스택    | **.NET 8(LTS)** 을 선택합니다.                                     |
    | 운영 체제 | **Windows**를 선택합니다.                                          |
    | 지역           | **미국 동부**를 선택합니다.                                          |
    | Windows 플랜     | **새로 만들기**를 선택하고, 텍스트 상자에서 myAppServicePlanEastUS를 입력합니다. |
