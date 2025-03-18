@@ -92,16 +92,17 @@ Exercise:
 
 1. 각 서브넷 만들기를 시작하려면 **+ 서브넷 추가**를 선택합니다. 각 서브넷 만들기를 마치려면 **추가**를 선택합니다.
 
-   | **서브넷**             | **옵션**           | **값**              |
-   | ---------------------- | -------------------- | ---------------------- |
-   | GatewaySubnet          | 서브넷 이름          | GatewaySubnet          |
-   |                        | 서브넷 주소 범위 | 10.20.0.0/27           |
-   | SharedServicesSubnet   | 서브넷 이름          | SharedServicesSubnet   |
-   |                        | 서브넷 주소 범위 | 10.20.10.0/24          |
-   | DatabaseSubnet         | 서브넷 이름          | DatabaseSubnet         |
-   |                        | 서브넷 주소 범위 | 10.20.20.0/24          |
-   | PublicWebServiceSubnet | 서브넷 이름          | PublicWebServiceSubnet |
-   |                        | 서브넷 주소 범위 | 10.20.30.0/24          |
+   | **서브넷**             | **옵션**           | **값**               |
+   | ---------------------- | -------------------- | ----------------------- |
+   | GatewaySubnet          | 서브넷 목적       | 가상 네트워크 게이트웨이 |
+   |                        | 서브넷 이름          | GatewaySubnet           |
+   |                        | 서브넷 주소 범위 | 10.20.0.0/27            |
+   | SharedServicesSubnet   | 서브넷 이름          | SharedServicesSubnet    |
+   |                        | 서브넷 주소 범위 | 10.20.10.0/24           |
+   | DatabaseSubnet         | 서브넷 이름          | DatabaseSubnet          |
+   |                        | 서브넷 주소 범위 | 10.20.20.0/24           |
+   | PublicWebServiceSubnet | 서브넷 이름          | PublicWebServiceSubnet  |
+   |                        | 서브넷 주소 범위 | 10.20.30.0/24           |
 
 1. CoreServicesVnet 및 연결된 서브넷 만들기를 마치려면 **검토 + 만들기**를 선택합니다.
 
