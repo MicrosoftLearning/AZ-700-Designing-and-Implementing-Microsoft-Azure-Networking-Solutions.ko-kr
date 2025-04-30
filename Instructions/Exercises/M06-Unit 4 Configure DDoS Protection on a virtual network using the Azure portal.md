@@ -214,19 +214,9 @@ Contoso의 네트워크 보안 팀 책임자로서 가상 네트워크에서 모
 
 ## 작업 7: 시뮬레이션 파트너와 함께 테스트
 
-1. [Azure DDoS 시뮬레이션 테스트 정책](https://learn.microsoft.com/azure/ddos-protection/test-through-simulations#azure-ddos-simulation-testing-policy) 검토
+1. [Azure DDoS 시뮬레이션 테스트 정책](https://learn.microsoft.com/en-us/azure/ddos-protection/test-through-simulations#configure-a-ddos-attack-simulation) 페이지를 검토합니다. 
 
-1. 승인된 테스트 파트너를 사용하여 DDoS 테스트 공격을 구성합니다. BreakingPoint Cloud를 사용하여 테스트하는 경우 아래 스크린샷의 설정을 사용해야 하지만(평가판 계정에서는 100k pps 테스트 크기를 선택해야 할 수 있음) **대상 IP 주소** 상자 ![DDOSAttack](https://user-images.githubusercontent.com/46939028/138599420-58bef33a-2597-4fa2-919f-bf1614037bc3.JPG)에서 고유한 **MyPublicIPAddress** 리소스의 IP 주소(예: **51.140.137.219**)를 지정합니다.
-
-1. Azure Portal 홈페이지에서 **모든 리소스**를 선택합니다.
-
-1. 리소스 목록에서 **MyPublicIPAddress** 리소스를 선택한 다음 **모니터링** 아래에서 **메트릭**을 선택합니다.
-
-1. **메트릭** 상자의 목록에서 **Under DDoS attack or not**(DDoS 공격 진행 여부)을 선택합니다.
-
-1. 이제 DDoS 공격이 발생한 것을 볼 수 있습니다. 결과가 표시되는 데 10분이 걸릴 수 있습니다.
-
-   ![DDoS 공격을 받는 리소스를 보여 주는 메트릭](../media/metrics-showing-resource-under-attack.png)
+1. 여러 테스트 파트너가 있습니다. 시간 여유가 있으면 DDoS 공격 시뮬레이션을 구성합니다. BreakingPoint Cloud를 사용하려면 먼저 BreakingPoint Cloud 계정을 만들어야 합니다.
 
 ## 리소스 정리
 
@@ -262,4 +252,4 @@ Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도
 + DDoS 공격은 애플리케이션의 리소스를 과부하시켜 정상적인 사용자가 애플리케이션을 사용할 수 없게 만드는 악의적인 시도입니다. 
 + Azure DDoS Protection은 DDoS 공격을 방어합니다. 가상 네트워크에서 특정 Azure 리소스를 보호하도록 자동으로 조정됩니다. 
 + Azure DDoS Proectection 기능에는 Always On 트래픽 모니터링, 적응형 실시간 튜닝, 원격 분석 및 경고가 포함됩니다.  
-+ Azure DDoS Protection은 DDoS IP 보호와 DDoS 네트워크 보호라는 두 가지 계층 형식을 지원합니다.
++ Azure DDoS Protection은 DDoS IP Protection 및 DDoS Network Protection이라는 두 가지 계층 유형을 지원합니다.
