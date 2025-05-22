@@ -162,7 +162,9 @@ Exercise:
     + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
     + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
-1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 **FirewallManager.json** 및 **FirewallManager.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M06**에서 Cloud Shell 홈 디렉토리로 하나씩 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 **FirewallManager.json** 및 **FirewallManager.parameters.json** 파일을 Cloud Shell 홈 디렉토리에 업로드합니다.
+
+    > **참고:** 사용자 구독으로 작업하는 경우 [템플릿 파일](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)은 GitHub 랩 리포지토리에서 사용할 수 있습니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 

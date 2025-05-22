@@ -38,7 +38,9 @@ Exercise:
     + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
     + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
-1. Cloud Shell 창 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 다음, **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M02**로부터 Cloud Shell 홈 디렉토리에 차례대로 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 Cloud Shell 홈 디렉터리에 업로드합니다.
+
+        Note:: If you are working in your own subscription the [template files](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises) are available in the GitHub lab repository.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 가상 네트워크 및 서브넷을 만듭니다.
 
@@ -201,7 +203,7 @@ Exercise:
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | 생성 1                  |
    |                 |                   | 가상 네트워크                             | ManufacturingVnet            |
-   |                 |                   | 서브넷                                      | GatewaySubnet(10.30.0.0/27) |
+   |                 |                   | 서브넷                                      | GatewaySubnet |
    |                 |                   | 공용 IP 주소 형식                      | Standard                     |
    |                 | 공용 IP 주소 | 공용 IP 주소                           | 새로 만들기                   |
    |                 |                   | 공용 IP 주소 이름                      | ManufacturingVnetGateway-ip  |

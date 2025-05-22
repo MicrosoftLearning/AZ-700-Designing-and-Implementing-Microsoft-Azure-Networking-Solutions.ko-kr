@@ -23,6 +23,8 @@ Exercise:
 
 ### 예상 소요 시간: 25분
 
+**중요:** 이 연습에서는 이전 랩의 가상 네트워크가 필요합니다. [템플릿](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises/M01/template.json) 파일을 사용하여 설치할 수 있습니다. 모든 가상 네트워크가 설치되지만 CoreServicesVNet만 필요합니다. 
+
 ## 작업 1: 프라이빗 DNS 영역 만들기
 
 1. [Azure Portal](https://portal.azure.com/)로 이동합니다.
@@ -36,9 +38,8 @@ Exercise:
 
     | **Tab**         | **옵션**                             | **값**            |
     | --------------- | -------------------------------------- | -------------------- |
-    | 기본 사항          | Resource group                         | ContosoResourceGroup |
-    |                 | 이름                                   | Contoso.com          |
-    | 태그            | 변경 필요 없음                    |                      |
+    | 기본 사항          | 리소스 그룹(필요한 경우 만듭니다) | `ContosoResourceGroup` |
+    |                 | 속성                                   | `Contoso.com`          |
     | 검토 + 만들기 | 설정 검토 및 만들기 선택 |                      |
 
 1. 배포가 완료될 때까지 기다렸다가 **리소스로 이동**을 선택합니다.
@@ -57,8 +58,8 @@ Exercise:
 
     | **옵션**                          | **값**                               |
     | ----------------------------------- | --------------------------------------- |
-    | 링크 이름                           | CoreServicesVnetLink                    |
-    | Subscription                        | 변경 필요 없음                     |
+    | 링크 이름                           | `CoreServicesVnetLink`                   |
+    | 구독                        | 변경 필요 없음                     |
     | Virtual Network                     | CoreServicesVnet(ContosoResourceGroup) |
     | 자동 등록 사용            | 선택한 상태                                |
     | 설정을 검토하고 확인을 선택합니다. |                                         |
@@ -66,34 +67,6 @@ Exercise:
 1. **새로 고침**을 선택합니다.
 
 1. CoreServicesVnetLink가 생성되었는지와 자동 등록이 설정되는지 확인합니다.
-
-1. 다음 표의 정보를 사용하여 ManufacturingVnet에 2~5단계를 반복합니다.
-
-    | **옵션**                          | **값**                                |
-    | ----------------------------------- | ---------------------------------------- |
-    | 링크 이름                           | ManufacturingVnetLink                    |
-    | Subscription                        | 변경 필요 없음                      |
-    | Virtual Network                     | ManufacturingVnet(ContosoResourceGroup) |
-    | 자동 등록 사용            | 선택한 상태                                 |
-    | 설정을 검토하고 확인을 선택합니다. |                                          |
-
-1. **새로 고침**을 선택합니다.
-
-1. ManufacturingVnetLink가 생성되었는지와 자동 등록이 설정되는지 확인합니다.
-
-1. 다음 표의 정보를 사용하여 ResearchVnet에 2~5단계를 반복합니다.
-
-    | **옵션**                          | **값**                           |
-    | ----------------------------------- | ----------------------------------- |
-    | 링크 이름                           | ResearchVnetLink                    |
-    | Subscription                        | 변경 필요 없음                 |
-    | Virtual Network                     | ResearchVnet(ContosoResourceGroup) |
-    | 자동 등록 사용            | 선택한 상태                            |
-    | 설정을 검토하고 확인을 선택합니다. |                                     |
-
-1. **새로 고침**을 선택합니다.
-
-1. ResearchVnetLink가 생성되었는지와 자동 등록이 설정되는지 확인합니다.
 
 ## 작업 3: 구성을 테스트할 가상 머신 만들기
 
@@ -104,11 +77,13 @@ Exercise:
     + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
     + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다. 
 
-1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후, **azuredeploy.json** 및 **azuredeploy.parameters.json** 파일을 소스 폴더 **F:\Allfiles\Exercises\M01**에서 Cloud Shell 홈 디렉토리로 하나씩 업로드합니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 관리** 아이콘을 선택하고 드롭다운 메뉴에서 **업로드**를 선택한 후 **azuredeploy.json** 및 **azuredeploy.parameters.json** 템플릿 파일을 업로드합니다.
 
+   >**참고:** 사용자 고유의 구독에서 작업하는 경우 [템플릿 파일](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)은 GitHub 랩 리포지토리에서 사용할 수 있습니다.
+   
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
-   >**참고**: 관리 암호를 입력하라는 메시지가 표시됩니다.
+   >**참고**: 관리 암호를 입력하라는 메시지가 표시됩니다. 이 암호는 이후 단계에서 필요합니다. 
 
    ```powershell
    $RGName = "ContosoResourceGroup"
@@ -132,37 +107,27 @@ Exercise:
 
 1. VM의 이름 및 IP 주소를 기록해 둡니다.
 
-### RDP를 사용하여 테스트 VM에 연결
+### VM에 연결하여 이름 확인 테스트
 
 1. Azure Portal 홈 페이지에서 **Virtual Machines**를 선택합니다.
 
 1. **TestVM1**을 선택합니다.
 
-1. TestVM1에서 **연결 &gt; RDP**을 선택하고 RDP 파일을 다운로드합니다.
+1. TestVM1에서 **연결&gt;연결**을 선택하고 RDP 파일을 다운로드합니다. 파일이 성공적으로 다운로드되었는지 확인합니다.
 
-    ![연결과 RDP가 강조 표시된 TestVM1.](../media/connect-to-am.png)
+1. RDP 파일을 찾고 두 번 클릭하여 파일을 실행합니다.
 
-1. RDP 파일을 데스크톱에 저장합니다.
+1. **연결**을 선택하고 템플릿 배포 중에 제공한 **TestUser** 암호를 입력합니다.
 
-1. **TestVM2**에도 동일한 단계 수행
-
-1. RDP 파일, 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하여 TestVM1에 연결합니다.
-
-1. RDP 파일, 사용자 이름 **TestUser** 및 배포 중에 제공한 암호를 사용하여 TestVM2에 연결합니다.
-
-1. 두 VM의 **디바이스에 대한 개인 정보 설정 선택**에서 **동의**를 선택합니다.
-
-1. 메시지가 표시되면 두 VM의 **네트워크**에서 **예**를 선택합니다.
+1. 경고 페이지에서 **확인**을 선택한 다음 **예**를 선택합니다.
 
 1. TestVM1에서 명령 프롬프트를 열고 `ipconfig /all` 명령을 입력합니다.
 
-1. IP 주소가 DNS 영역에서 적어둔 것과 동일한지 확인합니다.
+1. IP 주소가 DNS 영역의 주소와 동일한지 확인합니다.
 
-1. TestVM2.contoso.com 명령 ping을 입력합니다.
+1. `ping TestVM2.contoso.com` 명령을 입력합니다. 이 명령은 VM에서 사용하도록 설정된 Windows 방화벽으로 인해 시간 초과됩니다.
 
-1. FQDN이 프라이빗 DNS 영역에 기록된 IP 주소로 확인되는지 확인합니다. ping 자체는 VM에서 사용하도록 설정된 Windows 방화벽으로 인해 시간 초과됩니다.
-
-1. 또는 nslookup TestVM2.contoso.com 명령을 입력하고 VM2의 이름 확인 레코드를 수신했는지 확인할 수 있습니다.
+1. 대신 `nslookup TestVM2.contoso.com` 명령을 사용하여 VM2에 대한 이름 확인 레코드가 성공적으로 수신되었는지 확인합니다. 이는 프라이빗 영역 이름 확인을 보여 줍니다. 
 
 ## Copilot을 사용하여 학습 확장
 
