@@ -41,7 +41,7 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
 
    | **설정**         | **값**                                    |
    | ------------------- | -------------------------------------------- |
-   | Subscription        | 구독을 선택합니다.                    |
+   | 구독        | 구독을 선택합니다.                    |
    | Resource group      | 새 ContosoResourceGroup 만들기 선택       |
    | Application Gateway | ContosoAppGateway                            |
    | 지역              | **미국 동부**를 선택합니다.                           |
@@ -147,7 +147,9 @@ Azure가 사용자가 만든 리소스 간에 통신하려면 가상 네트워�
     + **스토리지 계정이 필요하지 않음**과 **구독**을 선택한 다음 **적용**을 선택합니다.
     + 터미널이 생성되고 프롬프트가 표시될 때까지 기다립니다.
       
-1. Cloud Shell 창의 도구 모음에서 **파일 관리**를 선택한 다음 **업로드**를 선택합니다. **backend.json**, **backend.parameters.json** 및 **install-iis.ps1** 파일을 업로드합니다. 파일은 리포지토리, **\Allfiles\Exercises\M05** 폴더에서 다운로드할 수 있습니다.
+1. Cloud Shell 창의 도구 모음에서 **파일 관리**를 선택한 다음 **업로드**를 선택합니다. 다음 **backend.json**, **backend.parameters.json**, **install-iis.ps1** 파일을 업로드합니다.
+
+    >**참고:** 사용자 구독으로 작업하는 경우 [템플릿 파일](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)은 GitHub 랩 리포지토리에서 사용할 수 있습니다.
 
 1. 다음 ARM 템플릿을 배포하여 이 연습에 필요한 VM을 만듭니다.
 
@@ -254,6 +256,6 @@ Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도
 ## 핵심 내용
 
 축하합니다. 랩을 완료했습니다. 이 랩의 주요 내용은 다음과 같습니다. 
-+ Azure Application Gateway는 웹 애플리케이션 트래픽을 관리할 수 있는 웹 트래픽(OSI 계층 7) 부하 분산 장치입니다.
++ Azure Application Gateway는 웹 애플리케이션에 대한 트래픽을 관리할 수 있는 웹 트래픽(OSI 계층 7) 부하 분산 장치입니다.
 + Application Gateway는 URI 경로 또는 호스트 헤더와 같은 HTTP 요청의 추가 특성을 기반으로 라우팅 결정을 내릴 수 있습니다.
 + 단일 지역에서 호스팅되는 애플리케이션과 URL 기반 라우팅이 필요한 경우 애플리케이션 게이트웨이를 사용합니다. 
