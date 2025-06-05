@@ -12,8 +12,9 @@ Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Priva
 
 ![프라이빗 엔드포인트 아키텍처의 다이어그램.](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
 
+### 대화형 랩 시뮬레이션
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20an%20Azure%20private%20endpoint%20using%20Azure%20PowerShell)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 시간: 45분
 
@@ -36,6 +37,8 @@ Azure SQL과 Azure Storage 같은 다양한 종류의 Azure 서비스에 대한 
     > **참고:** 사용자 구독으로 작업하는 경우 [템플릿 파일](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises)은 GitHub 랩 리포지토리에서 사용할 수 있습니다.
 
 PowerShell을 로컬로 설치하고 사용하도록 선택하는 경우, 이 예에서는 Azure PowerShell 모듈 버전 5.4.1 이상이 필요합니다. 설치되어 있는 버전을 확인하려면 ```Get-Module -ListAvailable Az```을 실행합니다. 업그레이드해야 하는 경우 [Azure PowerShell 모듈 설치](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)를 참조하세요. 또한 PowerShell을 로컬로 실행하는 경우 ```Connect-AzAccount```를 실행하여 Azure와 연결해야 합니다.
+
+### 작업 기술
 
 이 연습에서 다음을 수행합니다.
 

@@ -12,6 +12,8 @@ Exercise:
 
 ![서비스 엔드포인트 아키텍처 다이어그램](../media/5-exercise-restrict-network-paas-resources-virtual-network-service-endpoints.png)
 
+### 작업 기술
+
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: 가상 네트워크 만들기
@@ -26,7 +28,9 @@ Exercise:
 + 작업 10: 스토리지 계정에 대한 액세스 확인
 
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Restrict%20network%20access%20to%20PaaS%20resources%20with%20virtual%20network%20service%20endpoints)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+### 대화형 랩 시뮬레이션
+
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 시간: 35분
 
@@ -233,7 +237,7 @@ Exercise:
 
    | **설정**      | **값**                    |
    | ---------------- | ---------------------------- |
-   | Subscription     | 구독을 선택합니다.    |
+   | 구독     | 구독을 선택합니다.    |
    | 가상 네트워크 | CoreServicesVNet**을 선택합니다.** |
    | 서브넷          | **프라이빗**을 선택합니다.          |
 

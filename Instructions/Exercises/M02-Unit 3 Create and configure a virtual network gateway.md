@@ -13,6 +13,8 @@ Exercise:
 
 ![가상 네트워크 게이트웨이 다이어그램.](../media/3-exercise-create-configure-local-network-gateway.png)
 
+### 작업 기술
+
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: CoreServicesVnet 및 ManufacturingVnet 만들기
@@ -27,7 +29,9 @@ Exercise:
 + 작업 10: 연결 확인
 + 작업 11: VM 간 연결 테스트
 
->**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+### 대화형 랩 시뮬레이션
+
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 시간: 70분(배포 대기 시간 ~45분 포함)
 

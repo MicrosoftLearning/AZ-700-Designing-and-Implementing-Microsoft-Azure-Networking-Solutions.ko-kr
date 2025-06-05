@@ -14,6 +14,8 @@ Exercise:
 
 ![연습에서 생성되는 부하 분산 장치 아키텍처를 보여 주는 다이어그램 - 부하 분산 장치, VNet, 서브넷, Bastionsubnet 및 VM 포함](../media/3-exercise-monitor-load-balancer-resource-using-azure-monitor.png)
 
+### 작업 기술
+
  이 연습에서 다음을 수행합니다.
 
 + 작업 1: 가상 네트워크 만들기
@@ -30,11 +32,9 @@ Exercise:
 + 작업 12: 리소스 상태 보기
 + 작업 13: 진단 설정 구성
 
+### 대화형 랩 시뮬레이션
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Monitor%20a%20load%20balancer%20resource%20using%20Azure%20Monitor)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
-
-> [!Note]  
-> 지침과 Azure Portal 인터페이스 간에 약간의 차이가 있을 수 있지만 핵심 개념은 동일합니다.
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 시간: 55분
 
