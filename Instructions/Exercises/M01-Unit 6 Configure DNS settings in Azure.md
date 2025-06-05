@@ -12,6 +12,7 @@ Exercise:
 
 ![DNS 아키텍처의 다이어그램](../media/6-exercise-configure-domain-name-servers-configuration-azure.png)
 
+### 작업 기술
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: 프라이빗 DNS 영역 만들기
@@ -19,7 +20,9 @@ Exercise:
 + 작업 3: 구성을 테스트할 가상 머신 만들기
 + 작업 4: 레코드가 DNS 영역에 있는지 확인
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+### 대화형 랩 시뮬레이션
+
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 소요 시간: 25분
 

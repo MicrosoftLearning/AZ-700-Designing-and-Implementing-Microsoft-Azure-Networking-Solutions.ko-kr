@@ -12,7 +12,9 @@ Exercise:
 
 ![가상 네트워크 피어링의 다이어그램](../media/8-exercise-connect-two-azure-virtual-networks-global.png)
 
-이 단원에서 학습할 내용은 다음과 같습니다.
+### 작업 기술
+
+이 연습에서 다음을 수행합니다.
 
 + 작업 1: 구성을 테스트할 가상 머신 만들기
 + 작업 2: RDP를 사용하여 테스트 VM에 연결
@@ -20,7 +22,9 @@ Exercise:
 + 작업 4: CoreServicesVnet과 ManufacturingVnet 사이에 VNet 피어링 만들기
 + 작업 5: VM 간 연결 테스트
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+### 대화형 랩 시뮬레이션
+
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 소요 시간: 20분
 

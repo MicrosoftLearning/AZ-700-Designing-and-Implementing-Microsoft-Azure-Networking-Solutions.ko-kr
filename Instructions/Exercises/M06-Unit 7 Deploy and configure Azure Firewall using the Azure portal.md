@@ -12,6 +12,8 @@ Contoso의 네트워크 보안 팀에서 수행할 다음 작업은 특정 웹 �
 
 ![Azure 방화벽 아키텍처를 사용한 가상 네트워크 다이어그램.](../media/7-exercise-deploy-configure-azure-firewall-using-azure-portal.png)
 
+### 작업 기술
+
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: 리소스 그룹 만들기
@@ -25,8 +27,9 @@ Contoso의 네트워크 보안 팀에서 수행할 다음 작업은 특정 웹 �
 + 작업 9: 서버 네트워크 인터페이스에 대한 기본 및 보조 DNS 주소 변경
 + 작업 10: 방화벽 테스트
 
+### 대화형 랩 시뮬레이션
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20and%20configure%20Azure%20Firewall%20using%20the%20Azure%20portal)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 시간: 60분
 

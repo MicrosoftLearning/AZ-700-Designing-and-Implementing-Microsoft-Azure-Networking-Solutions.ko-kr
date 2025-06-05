@@ -12,15 +12,17 @@ Exercise:
 
 ![가상 네트워크 WAN 아키텍처의 다이어그램](../media/7-exercise-create-virtual-wan-by-using-azure-portal.png)
 
+### 작업 기술
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: Virtual WAN 만들기
 + 작업 2: Azure Portal을 사용하여 허브 만들기
 + 작업 3: 가상 허브에 VNet 연결
 
+### 대화형 랩 시뮬레이션
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20virtual%20WAN%20using%20the%20Azure%20portal)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
-
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
+>
 ### 예상 시간: 65분(배포 대기 시간 ~45분 포함)
 
 ## 작업 1: Virtual WAN 만들기
