@@ -14,14 +14,17 @@ Exercise:
 
 ![Azure Front Door에 대한 네트워크 구성](../media/6-exercise-create-front-door-for-highly-available.png)
 
+### 작업 기술
+
 이 연습에서 다음을 수행합니다.
 
 + 작업 1: 웹앱의 두 인스턴스 만들기
 + 작업 2: 애플리케이션에 대한 Front Door 만들기
 + 작업 3: 작동 중인 Azure Front Door 보기
 
+### 대화형 랩 시뮬레이션
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20a%20Front%20Door%20profile%20for%20a%20highly%20available%20web%20application)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 소요 시간: 30분
 
@@ -39,7 +42,7 @@ Exercise:
 
    | **설정**      | **값**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Subscription     | 구독을 선택합니다.                                    |
+   | 구독     | 구독을 선택합니다.                                    |
    | Resource group   | 리소스 그룹 ContosoResourceGroup을 선택합니다.               |
    | 이름             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예에서는 WebAppContoso-1을 사용합니다. |
    | 게시          | **코드**를 선택합니다.                                             |
@@ -60,7 +63,7 @@ Exercise:
 
    | **설정**      | **값**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Subscription     | 구독을 선택합니다.                                    |
+   | 구독     | 구독을 선택합니다.                                    |
    | Resource group   | 리소스 그룹 ContosoResourceGroup을 선택합니다.               |
    | 이름             | 웹앱에 대한 고유한 이름을 입력합니다. 이 예제에서는 WebAppContoso-2를 사용합니다. |
    | 게시          | **코드**를 선택합니다.                                             |
@@ -87,7 +90,7 @@ Exercise:
 
    | **설정**             | **값**                                    |
    | ----------------------- | -------------------------------------------- |
-   | Subscription            | 구독을 선택합니다.                    |
+   | 구독            | 구독을 선택합니다.                    |
    | Resource group          | ContosoResourceGroup 선택                  |
    | 리소스 그룹 위치 | 기본 설정 적용                       |
    | 이름                    | FrontDoor(yourinitials)와 같은 고유한 이름을 이 구독에 입력합니다.   |

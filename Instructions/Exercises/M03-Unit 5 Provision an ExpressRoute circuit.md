@@ -9,11 +9,15 @@ Exercise:
 
 이 연습에서는 Azure Portal 및 Azure Resource Manager 배포 모델을 사용하여 ExpressRoute 회로를 만듭니다.
 
-   >**참고:** **[대화형 랩 시뮬레이션](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Provision%20an%20ExpressRoute%20circuit)** 을 사용하여 이 랩을 원하는 속도로 클릭할 수 있습니다. 대화형 시뮬레이션과 호스트된 랩 간에 약간의 차이가 있을 수 있지만 보여주는 핵심 개념과 아이디어는 동일합니다.
+### 대화형 랩 시뮬레이션
+
+>**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
 
 ### 예상 소요 시간: 15분
 
 ![연습에 필요한 ExpressRoute 회로 레이아웃 다이어그램](../media/5-exercise-provision-expressroute-circuit.png)
+
+### 작업 기술
 
 이 연습에서 다음을 수행합니다.
 
@@ -28,11 +32,9 @@ Exercise:
 
    >**중요**: ExpressRoute 회로는 서비스 키가 발급되는 순간부터 비용이 청구됩니다. 연결 공급자가 회로를 프로비전할 준비가 된 후에 이 작업을 수행하도록 하십시오.
 
-1. Azure Portal 메뉴에서 **+ 리소스 만들기**를 선택합니다. **네트워킹**을 선택하고 다음 그림과 같이 **ExpressRoute**를 선택합니다. ExpressRoute가 목록에 없으면 **마켓플레이스 검색**을 사용하여 검색합니다.
+1. Azure Portal 메뉴에서 **ExpressRoute 회로**를 검색하고 선택합니다.
 
-   ![Azure Portal - ExpressRoute 회로 만들기 메뉴](../media/create-expressroute-circuit-menu.png)
-
-1. **ExpressRoute 생성** 페이지에서 **리소스 그룹**을 ExpressRouteResourceGroup으로 입력합니다. 그런 다음 **복원력**에서 **표준 복원력**을 선택합니다.
+1. **Create ExpressRoute** 페이지에서 **리소스 그룹**을 `ExpressRouteResourceGroup`(으)로 지정합니다. 그런 다음 **복원력**에서 **표준 복원력**을 선택합니다.
 
 1. ***회로 세부 정보**의 경우, 올바른 지역(**미국 동부 2**), 회로 이름(**TestERCircuit**), 피어링 위치(**시애틀**), 공급자(**Equinix**), 대역폭(**50Mbps**), SKU 계층(**Standard**) 및 데이터 계량 청구 모델(**데이터**)을 지정했는지 확인합니다.
 
