@@ -4,7 +4,9 @@ Exercise:
   module: Module 07 - Design and implement private access to Azure Services
 ---
 
-# M07-단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기
+# M07-단원 6 Azure PowerShell을 사용하여 Azure 프라이빗 엔드포인트 만들기(선택 사항)
+
+> **참고**: 이 랩은 선택 사항입니다. 이전 랩인 *가상 네트워크 서비스 엔드포인트로 PaaS 리소스에 대한 네트워크 액세스 제한*에서는 이 기능을 다룹니다. 나중에 이 랩은 사용 중지됩니다. 
 
 ## 연습 시나리오
 
@@ -144,6 +146,7 @@ $parameters3 = @{
 }
 
 New-AzBastion @parameters3
+
 ```
 
 ## 작업 3: 테스트 가상 머신 만들기
