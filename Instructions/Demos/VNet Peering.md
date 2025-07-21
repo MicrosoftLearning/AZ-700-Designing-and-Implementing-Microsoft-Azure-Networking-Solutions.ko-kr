@@ -5,9 +5,7 @@ demo:
 ---
 ## VNet 피어링 구성
 
-**참고:**  이 데모에서는 두 개의 가상 네트워크가 필요합니다.
-
-**시뮬레이션:**[Azure 피어링을 사용하여 두 가상 네트워크 연결](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Connect%20two%20Azure%20virtual%20networks%20using%20global%20virtual%20network%20peering)
+**참고:** 이 데모에서는 두 개의 가상 네트워크가 필요합니다.
 
 **참조**: [VNet 피어링을 사용하여 가상 네트워크 연결 - 자습서](https://docs.microsoft.com/azure/virtual-network/tutorial-connect-virtual-networks-portal)
 

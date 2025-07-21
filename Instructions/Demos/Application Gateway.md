@@ -7,9 +7,7 @@ demo:
 
 이 데모에서는 Azure Application Gateway를 만드는 방법을 알아봅니다. 
 
-**시뮬레이션:** [Azure Application Gateway 배포](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Deploy%20Azure%20Application%20Gateway)
-
-**참조**: [빠른 시작: Azure Application Gateway를 사용하여 웹 트래픽 보내기 - Azure Portal](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
+**참조**: [빠른 시작: Azure Application Gateway를 통해 웹 트래픽 보내기 - Azure Portal](https://learn.microsoft.com/azure/application-gateway/quick-create-portal)
 
 **참조**: [Azure Application Gateway를 사용하여 네트워크 트래픽 엔드투엔드 암호화](https://github.com/MicrosoftDocs/mslearn-end-to-end-encryption-with-app-gateway)
 
@@ -17,7 +15,7 @@ demo:
 
 **Azure Application Gateway 만들기**
 
-1. Azure Portal에 액세스합니다.
+1. Azure Portal 액세스:
 
 1. **Azure Application Gateway**를 검색하여 선택합니다.
 

@@ -7,8 +7,6 @@ demo:
 
 본 데모에서는 Azure DNS에 대해 살펴봅니다.
 
-**참조:** [시뮬레이션: Azure에서 DNS 설정 구성](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Configure%20DNS%20settings%20in%20Azure)
-
 **참조**: [자습서: 도메인 및 하위 도메인 호스트 - Azure DNS](https://docs.microsoft.com/azure/dns/dns-delegate-domain-azure-dns)
 
 **DNS 영역 만들기**
