@@ -4,8 +4,6 @@ demo:
   module: Module 02 - Design and implement hybrid networking
 ---
 
-**시뮬레이션:**[가상 네트워크 게이트웨이 만들기 및 구성](https://mslabs.cloudguides.com/guides/AZ-700%20Lab%20Simulation%20-%20Create%20and%20configure%20a%20virtual%20network%20gateway)
-
 이 데모에서는 가상 네트워크 게이트웨이에 대해 살펴보겠습니다.
 
 **참고:** 이 데모는 서브넷이 있는 가상 네트워크 2개를 사용하는 경우 가장 효율적으로 작동합니다.
