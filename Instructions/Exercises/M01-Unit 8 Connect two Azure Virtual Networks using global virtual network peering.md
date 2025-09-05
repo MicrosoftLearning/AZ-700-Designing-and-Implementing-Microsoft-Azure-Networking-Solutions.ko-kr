@@ -140,6 +140,8 @@ Exercise:
     | ------------------------------------ | --------------------------------------------- | 
     | 'CoreServicesVnet'이 'ManufacturingVnet'에 액세스하도록 허용 | 사용
     | 'CoreServicesVnet'이 'ManufacturingVnet'에서 전달된 트래픽을 수신하도록 허용 | 사용 |
+
+1. **CoreServicesVnet-ManufacturingVnet** 의 왼쪽에 있는 확인란을 선택하고 **동기화**를 선택합니다.
  
 1. CoreServicesVnet \| 피어링에서 **CoreServicesVnet-to-ManufacturingVnet** 피어링이 **연결되었는지** 확인하십시오.
 

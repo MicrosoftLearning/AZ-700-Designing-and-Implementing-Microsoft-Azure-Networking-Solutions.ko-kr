@@ -88,11 +88,8 @@ ExpressRoute를 통해 Azure 가상 네트워크와 온-프레미스 네트워�
    | 게이트웨이 유형              | ExpressRoute               |
    | SKU                       | 표준                   |
    | 가상 네트워크           | CoreServicesVNet           |
-   | **공용 IP 주소**     |                            |
-   | 공용 IP 주소         | 새로 만들기                 |
-   | 공용 IP 주소 이름    | CoreServicesVnetGateway-IP |
-   | 할당                | 구성할 수 없음           |
-
+   | 서브넷                    | GatewaySubnet              |
+   
 1. **검토 + 생성**를 선택합니다.
 
 1. 게이트웨이 구성이 유효성 검사를 통과하는지 확인한 다음, **만들기**를 선택합니다.
@@ -121,3 +118,4 @@ Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도
 + Microsoft는 최소 99.95%의 ExpressRoute 전용 연결 가용성을 보장합니다. 연결은 비공개이며 전용 선을 통해 이동하며, 제3자가 트래픽을 가로챌 수 없습니다.
 + 온-프레미스 네트워크와 Microsoft 클라우드 간 연결은 CloudExchange 공동 배치, 지점 간 이더넷 연결, Any-to-Any(IPVPN) 연결, ExpressRoute Direct라는 네 가지 방법으로 만들 수 있습니다.
 + ExpressRoute 기능은 SKU(로컬, 표준, 프리미엄)에 의해 결정됩니다. 
+
