@@ -43,7 +43,7 @@ Exercise:
 
    | **설정**      | **값**                                                    |
    | ---------------- | ------------------------------------------------------------ |
-   | Subscription     | 구독 선택                                     |
+   | 구독     | 구독 선택                                     |
    | Resource group   | **새로 만들기** 선택  이름: **Contoso-RG-TM1**             |
    | 속성             | **ContosoWebAppEastUSxx**(여기서 xx는 이름을 고유하기 만들어주는 이니셜임) |
    | 게시          | **코드**                                                     |
@@ -100,7 +100,7 @@ Exercise:
    | Resource group          | **Contoso-RG-TM1**       |
    | 리소스 그룹 위치 | **미국 동부**              |
 
-1. **만들기**를 선택합니다.
+1. **검토 + 만들기**를 선택한 다음, **만들기**를 선택합니다.
 
 ## 작업 3: Traffic Manager 엔드포인트 추가
 
@@ -160,13 +160,13 @@ Exercise:
 
 1. 장애 조치(failover) 엔드포인트가 제대로 작동하는지 테스트하려면 주 사이트를 사용하지 않도록 설정해야 합니다.
 
-1. **Contoso-TMProfile** 페이지의 개요 화면에서 **myPrimaryEndpoint**를 선택합니다.
+1. **Contoso-TMProfile** 페이지의 개요 화면에서 **엔드포인트:** 오른쪽에 있는 숫자 **2**를 선택합니다.
 
-1. **MyPrimaryEndpoint** 페이지의 **상태**에서 **사용 안 함**을 선택한 다음, **저장**을 선택합니다.
+1. **myPrimaryEndpoint**의 편집 단추(연필 아이콘)를 선택합니다.
 
-   ![그림 25](../media/disable-primary-endpoint-1.png)
+1. **myPrimaryEndpoint** 블레이드의 **상태** 아래에서 **엔드포인트 사용** 확인란을 선택 취소한 다음, **저장**을 선택합니다.
 
-1. **myPrimaryEndpoint** 페이지를 닫습니다(페이지 오른쪽 위에 있는 **X** 선택).
+1. 필요한 경우, **myPrimaryEndpoint** 블레이드를 닫습니다(페이지 오른쪽 상단 모서리에 있는 **X** 선택).
 
 1. 이제 **Contoso-TMProfile** 페이지에 있는 **myPrimaryEndpoint**의 **모니터 상태**가 **사용 안 함**이 됩니다.
 
