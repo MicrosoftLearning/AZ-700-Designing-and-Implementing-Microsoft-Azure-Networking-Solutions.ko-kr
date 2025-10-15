@@ -202,7 +202,7 @@ Exercise:
    | 기본 사항          | 프로젝트 세부 정보   | Subscription                                | 변경 필요 없음          |
    |                 |                   | ResourceGroup                               | ContosoResourceGroup         |
    |                 | 인스턴스 정보  | 속성                                        | ManufacturingVnetGateway     |
-   |                 |                   | 지역                                      | 북유럽                 |
+   |                 |                   | 지역                                      | 서유럽                  |
    |                 |                   | 게이트웨이 유형                                | VPN                          |
    |                 |                   | SKU                                         | VpnGw1                       |
    |                 |                   | Generation                                  | 생성 1                  |
