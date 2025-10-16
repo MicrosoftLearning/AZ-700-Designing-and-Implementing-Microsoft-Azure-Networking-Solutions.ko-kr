@@ -36,7 +36,7 @@ Exercise:
 
 1. **Create ExpressRoute** 페이지에서 **리소스 그룹**을 `ExpressRouteResourceGroup`(으)로 지정합니다. 그런 다음 **복원력**에서 **표준 복원력**을 선택합니다.
 
-1. ***회로 세부 정보**의 경우, 올바른 지역(**미국 동부 2**), 회로 이름(**TestERCircuit**), 피어링 위치(**시애틀**), 공급자(**Equinix**), 대역폭(**50Mbps**), SKU 계층(**Standard**) 및 데이터 계량 청구 모델(**데이터**)을 지정했는지 확인합니다.
+1. **회로 세부 정보**의 경우, 올바른 지역(**미국 동부 2**), 회로 이름(**TestERCircuit**), 피어링 위치(**Seattle**), 공급자(**Equinix**), 대역폭(**50Mbps**), SKU 계층(**Standard**) 및 데이터 계량 청구 모델(**데이터 요금**)을 지정했는지 확인합니다.
 
 1. **검토 + 생성**를 선택합니다.
 
@@ -141,3 +141,4 @@ Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도
 + Microsoft는 최소 99.95%의 ExpressRoute 전용 연결 가용성을 보장합니다. 연결은 비공개이며 전용 선을 통해 이동하며, 제3자가 트래픽을 가로챌 수 없습니다.
 + 온-프레미스 네트워크와 Microsoft 클라우드 간 연결은 CloudExchange 공동 배치, 지점 간 이더넷 연결, Any-to-Any(IPVPN) 연결, ExpressRoute Direct라는 네 가지 방법으로 만들 수 있습니다.
 + ExpressRoute 기능은 SKU(로컬, 표준, 프리미엄)에 의해 결정됩니다. 
+
