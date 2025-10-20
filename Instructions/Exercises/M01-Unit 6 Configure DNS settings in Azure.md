@@ -20,10 +20,6 @@ Exercise:
 + 작업 3: 구성을 테스트할 가상 머신 만들기
 + 작업 4: 레코드가 DNS 영역에 있는지 확인
 
-### 대화형 랩 시뮬레이션
-
->**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
-
 ### 예상 소요 시간: 25분
 
 **중요:** 이 연습에서는 이전 랩의 가상 네트워크가 필요합니다. [템플릿](https://github.com/MicrosoftLearning/AZ-700-Designing-and-Implementing-Microsoft-Azure-Networking-Solutions/tree/master/Allfiles/Exercises/M01/template.json) 파일을 사용하여 설치할 수 있습니다. 모든 가상 네트워크가 설치되지만 CoreServicesVNet만 필요합니다. 

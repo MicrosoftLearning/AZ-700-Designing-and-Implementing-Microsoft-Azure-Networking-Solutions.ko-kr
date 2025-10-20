@@ -14,10 +14,6 @@ Private Endpoint를 통해 Azure 웹앱에 안전하게 연결하여 Azure Priva
 
 ![프라이빗 엔드포인트 아키텍처의 다이어그램.](../media/6-exercise-create-azure-private-endpoint-using-azure-powershell.png)
 
-### 대화형 랩 시뮬레이션
-
->**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
-
 ### 예상 시간: 45분
 
 Azure 웹앱용 프라이빗 엔드포인트를 만들고, 가상 머신을 배포하여 프라이빗 연결을 테스트합니다.

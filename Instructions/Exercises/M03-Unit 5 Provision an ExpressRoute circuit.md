@@ -9,10 +9,6 @@ Exercise:
 
 이 연습에서는 Azure Portal 및 Azure Resource Manager 배포 모델을 사용하여 ExpressRoute 회로를 만듭니다.
 
-### 대화형 랩 시뮬레이션
-
->**참고**: 이전에 제공되었던 랩 시뮬레이션은 사용 중지되었습니다.
-
 ### 예상 소요 시간: 15분
 
 ![연습에 필요한 ExpressRoute 회로 레이아웃 다이어그램](../media/5-exercise-provision-expressroute-circuit.png)
@@ -141,4 +137,5 @@ Copilot은 Azure 스크립팅 도구를 사용하는 방법을 익히는 데 도
 + Microsoft는 최소 99.95%의 ExpressRoute 전용 연결 가용성을 보장합니다. 연결은 비공개이며 전용 선을 통해 이동하며, 제3자가 트래픽을 가로챌 수 없습니다.
 + 온-프레미스 네트워크와 Microsoft 클라우드 간 연결은 CloudExchange 공동 배치, 지점 간 이더넷 연결, Any-to-Any(IPVPN) 연결, ExpressRoute Direct라는 네 가지 방법으로 만들 수 있습니다.
 + ExpressRoute 기능은 SKU(로컬, 표준, 프리미엄)에 의해 결정됩니다. 
+
 
